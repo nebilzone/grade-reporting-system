@@ -52,7 +52,7 @@ A **UI version using DOM** will be added in future updates.
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/your-username/grade-reporting-system.git
+git clone https://github.com/nebilabdo/grade-reporting-system.git
 2️⃣ Move into the project folder
 cd grade-reporting-system
 3️⃣ Run the program
