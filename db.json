@@ -1,0 +1,114 @@
+{
+  "students": [
+    {
+      "id": "2215",
+      "StudentID": 101,
+      "StudentName": "John Doe",
+      "Year": 1,
+      "Semester": 1,
+      "Course": "Math",
+      "Score": 85,
+      "CreditHour": 3
+    },
+    {
+      "id": "ff7b",
+      "StudentID": 101,
+      "StudentName": "John Doe",
+      "Year": 1,
+      "Semester": 1,
+      "Course": "Science",
+      "Score": 90,
+      "CreditHour": 4
+    },
+    {
+      "id": "3f9f",
+      "StudentID": 101,
+      "StudentName": "John Doe",
+      "Year": 1,
+      "Semester": 1,
+      "Course": "English",
+      "Score": 88,
+      "CreditHour": 3
+    },
+    {
+      "id": "d186",
+      "StudentID": 101,
+      "StudentName": "John Doe",
+      "Year": 1,
+      "Semester": 2,
+      "Course": "Programming",
+      "Score": 92,
+      "CreditHour": 4
+    },
+    {
+      "id": "cfc2",
+      "StudentID": 101,
+      "StudentName": "John Doe",
+      "Year": 1,
+      "Semester": 2,
+      "Course": "Physics",
+      "Score": 81,
+      "CreditHour": 3
+    },
+    {
+      "id": "a3f1",
+      "StudentID": 102,
+      "StudentName": "Jane Smith",
+      "Year": 1,
+      "Semester": 1,
+      "Course": "Math",
+      "Score": 92,
+      "CreditHour": 3
+    },
+    {
+      "id": "c2ad",
+      "StudentID": 102,
+      "StudentName": "Jane Smith",
+      "Year": 1,
+      "Semester": 1,
+      "Course": "Science",
+      "Score": 88,
+      "CreditHour": 4
+    },
+    {
+      "id": "f425",
+      "StudentID": 102,
+      "StudentName": "Jane Smith",
+      "Year": 1,
+      "Semester": 1,
+      "Course": "English",
+      "Score": 94,
+      "CreditHour": 3
+    },
+    {
+      "id": "c4ff",
+      "StudentID": 101,
+      "StudentName": "John Doe",
+      "Year": 1,
+      "Semester": 2,
+      "Course": "java",
+      "Score": 85,
+      "CreditHour": 3
+    },
+    {
+      "id": "8add",
+      "StudentID": 101,
+      "StudentName": "John Doe",
+      "Year": 1,
+      "Semester": 2,
+      "Course": "css",
+      "Score": 90,
+      "CreditHour": 4
+    },
+    {
+      "id": "bf18",
+      "StudentID": 101,
+      "StudentName": "John Doe",
+      "Year": 1,
+      "Semester": 2,
+      "Course": "php",
+      "Score": 88,
+      "CreditHour": 3
+    }
+  ]
+}
