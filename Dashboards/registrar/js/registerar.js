@@ -22,10 +22,11 @@ async function display() {
   }
 
   const ethiopianYear = getEthiopianYear();
-  let idNumber = 1;
+  const idNumber = 1;
   // console.log(ethiopianYear); // 2018 (depending on date)
 
   let conditions = true;
+  console.log(application)
   application.sort((a, b) =>
     a.fullName
       .trim()
@@ -78,7 +79,7 @@ async function display() {
           const td = document.createElement("td");
           td.style.borderBottom = "1px solid #c1babaff";
           td.style.borderTop = "1px solid #c1babaff";
-          td.style.background = "#f2f2f2";
+          td.style.background = "#E6F7FF";
 
           td.append(button);
           tr.append(td);
@@ -104,7 +105,7 @@ async function display() {
       approveBtn.style.padding = "3px 8px";
       const td = document.createElement("td");
       td.style.borderBottom = "1px solid #c1babaff";
-      td.style.background = "#f2f2f2";
+      td.style.background = "#E6F7FF";
       approveBtn.style.backgroundColor = "#15803D";
       approveBtn.style.border = "none";
       approveBtn.style.borderRadius = "2px";

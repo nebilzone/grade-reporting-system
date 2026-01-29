@@ -7,6 +7,7 @@ forms.addEventListener("submit", async (e) => {
     fullName: event.fullName.value,
     email: event.email.value,
     password: event.password.value,
+    year:event.year.value,
     gender: document.querySelector('input[name="gender"]:checked')?.value || 0,
     documents: {
 

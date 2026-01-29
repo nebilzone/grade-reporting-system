@@ -1,3 +1,6 @@
+ 
+
+
 async function studentInfo() {
   let result = await fetch("http://localhost:3000/students");
   let solution = await result.json();

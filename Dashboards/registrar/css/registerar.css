@@ -6,35 +6,13 @@
 body {
   display: flex;
 }
-.side-bar {
-  display: flex;
-  flex-direction: column;
-  padding: 60px 20px 0px 20px;
-  align-items: start;
-  width: 220px;
-  height: 100vh;
-  background-color: rgb(215, 215, 244);
-  position: fixed;
-}
-.sidebar-item {
-  text-decoration: none;
-  padding: 12px 16px;
-  border-left: 4px solid transparent;
-}
-.sidebar-item:hover {
-  width: 130px;
-  background-color: rgba(140, 130, 130, 0.12);
-  border-radius: 5px;
-  border-left-color: #4f46e5;
-}
 
-
-.pageContent{
+.pageContent {
   margin-left: 220px;
 }
-h1{
-    padding: 20px;
-    color:  #435580;;
+h1 {
+  padding: 20px;
+  color: #435580;
 }
 .cardContainer {
   display: flex;

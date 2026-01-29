@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/sidebar.css" />
+    <link rel="stylesheet" href="./css/registerar.css" />
+    <link rel="stylesheet" href="../../components/sidebar.css">
     <!-- Font Awesome Free CDN -->
     <link
       rel="stylesheet"
@@ -12,27 +13,18 @@
     />
   </head>
   <body>
-    <div class="side-bar">
-     <a href="dashboard.html" class="sidebar-item active">Dashboard</a>
-      <a href="application.html" class="sidebar-item">Applications</a>
-
-      <a href="students.html" class="sidebar-item">Students</a>
-    <a href="departements.html" class="sidebar-item">Departements</a>
-
-   <a href="courses.html" class="sidebar-item">Courses</a>
-    <a href="teachers.html" class="sidebar-item">Teachers</a>
-    </div>
+    <div class="sidebarContainer"></div>
     <div class="pageContent">
       <h1>Registerar Dashboard</h1>
 
       <div class="cardContainer">
         <div class="totalStudents">
-          <h3>total students </h3>
+          <h3>total students</h3>
           <i class="fas fa-user-graduate"></i>
           <h3>435</h3>
         </div>
         <div class="pendingApplication">
-          <h3>Pending </h3>
+          <h3>Pending</h3>
           <i class="fas fa-hourglass-half"></i>
           <h3>45</h3>
         </div>
@@ -47,7 +39,7 @@
           <h3>554</h3>
         </div>
         <div class="freshman">
-          <h4>freshman Courses </h4>
+          <h4>freshman Courses</h4>
           <i class="fas fa-book"></i>
           <h4>554</h4>
         </div>
@@ -62,9 +54,17 @@
           <h4>554</h4>
         </div>
       </div>
-      <div class="filter"><label for="filter">Search </label>
-      <input type="search" placeholder="Filter by status pending" id="filter" /></div>
+      <div class="filter">
+        <label for="filter">Search </label>
+        <input
+          type="search"
+          placeholder="Filter by status pending"
+          id="filter"
+        />
+      </div>
     </div>
-    <script src="./script.js"></script>
+    <script src="./js/default.js"></script>
+
+    <script src="./js/registerar.js"></script>
   </body>
 </html>
