@@ -8,8 +8,30 @@ async function display() {
   const table = document.createElement("table");
   const thead = document.createElement("thead");
   const tbody = document.createElement("tbody");
+  function getEthiopianYear() {
+    const today = new Date();
+    const gregYear = today.getFullYear();
+    const month = today.getMonth(); // 0 = January
+    const day = today.getDate();
+
+    // Ethiopian New Year is September 11
+    const etYear =
+      month > 8 || (month === 8 && day >= 11) ? gregYear - 7 : gregYear - 8;
+
+    return etYear % 100;
+  }
+
+  const ethiopianYear = getEthiopianYear();
+  let idNumber = 1;
+  // console.log(ethiopianYear); // 2018 (depending on date)
 
   let conditions = true;
+  application.sort((a, b) =>
+    a.fullName
+      .trim()
+      .toLowerCase()
+      .localeCompare(b.fullName.trim().toLowerCase()),
+  );
   for (const object of application) {
     const tr = document.createElement("tr");
     if (conditions) {
@@ -30,7 +52,7 @@ async function display() {
       th.style.borderTop = "1px solid #c1babaff";
 
       th.textContent = "action";
-            th.style.textAlign = "start";
+      th.style.textAlign = "start";
 
       tr.append(th);
 
@@ -40,83 +62,101 @@ async function display() {
   }
 
   for (const object of application) {
-    const tr = document.createElement("tr");
-    let rows = 0;
-    for (const each in object) {
-      if (each == "password") {
-        continue;
-      }
-      if (each == "documents") {
-        const button = document.createElement("button");
-        button.textContent = "View Documents";
-        button.style.padding = "2px 9px";
-        button.style.margin = "3px 9px";
+    if (object.status == "Pending") {
+      const tr = document.createElement("tr");
+      let rows = 0;
+
+      for (const each in object) {
+        if (each == "password") {
+          continue;
+        }
+        if (each == "documents") {
+          const button = document.createElement("button");
+          button.textContent = "View Documents";
+          button.style.padding = "2px 9px";
+          button.style.margin = "3px 9px";
+          const td = document.createElement("td");
+          td.style.borderBottom = "1px solid #c1babaff";
+          td.style.borderTop = "1px solid #c1babaff";
+          td.style.background = "#f2f2f2";
+
+          td.append(button);
+          tr.append(td);
+          rows++;
+          continue;
+        }
         const td = document.createElement("td");
+        td.textContent = object[each];
         td.style.borderBottom = "1px solid #c1babaff";
         td.style.borderTop = "1px solid #c1babaff";
-        td.style.background = "#f2f2f2";
+        td.style.padding = "5px";
 
-        td.append(button);
         tr.append(td);
+        rows % 2 == 0
+          ? (td.style.background = "#f2f2f2")
+          : (td.style.background = "#e6f7ff");
         rows++;
-        continue;
       }
+      const approveBtn = document.createElement("button");
+      approveBtn.textContent = "Approve";
+      approveBtn.style.margin = "3px 15px";
+      approveBtn.type='button';
+      approveBtn.style.padding = "3px 8px";
       const td = document.createElement("td");
-      td.textContent = object[each];
       td.style.borderBottom = "1px solid #c1babaff";
-      td.style.borderTop = "1px solid #c1babaff";
-      td.style.padding = "5px";
+      td.style.background = "#f2f2f2";
+      approveBtn.style.backgroundColor = "#15803D";
+      approveBtn.style.border = "none";
+      approveBtn.style.borderRadius = "2px";
+      approveBtn.style.color = "white";
 
-      tr.append(td);
-      rows % 2 == 0
-        ? (td.style.background = "#f2f2f2")
-        : (td.style.background = "#e6f7ff");
-      rows++;
-    }
-    const approveBtn = document.createElement("button");
-    approveBtn.textContent = "Approve";
-    approveBtn.style.margin = "3px 15px";
-    approveBtn.style.padding = "3px 8px";
-    const td = document.createElement("td");
-    td.style.borderBottom = "1px solid #c1babaff";
-    td.style.background = "#f2f2f2";
-    approveBtn.style.backgroundColor = "#15803D";
-    approveBtn.style.border = "none";
-    approveBtn.style.borderRadius = "2px";
-    approveBtn.style.color = "white";
-
-    approveBtn.addEventListener("click", async function event(e) {
-      e.preventDefault();
-      const student = {
-        id: "",
-      };
-      await fetch("http://localhost:3000/students", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify(data),
+      approveBtn.addEventListener("click", async function event(e) {
+        e.preventDefault();
+        const numberOfStudents = await fetch("http://localhost:3000/students");
+        const json = await numberOfStudents.json();
+        const Id = json.length + 1;
+        const student = {
+          id: `UGPR${Id.toString().padStart(4, "0")}/${ethiopianYear}`,
+          fullName: object.fullName,
+          email: object.email,
+          password: object.password,
+          gender: object.gender,
+          departement: "FreshMan",
+          status: "active",
+        };
+        await fetch("http://localhost:3000/students", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify(student),
+        });
+        await fetch(`http://localhost:3000/applications/${object.id}`, {
+          method: "PATCH",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ status: "approved" }),
+        });
       });
-    });
-    td.style.borderTop = "1px solid #c1babaff";
-    td.append(approveBtn);
-    const rejectBtn = document.createElement("button");
-    rejectBtn.style.padding = "3px 8px";
+      td.style.borderTop = "1px solid #c1babaff";
+      td.append(approveBtn);
+      const rejectBtn = document.createElement("button");
+      rejectBtn.style.padding = "3px 8px";
 
-    rejectBtn.textContent = "Reject";
-    rejectBtn.style.backgroundColor = "#bc1111ff";
-    rejectBtn.style.border = "none";
-    rejectBtn.style.borderRadius = "2px";
-    rejectBtn.style.color = "white";
+      rejectBtn.textContent = "Reject";
+      rejectBtn.style.backgroundColor = "#bc1111ff";
+      rejectBtn.style.border = "none";
+      rejectBtn.style.borderRadius = "2px";
+      rejectBtn.style.color = "white";
 
-    td.append(rejectBtn);
-    tr.append(td);
+      td.append(rejectBtn);
+      tr.append(td);
 
-    table.append(tr);
+      table.append(tr);
+    }
+    table.append(thead);
+    table.style.borderCollapse = "collapse";
+    table.style.width = "95%";
+    table.style.margin = "40px";
+
+    searchDiv.append(table);
   }
-  table.append(thead);
-  table.style.borderCollapse = "collapse";
-  table.style.width = "95%";
-  table.style.margin = "40px";
-
-  searchDiv.append(table);
 }
 display();

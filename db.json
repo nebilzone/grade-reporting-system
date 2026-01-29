@@ -63,7 +63,7 @@
         "grade12": "Staff Evaluation Docs.pdf",
         "transcript": "Computer Security Chapter One.pdf"
       },
-      "status": "Pending"
+      "status": "approved"
     },
     {
       "id": 1769610864139,
@@ -76,7 +76,7 @@
         "grade12": "Staff Evaluation Docs.pdf",
         "transcript": "roadmap.pdf"
       },
-      "status": "Pending"
+      "status": "approved"
     },
     {
       "id": 1769611795059,
@@ -90,9 +90,196 @@
         "transcript": "roadmap.pdf"
       },
       "status": "Pending"
+    },
+    {
+      "id": 1769662017199,
+      "fullName": "Abdulkerim",
+      "email": "abdu@gmail.com",
+      "password": "w3r",
+      "gender": "Male",
+      "documents": {
+        "grade8": "Group members.pdf",
+        "grade12": "Staff Evaluation Docs.pdf",
+        "transcript": "Group members.pdf"
+      },
+      "status": "approved"
+    },
+    {
+      "id": 1769662164756,
+      "fullName": "muaz Abraham",
+      "email": "muaz@gmail.com",
+      "password": "edgf",
+      "gender": "Male",
+      "documents": {
+        "grade8": "Full Research Outline for Research Methods In CS.pdf",
+        "grade12": "roadmap.pdf",
+        "transcript": "Full Research Outline for Research Methods In CS.pdf"
+      },
+      "status": "Pending"
+    },
+    {
+      "id": 1769662208011,
+      "fullName": "nati abebaw",
+      "email": "nati@gmail.com",
+      "password": "cgdhwf",
+      "gender": "Male",
+      "documents": {
+        "grade8": "roadmap.pdf",
+        "grade12": "Group members.pdf",
+        "transcript": "Document1.pdf"
+      },
+      "status": "Pending"
+    },
+    {
+      "id": 1769662252641,
+      "fullName": "Eadle  Tesfaye",
+      "email": "ealde@gmail.com",
+      "password": "cdh",
+      "gender": "Female",
+      "documents": {
+        "grade8": "Document1.pdf",
+        "grade12": "Mesobinternshipreport.pdf",
+        "transcript": "cv (1).pdf"
+      },
+      "status": "approved"
+    },
+    {
+      "id": 1769662316997,
+      "fullName": "nejmia   abdi",
+      "email": "nejmi@gmail.com",
+      "password": "dfs",
+      "gender": "Female",
+      "documents": {
+        "grade8": "cv (1).pdf",
+        "grade12": "Full Research Outline for Research Methods In CS.pdf",
+        "transcript": "Mesobinternshipreport.pdf"
+      },
+      "status": "Pending"
+    },
+    {
+      "id": 1769662364009,
+      "fullName": "Firdos  kedis",
+      "email": "firdi@gmail.com",
+      "password": "dejh",
+      "gender": "Female",
+      "documents": {
+        "grade8": "cv (1).pdf",
+        "grade12": "Chapter Five.pdf",
+        "transcript": "Group members.pdf"
+      },
+      "status": "approved"
+    },
+    {
+      "id": 1769662583646,
+      "fullName": "Hanan Kasim",
+      "email": "hanan@gmail.com",
+      "password": "sdh",
+      "gender": "Female",
+      "documents": {
+        "grade8": "cv (1).pdf",
+        "grade12": "Mesobinternshipreport.pdf",
+        "transcript": "roadmap.pdf"
+      },
+      "status": "Pending"
+    },
+    {
+      "id": 1769662618489,
+      "fullName": "Lamrot  Fkru",
+      "email": "lamri@gmail.com",
+      "password": "cdjchd",
+      "gender": "Female",
+      "documents": {
+        "grade8": "Staff Evaluation Docs.pdf",
+        "grade12": "Group members.pdf",
+        "transcript": "roadmap.pdf"
+      },
+      "status": "Pending"
+    },
+    {
+      "id": 1769662666431,
+      "fullName": "Mohammed Ahmed",
+      "email": "mfeti@gmail.com",
+      "password": "mfeti",
+      "gender": "Female",
+      "documents": {
+        "grade8": "Full Research Outline for Research Methods In CS.pdf",
+        "grade12": "Mesobinternshipreport.pdf",
+        "transcript": "roadmap.pdf"
+      },
+      "status": "Pending"
+    },
+    {
+      "id": 1769662725525,
+      "fullName": "Mohammed Dorm",
+      "email": "mame@gmail.com",
+      "password": "asdf",
+      "gender": "Female",
+      "documents": {
+        "grade8": "roadmap.pdf",
+        "grade12": "Mesobinternshipreport.pdf",
+        "transcript": "Mesobinternshipreport.pdf"
+      },
+      "status": "Pending"
+    },
+    {
+      "id": 1769662774456,
+      "fullName": "Zode Fikadu",
+      "email": "zoba@gmail.com",
+      "password": "def",
+      "gender": "Female",
+      "documents": {
+        "grade8": "Mesobinternshipreport.pdf",
+        "grade12": "Group members.pdf",
+        "transcript": "Group members.pdf"
+      },
+      "status": "Pending"
     }
   ],
   "students": [
-
+    {
+      "id": "UGPR0001/18",
+      "fullName": "Abdulkerim",
+      "email": "abdu@gmail.com",
+      "password": "w3r",
+      "gender": "Male",
+      "departement": "FreshMan",
+      "status": "active"
+    },
+    {
+      "id": "UGPR0002/18",
+      "fullName": "ASDFG",
+      "email": "child@gmail.com",
+      "password": "bjgh",
+      "gender": "Male",
+      "departement": "FreshMan",
+      "status": "active"
+    },
+    {
+      "id": "UGPR0003/18",
+      "fullName": "Eadle  Tesfaye",
+      "email": "ealde@gmail.com",
+      "password": "cdh",
+      "gender": "Female",
+      "departement": "FreshMan",
+      "status": "active"
+    },
+    {
+      "id": "UGPR0004/18",
+      "fullName": "Ekram Tofik",
+      "email": "student@example.com",
+      "password": "ekru",
+      "gender": "Male",
+      "departement": "FreshMan",
+      "status": "active"
+    },
+    {
+      "id": "UGPR0005/18",
+      "fullName": "Firdos  kedis",
+      "email": "firdi@gmail.com",
+      "password": "dejh",
+      "gender": "Female",
+      "departement": "FreshMan",
+      "status": "active"
+    }
   ]
 }
