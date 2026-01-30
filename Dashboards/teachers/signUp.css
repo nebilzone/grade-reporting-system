@@ -1,0 +1,36 @@
+body{
+ display:flex;
+ justify-content: center;
+ height: 95vh;
+ align-items: center;
+}
+label{
+    color: #4B5563;
+}
+.registerForm{
+    width:300px;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: #e8e5e5;
+}
+#fullName,#email,#password,#national-id,#phone,#prefered-departments{
+    width:100%;
+    outline: none;
+    padding:2px;
+    height: 16px;
+    border-radius: 3px;
+    border:2px solid #D1D5DB;
+}
+#fullName:focus,#email:focus,#password:focus,#national-id:focus,#phone:focus,#prefered-departments:focus{
+    border:2px solid orange;
+
+}
+
+button {
+    margin-left: 250px;
+    background-color: #FF8415;
+    border:none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+}

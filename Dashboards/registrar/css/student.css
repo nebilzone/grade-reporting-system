@@ -1,0 +1,17 @@
+*{
+    padding: 0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+body{
+    /* display:flex;
+    gap: 30px; */
+
+}
+.pageContent{
+    margin-left: 250px;
+}
+h1 {
+  padding: 20px;
+  color: #435580;
+}

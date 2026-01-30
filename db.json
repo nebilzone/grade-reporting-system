@@ -6,13 +6,14 @@
       "email": "nebilbromance@gmail.com",
       "password": "rsaw",
       "year": "2016",
+      "role": "students",
       "gender": "Male",
       "documents": {
         "grade8": "cv (1).pdf",
         "grade12": "Group members.pdf",
         "transcript": "roadmap.pdf"
       },
-      "status": "approved"
+      "status": "Pending"
     },
     {
       "id": 1769587076156,
@@ -20,6 +21,8 @@
       "email": "nebilbromance1@gmail.com",
       "password": "rsaw44",
       "year": "2016",
+      "role": "students",
+
       "gender": "Male",
       "documents": {
         "grade8": "cv (1).pdf",
@@ -34,6 +37,8 @@
       "email": "nebilbromance2@gmail.com",
       "password": "rsaw88",
       "year": "2016",
+      "role": "students",
+
       "gender": "Male",
       "documents": {
         "grade8": "cv (1).pdf",
@@ -48,6 +53,8 @@
       "email": "nebilbromance2@gmail.com",
       "password": "rsaw88",
       "year": "2016",
+      "role": "students",
+
       "gender": "Male",
       "documents": {
         "grade8": "cv (1).pdf",
@@ -62,13 +69,15 @@
       "email": "student@example.com",
       "password": "ekru",
       "year": "2016",
+      "role": "students",
+
       "gender": "Male",
       "documents": {
         "grade8": "Chapter Five.pdf",
         "grade12": "Staff Evaluation Docs.pdf",
         "transcript": "Computer Security Chapter One.pdf"
       },
-      "status": "approved"
+      "status": "Pending"
     },
     {
       "id": 1769610864139,
@@ -76,13 +85,15 @@
       "email": "child@gmail.com",
       "password": "bjgh",
       "year": "2016",
+      "role": "students",
+
       "gender": "Male",
       "documents": {
         "grade8": "Chapter Five.pdf",
         "grade12": "Staff Evaluation Docs.pdf",
         "transcript": "roadmap.pdf"
       },
-      "status": "approved"
+      "status": "Pending"
     },
     {
       "id": 1769611795059,
@@ -90,13 +101,15 @@
       "email": "parent@example.com",
       "password": "habibyi",
       "year": "2016",
+      "role": "students",
+
       "gender": "Female",
       "documents": {
         "grade8": "roadmap.pdf",
         "grade12": "Group members.pdf",
         "transcript": "roadmap.pdf"
       },
-      "status": "approved"
+      "status": "Pending"
     },
     {
       "id": 1769662017199,
@@ -104,13 +117,15 @@
       "email": "abdu@gmail.com",
       "password": "w3r",
       "year": "2016",
+      "role": "students",
+
       "gender": "Male",
       "documents": {
         "grade8": "Group members.pdf",
         "grade12": "Staff Evaluation Docs.pdf",
         "transcript": "Group members.pdf"
       },
-      "status": "approved"
+      "status": "Pending"
     },
     {
       "id": 1769662164756,
@@ -118,13 +133,16 @@
       "email": "muaz@gmail.com",
       "password": "edgf",
       "year": "2017",
+            "role": "students",
+
       "gender": "Male",
+
       "documents": {
         "grade8": "Full Research Outline for Research Methods In CS.pdf",
         "grade12": "roadmap.pdf",
         "transcript": "Full Research Outline for Research Methods In CS.pdf"
       },
-      "status": "approved"
+      "status": "Pending"
     },
     {
       "id": 1769662208011,
@@ -132,13 +150,15 @@
       "email": "nati@gmail.com",
       "password": "cgdhwf",
       "year": "2017",
+      "role": "students",
+
       "gender": "Male",
       "documents": {
         "grade8": "roadmap.pdf",
         "grade12": "Group members.pdf",
         "transcript": "Document1.pdf"
       },
-      "status": "approved"
+      "status": "Pending"
     },
     {
       "id": 1769662252641,
@@ -146,13 +166,15 @@
       "email": "ealde@gmail.com",
       "password": "cdh",
       "year": "2017",
+      "role": "students",
+
       "gender": "Female",
       "documents": {
         "grade8": "Document1.pdf",
         "grade12": "Mesobinternshipreport.pdf",
         "transcript": "cv (1).pdf"
       },
-      "status": "approved"
+      "status": "Pending"
     },
     {
       "id": 1769662316997,
@@ -160,13 +182,15 @@
       "email": "nejmi@gmail.com",
       "password": "dfs",
       "year": "2017",
+      "role": "students",
+
       "gender": "Female",
       "documents": {
         "grade8": "cv (1).pdf",
         "grade12": "Full Research Outline for Research Methods In CS.pdf",
         "transcript": "Mesobinternshipreport.pdf"
       },
-      "status": "approved"
+      "status": "Pending"
     },
     {
       "id": 1769662364009,
@@ -174,13 +198,15 @@
       "email": "firdi@gmail.com",
       "password": "dejh",
       "year": "2017",
+      "role": "students",
+
       "gender": "Female",
       "documents": {
         "grade8": "cv (1).pdf",
         "grade12": "Chapter Five.pdf",
         "transcript": "Group members.pdf"
       },
-      "status": "approved"
+      "status": "Pending"
     },
     {
       "id": 1769662583646,
@@ -188,13 +214,15 @@
       "email": "hanan@gmail.com",
       "password": "sdh",
       "year": "2017",
+      "role": "students",
+
       "gender": "Female",
       "documents": {
         "grade8": "cv (1).pdf",
         "grade12": "Mesobinternshipreport.pdf",
         "transcript": "roadmap.pdf"
       },
-      "status": "approved"
+      "status": "Pending"
     },
     {
       "id": 1769662618489,
@@ -202,13 +230,15 @@
       "email": "lamri@gmail.com",
       "password": "cdjchd",
       "year": "2017",
+      "role": "students",
+
       "gender": "Female",
       "documents": {
         "grade8": "Staff Evaluation Docs.pdf",
         "grade12": "Group members.pdf",
         "transcript": "roadmap.pdf"
       },
-      "status": "approved"
+      "status": "Pending"
     },
     {
       "id": 1769662666431,
@@ -216,13 +246,15 @@
       "email": "mfeti@gmail.com",
       "password": "mfeti",
       "year": "2017",
+      "role": "students",
+
       "gender": "Female",
       "documents": {
         "grade8": "Full Research Outline for Research Methods In CS.pdf",
         "grade12": "Mesobinternshipreport.pdf",
         "transcript": "roadmap.pdf"
       },
-      "status": "approved"
+      "status": "Pending"
     },
     {
       "id": 1769662725525,
@@ -230,13 +262,15 @@
       "email": "mame@gmail.com",
       "password": "asdf",
       "year": "2017",
+      "role": "students",
+
       "gender": "Female",
       "documents": {
         "grade8": "roadmap.pdf",
         "grade12": "Mesobinternshipreport.pdf",
         "transcript": "Mesobinternshipreport.pdf"
       },
-      "status": "approved"
+      "status": "Pending"
     },
     {
       "id": 1769662774456,
@@ -244,6 +278,8 @@
       "email": "zoba@gmail.com",
       "password": "def",
       "year": "2018",
+      "role": "students",
+
       "gender": "Female",
       "documents": {
         "grade8": "Mesobinternshipreport.pdf",
@@ -258,13 +294,15 @@
       "email": "child@gmail.com",
       "password": "cf g",
       "year": "2018",
+      "role": "students",
+
       "gender": "Male",
       "documents": {
         "grade8": "roadmap.pdf",
         "grade12": "Mesobinternshipreport.pdf",
         "transcript": "Mesobinternshipreport.pdf"
       },
-      "status": "approved"
+      "status": "Pending"
     },
     {
       "id": 1769691004228,
@@ -272,159 +310,17 @@
       "email": "child@gmail.com",
       "password": "fdrr",
       "year": "2018",
+      "role": "students",
+
       "gender": "Male",
       "documents": {
         "grade8": "Mesobinternshipreport.pdf",
         "grade12": "Staff Evaluation Docs.pdf",
         "transcript": "Mesobinternshipreport.pdf"
       },
-      "status": "approved"
+      "status": "Pending"
     }
   ],
-  "students": [
-    {
-      "id": "UGPR0001/18",
-      "fullName": "Abdulkerim",
-      "email": "abdu@gmail.com",
-      "password": "w3r",
-      "gender": "Male",
-      "departement": "FreshMan",
-      "status": "active"
-    },
-    {
-      "id": "UGPR0002/18",
-      "fullName": "abdosh",
-      "email": "child@gmail.com",
-      "password": "fdrr",
-      "gender": "Male",
-      "departement": "FreshMan",
-      "status": "active"
-    },
-    {
-      "id": "UGPR0003/18",
-      "fullName": "ASDFG",
-      "email": "child@gmail.com",
-      "password": "bjgh",
-      "gender": "Male",
-      "departement": "FreshMan",
-      "status": "active"
-    },
-    {
-      "id": "UGPR0004/18",
-      "fullName": "bn",
-      "email": "child@gmail.com",
-      "password": "cf g",
-      "gender": "Male",
-      "departement": "FreshMan",
-      "status": "active"
-    },
-    {
-      "id": "UGPR0005/18",
-      "fullName": "Eadle  Tesfaye",
-      "email": "ealde@gmail.com",
-      "password": "cdh",
-      "gender": "Female",
-      "departement": "FreshMan",
-      "status": "active"
-    },
-    {
-      "id": "UGPR0006/18",
-      "fullName": "Ekram Tofik",
-      "email": "student@example.com",
-      "password": "ekru",
-      "gender": "Male",
-      "departement": "FreshMan",
-      "status": "active"
-    },
-    {
-      "id": "UGPR0007/18",
-      "fullName": "Firdos  kedis",
-      "email": "firdi@gmail.com",
-      "password": "dejh",
-      "gender": "Female",
-      "departement": "FreshMan",
-      "status": "active"
-    },
-    {
-      "id": "UGPR0008/18",
-      "fullName": "habibti",
-      "email": "parent@example.com",
-      "password": "habibyi",
-      "gender": "Female",
-      "departement": "FreshMan",
-      "status": "active"
-    },
-    {
-      "id": "UGPR0009/18",
-      "fullName": "Hanan Kasim",
-      "email": "hanan@gmail.com",
-      "password": "sdh",
-      "gender": "Female",
-      "departement": "FreshMan",
-      "status": "active"
-    },
-    {
-      "id": "UGPR0010/18",
-      "fullName": "Lamrot  Fkru",
-      "email": "lamri@gmail.com",
-      "password": "cdjchd",
-      "gender": "Female",
-      "departement": "FreshMan",
-      "status": "active"
-    },
-    {
-      "id": "UGPR0011/18",
-      "fullName": "Mohammed Ahmed",
-      "email": "mfeti@gmail.com",
-      "password": "mfeti",
-      "gender": "Female",
-      "departement": "FreshMan",
-      "status": "active"
-    },
-    {
-      "id": "UGPR0012/18",
-      "fullName": "Mohammed Dorm",
-      "email": "mame@gmail.com",
-      "password": "asdf",
-      "gender": "Female",
-      "departement": "FreshMan",
-      "status": "active"
-    },
-    {
-      "id": "UGPR0013/18",
-      "fullName": "muaz Abraham",
-      "email": "muaz@gmail.com",
-      "password": "edgf",
-      "gender": "Male",
-      "departement": "FreshMan",
-      "status": "active"
-    },
-    {
-      "id": "UGPR0014/18",
-      "fullName": "nati abebaw",
-      "email": "nati@gmail.com",
-      "password": "cgdhwf",
-      "gender": "Male",
-      "departement": "FreshMan",
-      "status": "active"
-    },
-    {
-      "id": "UGPR0015/18",
-      "fullName": "Nebil Abdo",
-      "email": "nebilbromance@gmail.com",
-      "password": "rsaw",
-      "gender": "Male",
-      "departement": "FreshMan",
-      "status": "active"
-    },
-    {
-      "id": "UGPR0016/18",
-      "fullName": "nejmia   abdi",
-      "email": "nejmi@gmail.com",
-      "password": "dfs",
-      "gender": "Female",
-      "departement": "FreshMan",
-      "status": "active"
-    }
-  ]
+  "students": [],
+  "teachers": []
 }

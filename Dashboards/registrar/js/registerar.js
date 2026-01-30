@@ -122,6 +122,7 @@ async function display() {
           email: object.email,
           password: object.password,
           gender: object.gender,
+          year:object.year,
           departement: "FreshMan",
           status: "active",
         };
