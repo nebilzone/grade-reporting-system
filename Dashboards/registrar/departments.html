@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Department Page</title>
+    <link rel="stylesheet" href="../../components/sidebar.css" />
+    <link rel="stylesheet" href="./css/departement.css" />
+  </head>
+  <body>
+    <div class="sidebarContainer"></div>
+
+    <div class="pageContent">
+      <h1>Departments dashboards</h1>
+      <button type="button" class="newDepartmentFormBtn">
+        Create new Departement
+      </button>
+
+      <div class="newDepartmentForm hidden">
+       <button type="button" class='backBtn'>❮ back</button>
+        <div>
+          <label for="departmentName">Department Name</label><br />
+          <input
+            type="text"
+            placeholder="Department Name"
+            id="departmentName"
+          />
+        </div>
+        <div>
+          <label for="departmentCode">Department Code</label><br />
+          <input type="text" placeholder="CS" id="departmentCode" />
+        </div>
+        <div>
+          <label for="status">Status</label><br />
+
+          <select name="status" id="status">
+            <option value="active">active</option>
+            <option value="pending">pending</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="year">Created Year</label><br />
+          <input type="text" placeholder="Year" id="year" />
+        </div>
+        <button type="submit" class="newDepartmentBtn">Create</button>
+      </div>
+    </div>
+    <div class="overlay hidden"></div>
+    <script src="./js/default.js"></script>
+    <script src="./js/departement.js"></script>
+  </body>
+</html>

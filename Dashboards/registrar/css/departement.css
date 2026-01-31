@@ -1,0 +1,74 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+}
+.pageContent {
+  width: 100%;
+  margin-left: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-right: 40px;
+}
+h1 {
+  padding: 20px;
+  color: #435580;
+}
+.newDepartmentFormBtn {
+  align-self: self-end;
+  padding: 3px;
+}
+.newDepartmentForm {
+  align-self: center;
+  padding: 35px;
+  border-radius: 5px;
+  background-color: #e8e5e5;
+  z-index: 10;
+}
+.newDepartmentForm div {
+  padding: 10px;
+  width: 270px;
+}
+
+.newDepartmentForm input,
+.newDepartmentForm select {
+  width: 250px;
+  padding: 3px;
+  border-radius: 3px;
+  outline: none;
+  border: 2px solid #d1d5db;
+}
+.newDepartmentForm input:focus,
+.newDepartmentForm select:focus {
+  border: 2px solid orange;
+}
+.newDepartmentBtn {
+  margin-left: 210px;
+}
+.newDepartmentBtn,
+.newDepartmentFormBtn {
+  background-color: #ff8415;
+  border: none;
+  padding: 3px 7px;
+  color: white;
+  border-radius: 3px;
+}
+.backBtn {
+  border: none;
+}
+.hidden {
+  display: none;
+}
+.overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(5, 5, 5, 0.45);
+  z-index: 5;
+}
