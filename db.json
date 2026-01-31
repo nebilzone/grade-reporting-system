@@ -22,7 +22,6 @@
       "password": "rsaw44",
       "year": "2016",
       "role": "students",
-
       "gender": "Male",
       "documents": {
         "grade8": "cv (1).pdf",
@@ -38,7 +37,6 @@
       "password": "rsaw88",
       "year": "2016",
       "role": "students",
-
       "gender": "Male",
       "documents": {
         "grade8": "cv (1).pdf",
@@ -54,7 +52,6 @@
       "password": "rsaw88",
       "year": "2016",
       "role": "students",
-
       "gender": "Male",
       "documents": {
         "grade8": "cv (1).pdf",
@@ -70,7 +67,6 @@
       "password": "ekru",
       "year": "2016",
       "role": "students",
-
       "gender": "Male",
       "documents": {
         "grade8": "Chapter Five.pdf",
@@ -86,14 +82,13 @@
       "password": "bjgh",
       "year": "2016",
       "role": "students",
-
       "gender": "Male",
       "documents": {
         "grade8": "Chapter Five.pdf",
         "grade12": "Staff Evaluation Docs.pdf",
         "transcript": "roadmap.pdf"
       },
-      "status": "Pending"
+      "status": "approved"
     },
     {
       "id": 1769611795059,
@@ -102,7 +97,6 @@
       "password": "habibyi",
       "year": "2016",
       "role": "students",
-
       "gender": "Female",
       "documents": {
         "grade8": "roadmap.pdf",
@@ -118,14 +112,13 @@
       "password": "w3r",
       "year": "2016",
       "role": "students",
-
       "gender": "Male",
       "documents": {
         "grade8": "Group members.pdf",
         "grade12": "Staff Evaluation Docs.pdf",
         "transcript": "Group members.pdf"
       },
-      "status": "Pending"
+      "status": "approved"
     },
     {
       "id": 1769662164756,
@@ -133,10 +126,8 @@
       "email": "muaz@gmail.com",
       "password": "edgf",
       "year": "2017",
-            "role": "students",
-
+      "role": "students",
       "gender": "Male",
-
       "documents": {
         "grade8": "Full Research Outline for Research Methods In CS.pdf",
         "grade12": "roadmap.pdf",
@@ -151,7 +142,6 @@
       "password": "cgdhwf",
       "year": "2017",
       "role": "students",
-
       "gender": "Male",
       "documents": {
         "grade8": "roadmap.pdf",
@@ -167,7 +157,6 @@
       "password": "cdh",
       "year": "2017",
       "role": "students",
-
       "gender": "Female",
       "documents": {
         "grade8": "Document1.pdf",
@@ -183,7 +172,6 @@
       "password": "dfs",
       "year": "2017",
       "role": "students",
-
       "gender": "Female",
       "documents": {
         "grade8": "cv (1).pdf",
@@ -199,7 +187,6 @@
       "password": "dejh",
       "year": "2017",
       "role": "students",
-
       "gender": "Female",
       "documents": {
         "grade8": "cv (1).pdf",
@@ -215,7 +202,6 @@
       "password": "sdh",
       "year": "2017",
       "role": "students",
-
       "gender": "Female",
       "documents": {
         "grade8": "cv (1).pdf",
@@ -231,7 +217,6 @@
       "password": "cdjchd",
       "year": "2017",
       "role": "students",
-
       "gender": "Female",
       "documents": {
         "grade8": "Staff Evaluation Docs.pdf",
@@ -247,7 +232,6 @@
       "password": "mfeti",
       "year": "2017",
       "role": "students",
-
       "gender": "Female",
       "documents": {
         "grade8": "Full Research Outline for Research Methods In CS.pdf",
@@ -263,7 +247,6 @@
       "password": "asdf",
       "year": "2017",
       "role": "students",
-
       "gender": "Female",
       "documents": {
         "grade8": "roadmap.pdf",
@@ -279,7 +262,6 @@
       "password": "def",
       "year": "2018",
       "role": "students",
-
       "gender": "Female",
       "documents": {
         "grade8": "Mesobinternshipreport.pdf",
@@ -295,7 +277,6 @@
       "password": "cf g",
       "year": "2018",
       "role": "students",
-
       "gender": "Male",
       "documents": {
         "grade8": "roadmap.pdf",
@@ -311,16 +292,165 @@
       "password": "fdrr",
       "year": "2018",
       "role": "students",
-
       "gender": "Male",
       "documents": {
         "grade8": "Mesobinternshipreport.pdf",
         "grade12": "Staff Evaluation Docs.pdf",
         "transcript": "Mesobinternshipreport.pdf"
       },
-      "status": "Pending"
+      "status": "approved"
+    },
+    {
+      "id": 1769783873758,
+      "fullName": "Nebil Abdo",
+      "email": "child@example.com",
+      "password": "1234",
+      "role": "teachers",
+      "phone": "+251948769744",
+      "gender": "Male",
+      "nationalID": "234",
+      "departments": "computer",
+      "documents": {
+        "cv": "cv (1).pdf",
+        "degree": "roadmap.pdf",
+        "masters": "Not uploaded",
+        "phd": "Not uploaded"
+      },
+      "status": "approved"
+    },
+    {
+      "id": 1769783873745,
+      "fullName": "Natnael Abebaw",
+      "email": "nati@example.com",
+      "password": "4568",
+      "role": "teachers",
+      "phone": "+251948769744",
+      "gender": "Male",
+      "nationalID": "67234",
+      "departments": "software",
+      "documents": {
+        "cv": "cv (1).pdf",
+        "degree": "roadmap.pdf",
+        "masters": "Not uploaded",
+        "phd": "Not uploaded"
+      },
+      "status": "approved"
     }
   ],
-  "students": [],
-  "teachers": []
+  "students": [
+    {
+      "id": "UGPR0001/2018",
+      "fullName": "abdosh",
+      "email": "child@gmail.com",
+      "password": "fdrr",
+      "gender": "Male",
+      "year": "2018",
+      "departement": "FreshMan",
+      "status": "active"
+    },
+    {
+      "id": "UGPR0002/2018",
+      "fullName": "Abdulkerim",
+      "email": "abdu@gmail.com",
+      "password": "w3r",
+      "gender": "Male",
+      "year": "2016",
+      "departement": "FreshMan",
+      "status": "Pending"
+    },
+    {
+      "id": "UGPR0003/2018",
+      "fullName": "ASDFG",
+      "email": "child@gmail.com",
+      "password": "bjgh",
+      "gender": "Male",
+      "year": "2016",
+      "departement": "FreshMan",
+      "status": "Pending"
+    },
+    {
+      "id": "UGPR0004/2018",
+      "fullName": "abdosh",
+      "email": "child@gmail.com",
+      "password": "fdrr",
+      "gender": "Male",
+      "year": "2018",
+      "departement": "FreshMan",
+      "status": "active"
+    }
+  ],
+  "teachers": [
+    {
+      "fullName": "Natnael Abebaw",
+      "email": "nati@example.com",
+      "password": "4568",
+      "gender": "Male",
+      "phone": "+251948769744",
+      "nationalId": "67234",
+      "role": "teachers",
+      "departement": "software",
+      "documents": {
+        "cv": "cv (1).pdf",
+        "degree": "roadmap.pdf",
+        "masters": "Not uploaded",
+        "phd": "Not uploaded"
+      },
+      "status": "active",
+      "id": 1
+    },
+    {
+      "fullName": "Nebil Abdo",
+      "email": "child@example.com",
+      "password": "1234",
+      "gender": "Male",
+      "phone": "+251948769744",
+      "nationalId": "234",
+      "role": "teachers",
+      "departement": "computer",
+      "documents": {
+        "cv": "cv (1).pdf",
+        "degree": "roadmap.pdf",
+        "masters": "Not uploaded",
+        "phd": "Not uploaded"
+      },
+      "status": "active",
+      "id": 2
+    },
+    {
+      "fullName": "Natnael Abebaw",
+      "email": "nati@example.com",
+      "password": "4568",
+      "gender": "Male",
+      "phone": "+251948769744",
+      "nationalId": "67234",
+      "role": "teachers",
+      "departement": "software",
+      "documents": {
+        "cv": "cv (1).pdf",
+        "degree": "roadmap.pdf",
+        "masters": "Not uploaded",
+        "phd": "Not uploaded"
+      },
+      "status": "active",
+      "id": 3
+    },
+    {
+      "fullName": "Nebil Abdo",
+      "email": "child@example.com",
+      "password": "1234",
+      "gender": "Male",
+      "phone": "+251948769744",
+      "nationalId": "234",
+      "role": "teachers",
+      "departement": "computer",
+      "documents": {
+        "cv": "cv (1).pdf",
+        "degree": "roadmap.pdf",
+        "masters": "Not uploaded",
+        "phd": "Not uploaded"
+      },
+      "status": "active",
+      "id": 4
+    }
+  ]
 }

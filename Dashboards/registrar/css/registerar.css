@@ -108,3 +108,23 @@ h1 {
   border: 1px solid orange;
   outline: none;
 }
+.btnTab {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+.btnTab button {
+  padding: 5px;
+}
+.fristBtn{
+background-color: #DFEDFF;
+border: none;
+color: #034ee4;
+border-radius: 3px;
+}
+.secondBtn{background-color: #FEE5E5;
+  border: none;
+color: #B07F36;
+border-radius: 3px;
+}

@@ -11,7 +11,7 @@ body{
     padding: 30px;
     border-radius: 5px;
 }
-.fullName,.email,.password,.year{
+#fullName,#email,#password,#year{
     width:100%
 }
 button {

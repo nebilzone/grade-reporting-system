@@ -16,12 +16,7 @@
         required
       /><br /><br />
       <label for="email" class="email">Email </label><br />
-      <input
-        type="email"
-        id="email"
-        placeholder="Email"
-        required
-      /><br /><br />
+      <input type="email" id="email" placeholder="Email" required /><br /><br />
       <label for="password" class="password">Password </label><br />
       <input
         type="password"
@@ -30,25 +25,18 @@
         required
       /><br /><br />
       <label for="phone" class="phone">Phone Number </label><br />
+      <input type="text" id="phone" placeholder="+251" required /><br /><br />
+      <label for="department">Departments </label><br />
       <input
         type="text"
-        class="phone"
-        id="phone"
-        placeholder="+251"
-        required
-      /><br /><br />
-      <label for="prefered-departments" >Departments </label><br />
-      <input
-        type="text"
-        id="prefered-departments"
+        id="department"
         placeholder="Prefered departments"
         required
       /><br /><br />
-      <label for="national-id" >National ID </label><br />
+      <label for="nationalId">National ID </label><br />
       <input
         type="text"
-        class="national-id"
-        id="national-id"
+        id="nationalId"
         placeholder="FAN Number"
         required
       /><br /><br />
@@ -56,37 +44,29 @@
       <label for="male" value="">Gender </label><br />
       <label for="male">Male </label>
       <input type="radio" value="Male" id="male" name="gender" />
-      <label for="female" class="femaleLabel">Female </label>
+      <label for="male">Female </label>
+      <input type="radio" value="Female" id="male" name="gender" /><br /><br />
+      <label for="cv"> CV </label><br />
       <input
-        type="radio"
-        value="Female"
-        id="female"
-        name="gender"
+        type="file"
+        id="cv"
+        name="cv"
+        accept="application/pdf"
+        required
       /><br /><br />
-      <label for="degree" >Bachelor Degree </label><br />
-
+      <label for="degree">Bachelor Degree </label><br />
       <input
         type="file"
         id="degree"
+        name="degree"
         accept="application/pdf"
-        required
       /><br /><br />
-      <label for="masters" >Masters (optional) </label><br />
+      <label for="masters">Masters (optional) </label><br />
 
-      <input
-        type="file"
-        id="masters"
-        accept="application/pdf"
+      <input type="file" id="masters" accept="application/pdf" /><br /><br />
+      <label for="phd">Phd (optional) </label><br />
 
-      /><br /><br />
-      <label for="phd" >Phd (optional) </label><br />
-
-      <input
-        type="file"
-        id="phd"
-        accept="application/pdf"
-        required
-      /><br /><br />
+      <input type="file" id="phd" accept="application/pdf" /><br /><br />
 
       <button type="submit" class="registerBtn">Register</button>
     </form>

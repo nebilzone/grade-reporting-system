@@ -3,9 +3,9 @@
     margin: 0px;
     box-sizing: border-box;
 }
-/* body{
+body{
     display: flex;
-} */
+}
 .pageContent{
     width: 100%;
     margin-left:250px ;
