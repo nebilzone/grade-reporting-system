@@ -1,7 +1,7 @@
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 body {
   display: flex;
@@ -12,7 +12,7 @@ body {
 
 .registerForm {
   width: 350px;
-  border: 1px solid orange;
+  border: 2px solid #d1d5db;
   padding: 30px;
   border-radius: 5px;
   background-color: #e8e5e5;
@@ -20,7 +20,7 @@ body {
 #fullName,
 #email,
 #password,
-#year,
+
 #freshman {
   width: 100%;
   outline: none;
@@ -30,9 +30,9 @@ body {
   border: 2px solid #d1d5db;
 }
 .options {
-  width: 250px;        /* control width */
-  height: 45px;        /* control height */
-  padding: 10px 12px;  /* top-bottom | left-right */
+  width: 250px;
+  height: 45px;
+  padding: 10px 12px; 
   font-size: 16px;
   border-radius: 6px;
   border: 1px solid #ccc;
@@ -50,7 +50,7 @@ body {
 
 button {
   margin-left: 247px;
-  background-color: #FF8415;
+  background-color: #ff8415;
   padding: 3px 7px;
   border: none;
   color: white;

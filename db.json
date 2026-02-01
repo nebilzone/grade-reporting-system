@@ -380,6 +380,78 @@
         "transcript": "cv (1).pdf"
       },
       "status": "Pending"
+    },
+    {
+      "id": 1769957309179,
+      "fullName": "Nebil Abdo",
+      "email": "nebilbromance@gmail.com",
+      "password": "@Nebilabdo43",
+      "nationalID": "cvbnm",
+      "role": "teachers",
+      "phone": "+251948769744",
+      "gender": "Male",
+      "departments": "fregftr",
+      "documents": {
+        "cv": "cv (1).pdf",
+        "degree": "cv (1).pdf",
+        "masters": "cv (1).pdf",
+        "phd": "cv (1).pdf"
+      },
+      "status": "Pending"
+    },
+    {
+      "id": 1769957475113,
+      "fullName": "Nebil Abdo",
+      "email": "nebilbromance@gmail.com",
+      "password": "@Nebilbbf2dc",
+      "nationalID": "cfvgrfdc",
+      "role": "teachers",
+      "phone": "+251948769744",
+      "gender": "Male",
+      "departments": "cfeds",
+      "documents": {
+        "cv": "cv (1).pdf",
+        "degree": "cv (1).pdf",
+        "masters": "cv (1).pdf",
+        "phd": "Not uploaded"
+      },
+      "status": "Pending"
+    },
+    {
+      "id": 1769957535850,
+      "fullName": "Nebil Abdo",
+      "email": "nebilbromance@gmail.com",
+      "password": "@Nebil23ec",
+      "nationalID": "dcfvgbh",
+      "role": "teachers",
+      "phone": "+251948769744",
+      "gender": "Male",
+      "departments": "fregftr",
+      "documents": {
+        "cv": "cv (1).pdf",
+        "degree": "cv (1).pdf",
+        "masters": "Not uploaded",
+        "phd": "Not uploaded"
+      },
+      "status": "Pending"
+    },
+    {
+      "id": 1769959338269,
+      "fullName": "Nebil Abdo",
+      "email": "nebilbromance@gmail.com",
+      "password": "@Nebilabdo45",
+      "role": "teachers",
+      "phone": "+251948769744",
+      "gender": "Male",
+      "nationalID": "1234567898765432",
+      "departments": "vbfghg5",
+      "documents": {
+        "cv": "cv (1).pdf",
+        "degree": "cv (1).pdf",
+        "masters": "Not uploaded",
+        "phd": "Not uploaded"
+      },
+      "status": "Pending"
     }
   ],
   "students": [

@@ -14,10 +14,9 @@ async function display() {
   function getEthiopianYear() {
     const today = new Date();
     const gregYear = today.getFullYear();
-    const month = today.getMonth(); // 0 = January
+    const month = today.getMonth(); 
     const day = today.getDate();
 
-    // Ethiopian New Year is September 11
     const etYear =
       month > 8 || (month === 8 && day >= 11) ? gregYear - 7 : gregYear - 8;
 
