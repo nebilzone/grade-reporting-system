@@ -8,34 +8,32 @@
   </head>
   <body>
     <form action="" class="registerForm" enctype="multipart/form-data">
-      <label for="fullName" class="fullName">Full Name </label><br />
-      <input
-        type="text"
-        id="fullName"
-        placeholder="Full Name"
-        required
-      /><br /><br />
-      <label for="email" class="email">Email </label><br />
-      <input
-        type="email"
-        id="email"
-        placeholder="Email"
-        required
-      /><br /><br />
-      <label for="password" >Password </label><br />
-      <input
-        type="password"
-        id="password"
-        placeholder="Password"
-        required
-      /><br /><br />
-      <label for="year" class="applicationYear">applicationYear </label><br />
-      <input
-        type="text"
-        id="year"
-        placeholder="application Year"
-        required
-      /><br /><br />
+      <label for="fullName">Full Name </label>
+      <div class="fullName">
+        <input type="text" id="fullName" placeholder="Full Name" required />
+      </div>
+      <br />
+      <label for="email" class="email">Email </label>
+      <div class="email">
+        <input type="email" id="email" placeholder="Email" required />
+      </div>
+      <br />
+      <label for="password">Password </label>
+      <div class="password">
+        <input type="password" id="password" placeholder="Password" required />
+      </div>
+      <br />
+      <label for="year" class="applicationYear">ApplicationYear </label>
+      <div class="year">
+        <input type="text" id="year" placeholder="Application Year" required />
+      </div>
+      <br />
+      <label for="freshman" class="freshman">Stream </label><br />
+      <select name="" id="freshman" class="options">
+        <option value="Natural">natural</option>
+        <option value="Social">social</option>
+      </select>
+      <br /><br />
 
       <label for="male" value="">Gender </label><br />
       <label for="male">Male </label>
@@ -47,7 +45,7 @@
         id="female"
         name="gender"
       /><br /><br />
-      <label for="grade8" >Grade 8 result </label><br />
+      <label for="grade8">Grade 8 result </label><br />
 
       <input
         type="file"
@@ -63,7 +61,7 @@
         accept="application/pdf"
         required
       /><br /><br />
-      <label for="grade12" >Grade 12 </label><br />
+      <label for="grade12">Grade 12 </label><br />
 
       <input
         type="file"

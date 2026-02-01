@@ -64,10 +64,10 @@
       "id": 1769609073603,
       "fullName": "Ekram Tofik",
       "email": "student@example.com",
-      "password": "ekru",
+      "password": "ekram",
       "year": "2016",
       "role": "students",
-      "gender": "Male",
+      "gender": "Female",
       "documents": {
         "grade8": "Chapter Five.pdf",
         "grade12": "Staff Evaluation Docs.pdf",
@@ -92,12 +92,12 @@
     },
     {
       "id": 1769611795059,
-      "fullName": "habibti",
+      "fullName": "natinael",
       "email": "parent@example.com",
-      "password": "habibyi",
+      "password": "nati",
       "year": "2016",
       "role": "students",
-      "gender": "Female",
+      "gender": "Male",
       "documents": {
         "grade8": "roadmap.pdf",
         "grade12": "Group members.pdf",
@@ -335,6 +335,51 @@
         "phd": "Not uploaded"
       },
       "status": "approved"
+    },
+    {
+      "id": 1769887855012,
+      "fullName": "4d",
+      "email": "swxx@gmail.com",
+      "password": "defrvg",
+      "year": "xdwerf",
+      "role": "students",
+      "gender": "Male",
+      "documents": {
+        "grade8": "cv (1).pdf",
+        "grade12": "cv (1).pdf",
+        "transcript": "cv (1).pdf"
+      },
+      "status": "Pending"
+    },
+    {
+      "id": 1769887932288,
+      "fullName": "bn",
+      "email": "nebilbromance@email.com",
+      "password": "gvhbjn",
+      "year": "578",
+      "role": "students",
+      "gender": "Male",
+      "documents": {
+        "grade8": "cv (1).pdf",
+        "grade12": "cv (1).pdf",
+        "transcript": "cv (1).pdf"
+      },
+      "status": "Pending"
+    },
+    {
+      "id": 1769888047347,
+      "fullName": "decfr",
+      "email": "admin@example.com",
+      "password": "e3r4",
+      "year": "234",
+      "role": "students",
+      "gender": "Female",
+      "documents": {
+        "grade8": "cv (1).pdf",
+        "grade12": "cv (1).pdf",
+        "transcript": "cv (1).pdf"
+      },
+      "status": "Pending"
     }
   ],
   "students": [
@@ -345,7 +390,7 @@
       "password": "fdrr",
       "gender": "Male",
       "year": "2018",
-      "departement": "FreshMan",
+      "level": "Freshman",
       "status": "active"
     },
     {
@@ -355,7 +400,7 @@
       "password": "w3r",
       "gender": "Male",
       "year": "2016",
-      "departement": "FreshMan",
+      "level": "Freshman",
       "status": "Pending"
     },
     {
@@ -365,7 +410,7 @@
       "password": "bjgh",
       "gender": "Male",
       "year": "2016",
-      "departement": "FreshMan",
+      "level": "Freshman",
       "status": "Pending"
     },
     {
@@ -374,8 +419,8 @@
       "email": "child@gmail.com",
       "password": "fdrr",
       "gender": "Male",
+      "level": "Freshman",
       "year": "2018",
-      "departement": "FreshMan",
       "status": "active"
     }
   ],
@@ -452,5 +497,136 @@
       "status": "active",
       "id": 4
     }
-  ]
+  ],
+  "courses": [
+    {
+      "id": "FRESH-COM-101",
+      "name": "Communicative English 1",
+      "level": "Freshman",
+      "track": "ALL",
+      "semester": 1,
+      "credit": 3
+    },
+    {
+      "id": "FRESH-COM-101",
+      "name": "Logic and Critical",
+      "level": "Freshman",
+      "track": "ALL",
+      "semester": 1,
+      "credit": 3
+    },
+    {
+      "id": "FRESH-COM-101",
+      "name": "Geography",
+      "level": "Freshman",
+      "track": "ALL",
+      "semester": 1,
+      "credit": 3
+    },
+    {
+      "id": "FRESH-NAT-101",
+      "name": "Mathematics For Natural",
+      "level": "Freshman",
+      "track": "Natural",
+      "semester": 1,
+      "credit": 3
+    },
+    {
+      "id": "FRESH-SOC-101",
+      "name": "Mathematics For Social",
+      "level": "Freshman",
+      "track": "Social",
+      "semester": 1,
+      "credit": 3
+    },
+    {
+      "id": "FRESH-COM-101",
+      "name": "phsycology",
+      "level": "Freshman",
+      "track": "All",
+      "semester": 1,
+      "credit": 3
+    },
+    {
+      "id": "FRESH-COM-101",
+      "name": "History",
+      "level": "Freshman",
+      "track": "All",
+      "semester": 1,
+      "credit": 3
+    },
+    {
+      "id": "FRESH-COM-101",
+      "name": "Economics",
+      "level": "Freshman",
+      "track": "Social",
+      "semester": 1,
+      "credit": 3
+    },
+    {
+      "id": "FRESH-COM-101",
+      "name": "Communicative English 2",
+      "level": "Freshman",
+      "track": "ALL",
+      "semester": 2,
+      "credit": 3
+    },
+    {
+      "id": "FRESH-COM-101",
+      "name": "Anthropology",
+      "level": "Freshman",
+      "track": "ALL",
+      "semester": 2,
+      "credit": 3
+    },
+    {
+      "id": "FRESH-COM-101",
+      "name": "Emerging",
+      "level": "Freshman",
+      "track": "ALL",
+      "semester": 2,
+      "credit": 3
+    },
+    {
+      "id": "FRESH-NAT-101",
+      "name": "Applied Maths",
+      "level": "Freshman",
+      "track": "Natural",
+      "semester": 2,
+      "credit": 3
+    },
+    {
+      "id": "FRESH-SOC-101",
+      "name": "Enterprener",
+      "level": "Freshman",
+      "track": "Social",
+      "semester": 2,
+      "credit": 3
+    },
+    {
+      "id": "FRESH-NAT-101",
+      "name": "Physics",
+      "level": "Freshman",
+      "track": "All",
+      "semester": 1,
+      "credit": 3
+    },
+    {
+      "id": "FRESH-COM-101",
+      "name": "History 1",
+      "level": "Freshman",
+      "track": "All",
+      "semester": 2,
+      "credit": 3
+    },
+    {
+      "id": "FRESH-NAT-101",
+      "name": "Economics",
+      "level": "Freshman",
+      "track": "Natural",
+      "semester": 2,
+      "credit": 3
+    }
+  ],
+  "registrations": []
 }

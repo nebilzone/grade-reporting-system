@@ -1,9 +1,13 @@
 const submitForm = document.querySelector(".registerForm");
 submitForm.addEventListener("submit", async function (e) {
   e.preventDefault();
-  console.log(e);
   const event = e.target;
-
+while(event.fullName.value.length<3){
+const err=document.createElement('p');
+err.textContent='Please insert Valid Name'
+// .append()
+}
+console.log(event.fullName)
   const teacher = {
     id:Date.now(),
     fullName: event.fullName.value,
@@ -23,12 +27,12 @@ submitForm.addEventListener("submit", async function (e) {
     status:"Pending"
   };
   console.log(teacher);
-    await fetch("http://localhost:3000/applications", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(teacher),
-    });
-  alert("Application submitted successfully!");
+  //   await fetch("http://localhost:3000/applications", {
+  //     method: "POST",
+  //     headers: {
+  //       "content-type": "application/json",
+  //     },
+  //     body: JSON.stringify(teacher),
+  //   });
+  // alert("Application submitted successfully!");
 });

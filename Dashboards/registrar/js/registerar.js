@@ -9,7 +9,7 @@ async function display() {
   const table = document.createElement("table");
   const thead = document.createElement("thead");
   const tabBtn = document.querySelector(".btnTab");
-  let activeTab = "students"; 
+  let activeTab = "students";
 
   function getEthiopianYear() {
     const today = new Date();
@@ -138,7 +138,7 @@ async function display() {
             password: object.password,
             gender: object.gender,
             year: object.year,
-            departement: "FreshMan",
+            level: "FreshMan",
             status: "active",
           };
           await fetch("http://localhost:3000/students", {
