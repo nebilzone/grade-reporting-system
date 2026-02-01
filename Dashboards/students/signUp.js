@@ -1,7 +1,7 @@
 const forms = document.querySelector(".registerForm");
-const paswwordInput = document.querySelector(".password");
-const fullNameInput = document.querySelector(".fullName");
-const emailInput = document.querySelector(".email");
+const passwordContainer = document.querySelector(".password");
+const fullNameContainer = document.querySelector(".fullName");
+const emailContainer = document.querySelector(".email");
 const batchInput = document.querySelector(".year");
 const streamInput = document.querySelector("freshman");
 const genderInput = document.querySelector('input[name="gender"]');
@@ -17,7 +17,66 @@ function getEthiopianYear() {
 
   return etYear;
 }
-
+async function nameValidation(name) {
+  const err = document.createElement("p");
+  document.querySelector("#email").addEventListener("focus", async function () {
+    err.textContent = "";
+  });
+  let value = name.trim();
+  value = value.replace(/\s+/g, " ");
+  const parts = value.split(" ");
+  const isCapitalized = parts.every(
+    (word) => word[0] === word[0].toUpperCase(),
+  );
+  if (
+    value.length < 7 ||
+    !value.includes(" ") ||
+    !/^[A-Za-z\s]+$/.test(value) ||
+    !isCapitalized
+  ) {
+    err.textContent = "Please insert Valid Name";
+    err.style.color = "red";
+    emailContainer.append(err);
+    return false;
+  } else {
+    return value;
+  }
+}
+async function emailValidation(email) {
+  const err = document.createElement("p");
+  document
+    .querySelector("#fullName")
+    .addEventListener("focus", async function () {
+      err.textContent = "";
+    });
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    err.textContent = "Please insert email address";
+    err.style.color = "red";
+    fullNameContainer.append(err);
+    return false;
+  } else {
+    return email;
+  }
+}
+async function passwordValidation(password) {
+  const err = document.createElement("p");
+  document
+    .querySelector("#password")
+    .addEventListener("focus", async function () {
+      err.textContent = "";
+    });
+  if (
+    !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9])\S{8,}$/.test(password)
+  ) {
+    err.textContent =
+      "Password must > 8 & contain 1 small ,1 capital and 1 special character";
+    err.style.color = "red";
+    passwordContainer.append(err);
+    return false;
+  } else {
+    return password;
+  }
+}
 forms.addEventListener("submit", async (e) => {
   e.preventDefault();
 

@@ -1,12 +1,13 @@
 const submitForm = document.querySelector(".registerForm");
-const paswwordInput = document.querySelector(".password");
-const fullNameInput = document.querySelector(".fullName");
-const emailInput = document.querySelector(".email");
-const nationalIDInput = document.querySelector(".nationalID");
-const departementInput = document.querySelector(".departement");
+const passwordContainer = document.querySelector(".password");
+const fullNameContainer = document.querySelector(".fullName");
+const emailContainer = document.querySelector(".email");
+const nationalIdContainer = document.querySelector(".nationalID");
+const departementContainer = document.querySelector(".departement");
+const phoneContainer = document.querySelector(".phone");
 async function nameValidation(name) {
   const err = document.createElement("p");
-  document.querySelector("#email").addEventListener("focus", async function () {
+  document.querySelector("#fullName").addEventListener("focus", async function () {
     err.textContent = "";
   });
   let value = name.trim();
@@ -23,7 +24,7 @@ async function nameValidation(name) {
   ) {
     err.textContent = "Please insert Valid Name";
     err.style.color = "red";
-    emailInput.append(err);
+    emailContainer.append(err);
     return false;
   } else {
     return value;
@@ -32,14 +33,14 @@ async function nameValidation(name) {
 async function emailValidation(email) {
   const err = document.createElement("p");
   document
-    .querySelector("#fullName")
+    .querySelector("#email")
     .addEventListener("focus", async function () {
       err.textContent = "";
     });
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     err.textContent = "Please insert email address";
     err.style.color = "red";
-    fullNameInput.append(err);
+    fullNameContainer.append(err);
     return false;
   } else {
     return email;
@@ -58,7 +59,7 @@ async function passwordValidation(password) {
     err.textContent =
       "Password must > 8 & contain 1 small ,1 capital and 1 special character";
     err.style.color = "red";
-    paswwordInput.append(err);
+    passwordContainer.append(err);
     return false;
   } else {
     return password;
@@ -75,7 +76,7 @@ async function nationalIDValidation(id) {
   if (id.length < 16 || id.length > 16 || isNaN(id)) {
     err.textContent = "Please insert valid FAN number";
     err.style.color = "red";
-    nationalIDInput.append(err);
+    nationalIdContainer.append(err);
     return false;
   } else {
     return id;
@@ -92,13 +93,50 @@ async function departementValidation(departement) {
   if (departement.length < 3 || !/^[a-zA-Z\s\-]+$/.test(departement)) {
     err.textContent = "Please insert valid departement Name";
     err.style.color = "red";
-    departementInput.append(err);
+    departementContainer.append(err);
     return false;
   } else {
     return departement;
   }
 }
+async function phoneNumberValidation(phone) {
+  const trimmedPhone = phone.trim();
+  const err = document.createElement("p");
 
+  document
+    .querySelector("#phone")
+    .addEventListener("focus", async function () {
+      err.textContent = "";
+    });
+  if (trimmedPhone.startsWith("+251")) {
+    if (
+      (trimmedPhone.slice(0, 4) != "+2519" &&
+        trimmedPhone.slice(0, 4) != "+2517") ||
+      trimmedPhone.slice(4).length != 8
+    ) {
+      err.textContent = "Please insert valid departement Name";
+      err.style.color = "red";
+      departementContainer.append(err);
+      return false;
+    }
+  } else if (trimmedPhone.startsWith("0")) {
+    if (
+      (trimmedPhone.slice(0, 2) != "09" && trimmedPhone.slice(0, 2) != "07") ||
+      trimmedPhone.slice(2).length != 8
+    ) {
+      err.textContent = "Please insert valid departement Name";
+      err.style.color = "red";
+      phoneContainer.append(err);
+      return false;
+    }
+  } else {
+    err.textContent = "Please insert valid phone number";
+    err.style.color = "red";
+    phoneContainer.append(err);
+    return false;
+  }
+  return trimmedPhone;
+}
 submitForm.addEventListener("submit", async function (e) {
   e.preventDefault();
   const event = e.target;
@@ -107,6 +145,7 @@ submitForm.addEventListener("submit", async function (e) {
   const password = await passwordValidation(event.password.value);
   const nationalId = await nationalIDValidation(event.nationalId.value);
   const departement = await departementValidation(event.department.value);
+  const phone = await phoneNumberValidation(event.phone.value);
 
   const teacher = {
     id: Date.now(),
@@ -114,10 +153,10 @@ submitForm.addEventListener("submit", async function (e) {
     email: email,
     password: password,
     role: "teachers",
-    phone: event.phone.value,
+    phone: phone,
     gender: document.querySelector('input[name="gender"]:checked').value,
     nationalID: nationalId,
-    departments: event.department.value,
+    departments: departement,
     documents: {
       cv: event.cv.files[0].name,
       degree: event.degree.files[0].name,
@@ -126,7 +165,7 @@ submitForm.addEventListener("submit", async function (e) {
     },
     status: "Pending",
   };
-  if (email && name && password && nationalId && departement) {
+  if (email && name && password && nationalId && departement && phone) {
     await fetch("http://localhost:3000/applications", {
       method: "POST",
       headers: {

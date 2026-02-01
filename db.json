@@ -336,51 +336,8 @@
       },
       "status": "approved"
     },
-    {
-      "id": 1769887855012,
-      "fullName": "4d",
-      "email": "swxx@gmail.com",
-      "password": "defrvg",
-      "year": "xdwerf",
-      "role": "students",
-      "gender": "Male",
-      "documents": {
-        "grade8": "cv (1).pdf",
-        "grade12": "cv (1).pdf",
-        "transcript": "cv (1).pdf"
-      },
-      "status": "Pending"
-    },
-    {
-      "id": 1769887932288,
-      "fullName": "bn",
-      "email": "nebilbromance@email.com",
-      "password": "gvhbjn",
-      "year": "578",
-      "role": "students",
-      "gender": "Male",
-      "documents": {
-        "grade8": "cv (1).pdf",
-        "grade12": "cv (1).pdf",
-        "transcript": "cv (1).pdf"
-      },
-      "status": "Pending"
-    },
-    {
-      "id": 1769888047347,
-      "fullName": "decfr",
-      "email": "admin@example.com",
-      "password": "e3r4",
-      "year": "234",
-      "role": "students",
-      "gender": "Female",
-      "documents": {
-        "grade8": "cv (1).pdf",
-        "grade12": "cv (1).pdf",
-        "transcript": "cv (1).pdf"
-      },
-      "status": "Pending"
-    },
+    
+
     {
       "id": 1769957309179,
       "fullName": "Nebil Abdo",
@@ -445,6 +402,24 @@
       "gender": "Male",
       "nationalID": "1234567898765432",
       "departments": "vbfghg5",
+      "documents": {
+        "cv": "cv (1).pdf",
+        "degree": "cv (1).pdf",
+        "masters": "Not uploaded",
+        "phd": "Not uploaded"
+      },
+      "status": "Pending"
+    },
+    {
+      "id": 1769972298590,
+      "fullName": "Nebil Abdo",
+      "email": "nebilbromance@gmail.com",
+      "password": "@Nebil4488",
+      "role": "teachers",
+      "phone": "+1 (555) 123-4567",
+      "gender": "Male",
+      "nationalID": "1234567898765432",
+      "departments": "fregftr",
       "documents": {
         "cv": "cv (1).pdf",
         "degree": "cv (1).pdf",

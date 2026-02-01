@@ -1,5 +1,5 @@
-const newDepartementFormBtn = document.querySelector(".newDepartmentFormBtn");
-const newDepartementForm = document.querySelector(".newDepartmentForm");
+const newDepartementFormBtn = document.querySelector(".newCollegeFormBtn");
+const newDepartementForm = document.querySelector(".newCollegeForm");
 const overlay = document.querySelector(".overlay");
 const backBtn = document.querySelector(".backBtn");
 newDepartementFormBtn.addEventListener("click", function () {

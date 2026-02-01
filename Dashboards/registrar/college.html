@@ -5,30 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Department Page</title>
     <link rel="stylesheet" href="../../components/sidebar.css" />
-    <link rel="stylesheet" href="./css/departement.css" />
+    <link rel="stylesheet" href="./css/college.css" />
   </head>
   <body>
     <div class="sidebarContainer"></div>
 
     <div class="pageContent">
-      <h1>Departments dashboards</h1>
-      <button type="button" class="newDepartmentFormBtn">
-        Create new Departement
+      <h1>College dashboards</h1>
+      <button type="button" class="newCollegeFormBtn">
+        Create new College
       </button>
 
-      <div class="newDepartmentForm hidden">
+      <div class="newCollegeForm hidden">
        <button type="button" class='backBtn'>❮ back</button>
         <div>
-          <label for="departmentName">Department Name</label><br />
+          <label for="collegeName">College Name</label><br />
           <input
             type="text"
-            placeholder="Department Name"
-            id="departmentName"
+            placeholder="College Name"
+            id="collegeName"
           />
         </div>
         <div>
-          <label for="departmentCode">Department Code</label><br />
-          <input type="text" placeholder="CS" id="departmentCode" />
+          <label for="CollegeId">Collge ID</label><br />
+          <input type="text" placeholder="CCI" id="collegeId" />
         </div>
         <div>
           <label for="status">Status</label><br />
@@ -43,11 +43,11 @@
           <label for="year">Created Year</label><br />
           <input type="text" placeholder="Year" id="year" />
         </div>
-        <button type="submit" class="newDepartmentBtn">Create</button>
+        <button type="submit" class="newCollegeBtn">Create</button>
       </div>
     </div>
     <div class="overlay hidden"></div>
     <script src="./js/default.js"></script>
-    <script src="./js/departement.js"></script>
+    <script src="./js/college.js"></script>
   </body>
 </html>

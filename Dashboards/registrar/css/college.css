@@ -18,39 +18,39 @@ h1 {
   padding: 20px;
   color: #435580;
 }
-.newDepartmentFormBtn {
+.newCollegeFormBtn {
   align-self: self-end;
   padding: 3px;
 }
-.newDepartmentForm {
+.newCollegeForm {
   align-self: center;
   padding: 35px;
   border-radius: 5px;
   background-color: #e8e5e5;
   z-index: 10;
 }
-.newDepartmentForm div {
+.newCollegeForm div {
   padding: 10px;
   width: 270px;
 }
 
-.newDepartmentForm input,
-.newDepartmentForm select {
+.newCollegeForm input,
+.newCollegeForm select {
   width: 250px;
   padding: 3px;
   border-radius: 3px;
   outline: none;
   border: 2px solid #d1d5db;
 }
-.newDepartmentForm input:focus,
-.newDepartmentForm select:focus {
+.newCollegeForm input:focus,
+.newCollegeForm select:focus {
   border: 2px solid orange;
 }
-.newDepartmentBtn {
+.newCollegeBtn {
   margin-left: 210px;
 }
-.newDepartmentBtn,
-.newDepartmentFormBtn {
+.newCollegeBtn,
+.newCollegeFormBtn {
   background-color: #ff8415;
   border: none;
   padding: 3px 7px;
