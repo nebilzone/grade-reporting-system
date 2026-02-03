@@ -11,6 +11,7 @@ const collegeContainer = document.querySelector(".collageBtnContainer");
 const departementContainer = document.querySelector(".departementContainer");
 const addingCollegeForm = document.querySelector(".addingCourseForm");
 
+const yearBtn = document.querySelectorAll(".yearOfDept");
 newCollegeFormBtn.addEventListener("click", function () {
   document.querySelector("#collegeName").value = "";
   document.querySelector("#collegeId").value = "";
@@ -41,8 +42,7 @@ async function collegeNameValidation(name) {
   //   collegeNameContainer.append(err);
   //   return false;
   // } else {
-    return name;
-  
+  return name;
 }
 async function collegeIDValidation(id) {
   const err = document.createElement("p");
@@ -111,31 +111,176 @@ collegeContainer.addEventListener("click", async function (e) {
         const buttons = document.createElement("button");
         buttons.textContent = `▶ ${eachDepartement[departement]}`;
         buttons.type = "button";
-        buttons.dataset.id=eachDepartement.departementId;
+        buttons.dataset.id = eachDepartement.departementId;
         departementContainer.append(buttons);
       }
     }
-
   }
 });
-async function fetchingCourse(){
+async function fetchingCourse() {
   const response = await fetch("http://localhost:3000/courses");
-  return  await response.json();
-
+  return await response.json();
 }
-departementContainer.addEventListener('click',async function(e){
-e.preventDefault();
-const clickedDept=e.target.closest('button');
-console.log(clickedDept.dataset.id)
-const courses=await fetchingCourse()
-for(const eachObjec of courses){
-  if(clickedDept.dataset.id==eachObjec.departementId){
 
-    console.log(eachObjec)
+// Global variables
+let lastDepartementClicked = null; // track last clicked department
+let lastYearBtn = null;             // track last clicked year
+let lastSemesterBtn = null;         // track last clicked semester
+let courses = [];                   // store all courses
+
+departementContainer.addEventListener("click", async function (e) {
+  e.preventDefault();
+
+  const deptBtn = e.target.closest("button[data-id]"); // department button
+  const yearBtn = e.target.closest(".yearOfDept");     // year button
+  const semBtn = e.target.closest(".semOfDept");      // semester button
+
+  // ------------------------
+  // 1️⃣ Department clicked
+  // ------------------------
+  if (deptBtn && !yearBtn && !semBtn) {
+    const deptId = deptBtn.dataset.id;
+    courses = await fetchingCourse(); // fetch courses
+
+    // Toggle same department
+    if (lastDepartementClicked === deptBtn) {
+      const yearButtons = deptBtn.querySelectorAll(".yearOfDept");
+      if (yearButtons.length > 0) {
+        yearButtons.forEach(btn => btn.remove());
+        lastDepartementClicked = null;
+        lastYearBtn = null;
+        lastSemesterBtn = null;
+      } else {
+        addYearButtons(deptBtn, deptId);
+        lastDepartementClicked = deptBtn;
+      }
+      return;
+    }
+
+    // Remove previous department's years
+    if (lastDepartementClicked && lastDepartementClicked !== deptBtn) {
+      lastDepartementClicked.querySelectorAll(".yearOfDept").forEach(btn => btn.remove());
+      lastYearBtn = null;
+      lastSemesterBtn = null;
+    }
+
+    // Show years for this department
+    addYearButtons(deptBtn, deptId);
+    lastDepartementClicked = deptBtn;
+    return;
   }
 
+  // ------------------------
+  // 2️⃣ Year clicked
+  // ------------------------
+  if (yearBtn && !semBtn) {
+    const deptParent = yearBtn.closest("button[data-id]");
+    const deptId = deptParent.dataset.id;
+    const year = parseInt(yearBtn.dataset.year);
+
+    // Collapse previously opened year if different
+    if (lastYearBtn && lastYearBtn !== yearBtn) {
+      lastYearBtn.querySelectorAll(".semOfDept").forEach(btn => btn.remove());
+    }
+
+    // Toggle same year
+    const semestersExist = yearBtn.querySelectorAll(".semOfDept").length > 0;
+    if (semestersExist) {
+      yearBtn.querySelectorAll(".semOfDept").forEach(btn => btn.remove());
+      lastYearBtn = null;
+      lastSemesterBtn = null;
+      return;
+    }
+
+    const semestersAdded = new Set();
+
+    // Add semesters
+    courses.forEach(course => {
+      if (course.departementId == deptId && course.year == year && !semestersAdded.has(course.semester)) {
+        const semButton = document.createElement("button");
+        semButton.textContent = `▶ Semester ${course.semester}`;
+        semButton.className = "semOfDept";
+        semButton.dataset.semester = course.semester;
+        yearBtn.append(semButton);
+        semestersAdded.add(course.semester);
+      }
+    });
+
+    lastYearBtn = yearBtn;
+    lastSemesterBtn = null; // reset semester
+    return;
+  }
+
+  // ------------------------
+  // 3️⃣ Semester clicked
+  // ------------------------
+  if (semBtn) {
+    const yearParent = semBtn.closest(".yearOfDept");
+    const deptParent = semBtn.closest("button[data-id]");
+    const deptId = deptParent.dataset.id;
+    const year = parseInt(yearParent.dataset.year);
+    const semester = parseInt(semBtn.dataset.semester);
+
+    // Remove previous semester table if different
+    if (lastSemesterBtn && lastSemesterBtn !== semBtn) {
+      lastSemesterBtn.querySelectorAll("table").forEach(tbl => tbl.remove());
+    }
+
+    // Toggle same semester table
+    const existingTable = semBtn.querySelector("table");
+    if (existingTable) {
+      existingTable.remove();
+      lastSemesterBtn = null;
+      return;
+    }
+
+    // Create table
+    const table = document.createElement("table");
+    table.innerHTML = `
+      <tr>
+        <th>Course Name</th>
+        <th>Course Code</th>
+        <th>Credit</th>
+      </tr>
+    `;
+
+    courses.forEach(course => {
+      if (course.departementId == deptId && course.year == year && course.semester == semester) {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td>${course.name}</td>
+          <td>${course.code}</td>
+          <td>${course.credit}</td>
+        `;
+        table.append(row);
+      }
+    });
+
+    semBtn.append(table);
+    lastSemesterBtn = semBtn;
+    return;
+  }
+});
+
+// ------------------------
+// Helper function to add year buttons
+// ------------------------
+function addYearButtons(deptBtn, deptId) {
+  const addedYears = new Set();
+  deptBtn.querySelectorAll(".yearOfDept").forEach(btn => addedYears.add(parseInt(btn.dataset.year)));
+
+  courses.forEach(course => {
+    if (course.departementId == deptId && !addedYears.has(course.year)) {
+      const btn = document.createElement("button");
+      btn.textContent = `▶ Year ${course.year}`;
+      btn.className = "yearOfDept";
+      btn.dataset.year = course.year;
+      deptBtn.append(btn);
+      addedYears.add(course.year);
+    }
+  });
 }
-})
+
 async function displayCollege() {
   const colleges = await fetchingCollege();
   for (const eachCollege of colleges) {
