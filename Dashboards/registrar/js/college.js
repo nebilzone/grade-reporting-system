@@ -122,12 +122,17 @@ async function fetchingCourse() {
   return await response.json();
 }
 
+// -----------------------------
 // Global variables
-let lastDepartementClicked = null; // track last clicked department
-let lastYearBtn = null;             // track last clicked year
-let lastSemesterBtn = null;         // track last clicked semester
-let courses = [];                   // store all courses
+// -----------------------------
+let lastDepartementClicked = null;
+let lastYearBtn = null;
+let lastSemesterBtn = null;
+let courses = []; // store all courses
 
+// -----------------------------
+// Department container listener
+// -----------------------------
 departementContainer.addEventListener("click", async function (e) {
   e.preventDefault();
 
@@ -135,12 +140,12 @@ departementContainer.addEventListener("click", async function (e) {
   const yearBtn = e.target.closest(".yearOfDept");     // year button
   const semBtn = e.target.closest(".semOfDept");      // semester button
 
-  // ------------------------
+  // -----------------------------
   // 1️⃣ Department clicked
-  // ------------------------
+  // -----------------------------
   if (deptBtn && !yearBtn && !semBtn) {
     const deptId = deptBtn.dataset.id;
-    courses = await fetchingCourse(); // fetch courses
+    courses = await fetchingCourse();
 
     // Toggle same department
     if (lastDepartementClicked === deptBtn) {
@@ -170,15 +175,15 @@ departementContainer.addEventListener("click", async function (e) {
     return;
   }
 
-  // ------------------------
+  // -----------------------------
   // 2️⃣ Year clicked
-  // ------------------------
+  // -----------------------------
   if (yearBtn && !semBtn) {
     const deptParent = yearBtn.closest("button[data-id]");
     const deptId = deptParent.dataset.id;
     const year = parseInt(yearBtn.dataset.year);
 
-    // Collapse previously opened year if different
+    // Collapse previous year if different
     if (lastYearBtn && lastYearBtn !== yearBtn) {
       lastYearBtn.querySelectorAll(".semOfDept").forEach(btn => btn.remove());
     }
@@ -207,13 +212,13 @@ departementContainer.addEventListener("click", async function (e) {
     });
 
     lastYearBtn = yearBtn;
-    lastSemesterBtn = null; // reset semester
+    lastSemesterBtn = null;
     return;
   }
 
-  // ------------------------
+  // -----------------------------
   // 3️⃣ Semester clicked
-  // ------------------------
+  // -----------------------------
   if (semBtn) {
     const yearParent = semBtn.closest(".yearOfDept");
     const deptParent = semBtn.closest("button[data-id]");
@@ -234,13 +239,14 @@ departementContainer.addEventListener("click", async function (e) {
       return;
     }
 
-    // Create table
+    // Create course table
     const table = document.createElement("table");
     table.innerHTML = `
       <tr>
         <th>Course Name</th>
         <th>Course Code</th>
         <th>Credit</th>
+        <th>Actions</th>
       </tr>
     `;
 
@@ -251,8 +257,32 @@ departementContainer.addEventListener("click", async function (e) {
           <td>${course.name}</td>
           <td>${course.code}</td>
           <td>${course.credit}</td>
+          <td>
+            <button class="editBtn">Edit</button>
+            <button class="deleteBtn">Delete</button>
+          </td>
         `;
         table.append(row);
+      }
+    });
+
+    // Prevent table clicks from collapsing
+    table.addEventListener("click", function(e) {
+      e.stopPropagation();
+    });
+
+    // Event delegation for edit/delete buttons
+    table.addEventListener("click", function(e) {
+      e.stopPropagation();
+      if (e.target.classList.contains("editBtn")) {
+        const tr = e.target.closest("tr");
+        console.log("Edit course:", tr.children[0].textContent);
+        // your edit logic here
+      } else if (e.target.classList.contains("deleteBtn")) {
+        const tr = e.target.closest("tr");
+        console.log("Delete course:", tr.children[0].textContent);
+        tr.remove();
+        // your delete logic here
       }
     });
 
@@ -262,9 +292,9 @@ departementContainer.addEventListener("click", async function (e) {
   }
 });
 
-// ------------------------
+// -----------------------------
 // Helper function to add year buttons
-// ------------------------
+// -----------------------------
 function addYearButtons(deptBtn, deptId) {
   const addedYears = new Set();
   deptBtn.querySelectorAll(".yearOfDept").forEach(btn => addedYears.add(parseInt(btn.dataset.year)));
@@ -280,6 +310,7 @@ function addYearButtons(deptBtn, deptId) {
     }
   });
 }
+
 
 async function displayCollege() {
   const colleges = await fetchingCollege();
