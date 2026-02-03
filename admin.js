@@ -5,11 +5,13 @@ async function studentData() {
 async function groupById() {
   let studentObj = await studentData();
   const grouped = {};
+  console.log(studentObj)
   for (const student of studentObj) {
-    id = student.StudentID;
+    console.log(student)
+    id = student.id;
     if (!grouped[id]) {
       grouped[id] = {
-        studentName: student.StudentName,
+        studentName: student.fullName,
         record: [],
       };
     }

@@ -12,38 +12,39 @@
 
     <div class="pageContent">
       <h1>College dashboards</h1>
-      <button type="button" class="newCollegeFormBtn">
-        Create new College
-      </button>
+ <div class="collageContainer">
+          <button type="button" class="newCollegeFormBtn">
+          Create new College
+        </button>
+        <div class="collageBtnContainer"></div>
+                <div class="departementContainer"></div>
 
+        </div>
       <div class="newCollegeForm hidden">
-       <button type="button" class='backBtn'>❮ back</button>
-        <div>
-          <label for="collegeName">College Name</label><br />
-          <input
-            type="text"
-            placeholder="College Name"
-            id="collegeName"
-          />
-        </div>
-        <div>
-          <label for="CollegeId">Collge ID</label><br />
-          <input type="text" placeholder="CCI" id="collegeId" />
-        </div>
-        <div>
-          <label for="status">Status</label><br />
+        <form action="" class="addingCourseForm">
+          <button type="button" class="backBtn">&times;</button>
+          <div class="collegeName">
+            <label for="collegeName">College Name</label><br />
+            <input type="text" placeholder="College Name" id="collegeName" />
+          </div>
+          <div class="collegeIdContainer">
+            <label for="collegeId">Collge ID</label><br />
+            <input type="text" placeholder="CCI" id="collegeId" />
+          </div>
+          <div>
+            <label for="status">Status</label><br />
+            <select name="status" id="status">
+              <option value="active">active</option>
+              <option value="pending">pending</option>
+            </select>
+          </div>
 
-          <select name="status" id="status">
-            <option value="active">active</option>
-            <option value="pending">pending</option>
-          </select>
-        </div>
+          <button type="submit" class="submitCollegeBtn">Create</button>
+        </form>
 
-        <div>
-          <label for="year">Created Year</label><br />
-          <input type="text" placeholder="Year" id="year" />
-        </div>
-        <button type="submit" class="newCollegeBtn">Create</button>
+      </div>
+
+
       </div>
     </div>
     <div class="overlay hidden"></div>

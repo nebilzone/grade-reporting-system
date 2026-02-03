@@ -14,7 +14,7 @@ async function display() {
   function getEthiopianYear() {
     const today = new Date();
     const gregYear = today.getFullYear();
-    const month = today.getMonth(); 
+    const month = today.getMonth();
     const day = today.getDate();
 
     const etYear =
@@ -34,6 +34,7 @@ async function display() {
     table.innerHTML = "";
     thead.innerHTML = "";
     const ethiopianYear = getEthiopianYear();
+
     const idNumber = 1;
     const h3 = document.createElement("h3");
     h3.textContent = "Students applications";
@@ -140,6 +141,21 @@ async function display() {
             level: "FreshMan",
             status: "active",
           };
+
+
+          await fetch("http://localhost:5000/api/send-approval", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              name: object.fullName,
+              email: object.email,
+              password: object.password,
+              studentId: `UGPR${Id.toString().padStart(4, "0")}/${ethiopianYear%100}`,
+            }),
+          });
+
           await fetch("http://localhost:3000/students", {
             method: "POST",
             headers: { "content-type": "application/json" },
@@ -233,7 +249,7 @@ async function display() {
           }
           if (each == "documents") {
             const button = document.createElement("button");
-            button.textContent = "View Documents";
+            button.textContent = "View";
             button.style.padding = "2px 9px";
             button.style.margin = "3px 9px";
             const td = document.createElement("td");

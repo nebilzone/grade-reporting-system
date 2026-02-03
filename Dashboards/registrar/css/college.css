@@ -20,11 +20,12 @@ h1 {
 }
 .newCollegeFormBtn {
   align-self: self-end;
-  padding: 3px;
+  padding: 3px 10px;
 }
 .newCollegeForm {
   align-self: center;
-  padding: 35px;
+  margin-bottom: 30px;
+  padding: 10px 35px 35px 35px;
   border-radius: 5px;
   background-color: #e8e5e5;
   z-index: 10;
@@ -46,10 +47,10 @@ h1 {
 .newCollegeForm select:focus {
   border: 2px solid orange;
 }
-.newCollegeBtn {
+.submitCollegeBtn {
   margin-left: 210px;
 }
-.newCollegeBtn,
+.submitCollegeBtn,
 .newCollegeFormBtn {
   background-color: #ff8415;
   border: none;
@@ -58,7 +59,17 @@ h1 {
   border-radius: 3px;
 }
 .backBtn {
+  font-size: xx-large;
+  color: red;
+  background-color: #e8e5e5;
+  width: 35px;
+  height: 35px;
+  margin-left: 240px;
   border: none;
+}
+.backBtn:hover {
+  border-radius: 50%;
+  background-color: rgb(206, 206, 238);
 }
 .hidden {
   display: none;
@@ -71,4 +82,42 @@ h1 {
   height: 100%;
   background-color: rgba(5, 5, 5, 0.45);
   z-index: 5;
+}
+.collageContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.collageBtnContainer {
+  display: flex;
+  gap: 20px;
+}
+.collageBtnContainer button {
+  padding: 4px 10px;
+  background-color: #dfedff;
+  color: #435580;
+  border: 2px solid #b4caeb;
+  border-radius: 5px;
+}
+.departementContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+}
+.departementContainer button {
+  color: red;
+  background-color: none;
+  padding: 5px;
+  text-align: start;
+  border: none;
+  width: 200px;
+  background: none ;
+
+
+}
+.collageBtnContainer button.active {
+  background-color: #80aae2;
+  color: #093fbc;
+  border: 2px solid #80aef4;
 }

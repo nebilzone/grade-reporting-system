@@ -1,0 +1,8 @@
+# Node modules
+node_modules/
+
+# Env file with secrets
+.env
+
+# Optional logs
+npm-debug.log
