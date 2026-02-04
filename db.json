@@ -253,7 +253,7 @@
         "grade12": "Mesobinternshipreport.pdf",
         "transcript": "Mesobinternshipreport.pdf"
       },
-      "status": "Pending"
+      "status": "approved"
     },
     {
       "id": 1769662774456,
@@ -425,6 +425,21 @@
         "phd": "Not uploaded"
       },
       "status": "Pending"
+    },
+    {
+      "id": 1770205878553,
+      "fullName": "Abdi Fekeda",
+      "email": "abdifekeda0@gmail.com",
+      "password": "ABDIfEKEDA2@",
+      "year": 2018,
+      "role": "students",
+      "gender": "Male",
+      "documents": {
+        "grade8": "cv (1).pdf",
+        "grade12": "cv (1).pdf",
+        "transcript": "cv (1).pdf"
+      },
+      "status": "approved"
     }
   ],
   "students": [
@@ -575,6 +590,26 @@
       "password": "ekram",
       "gender": "Female",
       "year": "2016",
+      "level": "FreshMan",
+      "status": "active"
+    },
+    {
+      "id": "UGPR0016/2018",
+      "fullName": "Abdi Fekeda",
+      "email": "abdifekeda0@gmail.com",
+      "password": "ABDIfEKEDA2@",
+      "gender": "Male",
+      "year": 2018,
+      "level": "FreshMan",
+      "status": "active"
+    },
+    {
+      "id": "UGPR0017/2018",
+      "fullName": "Mohammed Dorm",
+      "email": "mame@gmail.com",
+      "password": "asdf",
+      "gender": "Female",
+      "year": "2017",
       "level": "FreshMan",
       "status": "active"
     }

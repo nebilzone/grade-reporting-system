@@ -122,138 +122,115 @@ async function fetchingCourse() {
   return await response.json();
 }
 
-// -----------------------------
-// Global variables
-// -----------------------------
 let lastDepartementClicked = null;
 let lastYearBtn = null;
 let lastSemesterBtn = null;
-let courses = []; // store all courses
+let courses = [];
 
-// -----------------------------
-// Department container listener
-// -----------------------------
 departementContainer.addEventListener("click", async function (e) {
   e.preventDefault();
-
-  const deptBtn = e.target.closest("button[data-id]"); // department button
-  const yearBtn = e.target.closest(".yearOfDept");     // year button
-  const semBtn = e.target.closest(".semOfDept");      // semester button
-
-  // -----------------------------
-  // 1️⃣ Department clicked
-  // -----------------------------
+  const deptBtn = e.target.closest("button[data-id]");
+  const yearBtn = e.target.closest(".yearOfDept");
+  const semBtn = e.target.closest(".semOfDept");
   if (deptBtn && !yearBtn && !semBtn) {
     const deptId = deptBtn.dataset.id;
     courses = await fetchingCourse();
 
-    // Toggle same department
     if (lastDepartementClicked === deptBtn) {
-      const yearButtons = deptBtn.querySelectorAll(".yearOfDept");
-      if (yearButtons.length > 0) {
-        yearButtons.forEach(btn => btn.remove());
-        lastDepartementClicked = null;
-        lastYearBtn = null;
-        lastSemesterBtn = null;
-      } else {
-        addYearButtons(deptBtn, deptId);
-        lastDepartementClicked = deptBtn;
-      }
+      deptBtn.querySelectorAll(".yearOfDept").forEach((e) => e.remove());
+      lastDepartementClicked = null;
+      lastYearBtn = null;
+      lastSemesterBtn = null;
       return;
     }
 
-    // Remove previous department's years
-    if (lastDepartementClicked && lastDepartementClicked !== deptBtn) {
-      lastDepartementClicked.querySelectorAll(".yearOfDept").forEach(btn => btn.remove());
-      lastYearBtn = null;
-      lastSemesterBtn = null;
+    if (lastDepartementClicked) {
+      lastDepartementClicked
+        .querySelectorAll(".yearOfDept")
+        .forEach((btn) => btn.remove());
     }
 
-    // Show years for this department
-    addYearButtons(deptBtn, deptId);
+    addingYear(deptBtn, deptId);
     lastDepartementClicked = deptBtn;
     return;
   }
-
-  // -----------------------------
-  // 2️⃣ Year clicked
-  // -----------------------------
   if (yearBtn && !semBtn) {
-    const deptParent = yearBtn.closest("button[data-id]");
-    const deptId = deptParent.dataset.id;
-    const year = parseInt(yearBtn.dataset.year);
+    e.stopPropagation();
+    const deptBtn = yearBtn.closest("button[data-id]");
 
-    // Collapse previous year if different
+    const deptId = deptBtn.dataset.id;
+    const year = yearBtn.dataset.year;
+    const opened = yearBtn.querySelector(".semOfDept");
     if (lastYearBtn && lastYearBtn !== yearBtn) {
-      lastYearBtn.querySelectorAll(".semOfDept").forEach(btn => btn.remove());
+      lastYearBtn.querySelectorAll(".semOfDept").forEach((btn) => btn.remove());
+      lastYearBtn.textContent = `▶ Year ${lastYearBtn.dataset.year}`;
     }
 
-    // Toggle same year
-    const semestersExist = yearBtn.querySelectorAll(".semOfDept").length > 0;
-    if (semestersExist) {
-      yearBtn.querySelectorAll(".semOfDept").forEach(btn => btn.remove());
+    if (opened) {
+      yearBtn.querySelectorAll(".semOfDept").forEach((btn) => btn.remove());
+      yearBtn.textContent = `▶ Year ${year}`;
       lastYearBtn = null;
       lastSemesterBtn = null;
       return;
     }
 
-    const semestersAdded = new Set();
+    yearBtn.textContent = `▼ Year ${year}`;
 
-    // Add semesters
-    courses.forEach(course => {
-      if (course.departementId == deptId && course.year == year && !semestersAdded.has(course.semester)) {
-        const semButton = document.createElement("button");
-        semButton.textContent = `▶ Semester ${course.semester}`;
-        semButton.className = "semOfDept";
-        semButton.dataset.semester = course.semester;
-        yearBtn.append(semButton);
-        semestersAdded.add(course.semester);
+    const addedSemesters = new Set();
+
+    courses.forEach((course) => {
+      if (
+        course.departementId == deptId &&
+        course.year == year &&
+        !addedSemesters.has(course.semester)
+      ) {
+        const sem = document.createElement("button");
+        sem.textContent = `▶ Semester ${course.semester}`;
+        sem.className = "semOfDept";
+        sem.dataset.semester = course.semester;
+        yearBtn.append(sem);
+        addedSemesters.add(course.semester);
       }
     });
-
     lastYearBtn = yearBtn;
     lastSemesterBtn = null;
-    return;
   }
-
-  // -----------------------------
-  // 3️⃣ Semester clicked
-  // -----------------------------
   if (semBtn) {
-    const yearParent = semBtn.closest(".yearOfDept");
-    const deptParent = semBtn.closest("button[data-id]");
-    const deptId = deptParent.dataset.id;
-    const year = parseInt(yearParent.dataset.year);
-    const semester = parseInt(semBtn.dataset.semester);
+    e.stopPropagation();
+    const depBtn = semBtn.closest("button[data-id]");
+    const yearBtn = semBtn.closest(".yearOfDept");
+    const deptId = depBtn.dataset.id;
+    const year = yearBtn.dataset.year;
+    const semester = semBtn.dataset.semester;
 
-    // Remove previous semester table if different
     if (lastSemesterBtn && lastSemesterBtn !== semBtn) {
-      lastSemesterBtn.querySelectorAll("table").forEach(tbl => tbl.remove());
+      lastSemesterBtn.querySelector("table")?.remove();
+      lastSemesterBtn.textContent = `▶ Semester ${lastSemesterBtn.dataset.semester}`;
     }
-
-    // Toggle same semester table
     const existingTable = semBtn.querySelector("table");
     if (existingTable) {
       existingTable.remove();
+      lastSemesterBtn.textContent = `▶ Semester ${lastSemesterBtn.dataset.semester}`;
       lastSemesterBtn = null;
-      return;
     }
-
-    // Create course table
+    semBtn.textContent = `▼ Semester ${semester}`;
     const table = document.createElement("table");
     table.innerHTML = `
       <tr>
-        <th>Course Name</th>
-        <th>Course Code</th>
+        <th>Course</th>
+        <th>Code</th>
         <th>Credit</th>
-        <th>Actions</th>
+        <th>Action</th>
       </tr>
     `;
-
-    courses.forEach(course => {
-      if (course.departementId == deptId && course.year == year && course.semester == semester) {
-        const row = document.createElement("tr");
-        row.innerHTML = `
+    courses.forEach((course) => {
+      if (
+        course.departementId == deptId &&
+        year == course.year &&
+        semester == course.semester
+      ) {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
           <td>${course.name}</td>
           <td>${course.code}</td>
           <td>${course.credit}</td>
@@ -261,56 +238,33 @@ departementContainer.addEventListener("click", async function (e) {
             <button class="editBtn">Edit</button>
             <button class="deleteBtn">Delete</button>
           </td>
-        `;
-        table.append(row);
+  `;
+        table.append(tr);
       }
     });
-
-    // Prevent table clicks from collapsing
-    table.addEventListener("click", function(e) {
-      e.stopPropagation();
-    });
-
-    // Event delegation for edit/delete buttons
-    table.addEventListener("click", function(e) {
-      e.stopPropagation();
-      if (e.target.classList.contains("editBtn")) {
-        const tr = e.target.closest("tr");
-        console.log("Edit course:", tr.children[0].textContent);
-        // your edit logic here
-      } else if (e.target.classList.contains("deleteBtn")) {
-        const tr = e.target.closest("tr");
-        console.log("Delete course:", tr.children[0].textContent);
-        tr.remove();
-        // your delete logic here
-      }
-    });
+    table.addEventListener("click", (e) => e.stopPropagation());
 
     semBtn.append(table);
     lastSemesterBtn = semBtn;
-    return;
   }
+  lastDepartementClicked = deptBtn;
 });
 
-// -----------------------------
-// Helper function to add year buttons
-// -----------------------------
-function addYearButtons(deptBtn, deptId) {
-  const addedYears = new Set();
-  deptBtn.querySelectorAll(".yearOfDept").forEach(btn => addedYears.add(parseInt(btn.dataset.year)));
-
-  courses.forEach(course => {
-    if (course.departementId == deptId && !addedYears.has(course.year)) {
+function addingYear(deptBtn, deptId) {
+  console.log(deptBtn);
+  console.log(deptId);
+  const years = new Set();
+  courses.forEach((course) => {
+    if (deptId == course.departementId && !years.has(course.year)) {
       const btn = document.createElement("button");
       btn.textContent = `▶ Year ${course.year}`;
       btn.className = "yearOfDept";
       btn.dataset.year = course.year;
       deptBtn.append(btn);
-      addedYears.add(course.year);
+      years.add(course.year);
     }
   });
 }
-
 
 async function displayCollege() {
   const colleges = await fetchingCollege();
