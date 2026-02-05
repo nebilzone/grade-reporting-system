@@ -1,0 +1,112 @@
+{
+    "departments": [
+    {
+      "id": 101,
+      "name": "Computer Science",
+      "collegeId": "CCI",
+      "departementId": "CS"
+    },
+    {
+      "id": 102,
+      "name": "Software Engineering",
+      "collegeId": "CCI",
+      "departementId": "SE"
+    },
+    {
+      "id": 103,
+      "name": "Information Technology",
+      "collegeId": "CCI",
+      "departementId": "IT"
+    },
+    {
+      "id": 104,
+      "name": "Information Science",
+      "collegeId": "CCI",
+      "departementId": "IF"
+    },
+    {
+      "id": 105,
+      "name": "Information System",
+      "collegeId": "CCI",
+      "departementId": "IS"
+    },
+    {
+      "id": 201,
+      "name": "Nursing",
+      "collegeId": "CMH",
+      "departementId": "NURSE"
+    },
+    {
+      "id": 202,
+      "name": "Medicine",
+      "collegeId": "CMH",
+      "departementId": "MED"
+    },
+    {
+      "id": 203,
+      "name": "Pharmacy",
+      "collegeId": "CMH",
+      "departementId": "PH"
+    },
+    {
+      "id": 301,
+      "name": "Accounting",
+      "collegeId": "CH",
+      "departementId": "AC"
+    },
+    {
+      "id": 401,
+      "name": "Statistics",
+      "collegeId": "CCS",
+      "departementId": "STAT"
+    },
+    {
+      "id": 402,
+      "name": "Probability",
+      "collegeId": "CCS",
+      "departementId": "PROB"
+    },
+    {
+      "id": 501,
+      "name": "Electrical Enginering",
+      "collegeId": "CE",
+      "departementId": "EE"
+    },
+    {
+      "id": 502,
+      "name": "Civil Enginering",
+      "collegeId": "CE",
+      "departementId": "CE"
+    },
+    {
+      "id": 501,
+      "name": "Mechanical Enginering",
+      "collegeId": "CE",
+      "departementId": "ME"
+    },
+    {
+      "id": 601,
+      "name": "Law",
+      "collegeId": "CL",
+      "departementId": "LAW"
+    },
+    {
+      "id": 602,
+      "name": "Constitions",
+      "collegeId": "CL",
+      "departementId": "CONS"
+    },
+    {
+      "id": 701,
+      "name": "AgroEconomics",
+      "collegeId": "CA",
+      "departementId": "AGRO"
+    },
+    {
+      "id": 702,
+      "name": "AgroBussiness",
+      "collegeId": "CA",
+      "departementId": "AGRI"
+    }
+  ]
+}

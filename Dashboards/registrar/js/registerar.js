@@ -1,7 +1,7 @@
 const searchDiv = document.querySelector(".pageContent");
 const tableContainer = document.querySelector(".tableContainer");
 async function appilications() {
-  const application = await fetch("http://localhost:3000/applications");
+  const application = await fetch("http://localhost:3000/users");
   return await application.json();
 }
 async function display() {
@@ -161,7 +161,7 @@ async function display() {
             headers: { "content-type": "application/json" },
             body: JSON.stringify(student),
           });
-          await fetch(`http://localhost:3000/applications/${object.id}`, {
+          await fetch(`http://localhost:3000/users/${object.id}`, {
             method: "PATCH",
             headers: { "content-type": "application/json" },
             body: JSON.stringify({ status: "approved" }),

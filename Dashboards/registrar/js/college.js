@@ -87,7 +87,7 @@ addingCollegeForm.addEventListener("submit", async function (e) {
 });
 
 async function fetchingCollege() {
-  const response = await fetch("http://localhost:3000/colleges");
+  const response = await fetch(" http://localhost:3000/colleges");
   return await response.json();
 }
 async function fetchinDepartement(id) {
@@ -119,7 +119,8 @@ collegeContainer.addEventListener("click", async function (e) {
 });
 async function fetchingCourse() {
   const response = await fetch("http://localhost:3000/courses");
-  return await response.json();
+  const courses = await response.json();
+  return courses.filter((item) => item.active);
 }
 
 let lastDepartementClicked = null;
@@ -230,19 +231,97 @@ departementContainer.addEventListener("click", async function (e) {
         semester == course.semester
       ) {
         const tr = document.createElement("tr");
+        tr.dataset.id = course.id;
         tr.innerHTML = `
           <td>${course.name}</td>
           <td>${course.code}</td>
           <td>${course.credit}</td>
           <td>
             <button class="editBtn">Edit</button>
-            <button class="deleteBtn">Delete</button>
+            <button class="removeBtn">Remove</button>
           </td>
   `;
         table.append(tr);
       }
     });
-    table.addEventListener("click", (e) => e.stopPropagation());
+    table.addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      // Use closest to handle clicks even if inner span/input clicked
+      const removeBtn = e.target.closest(".removeBtn");
+      const editBtn = e.target.closest(".editBtn");
+      const saveBtn = e.target.closest(".saveBtn");
+
+      if (removeBtn) {
+        const row = removeBtn.closest("tr");
+        const courseId = row.dataset.id;
+
+        row.remove(); // remove row visually
+
+        // soft delete
+        fetch(`http://localhost:3000/courses/${courseId}`, {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ active: false }),
+        })
+          .then((res) => res.json())
+          .then((data) => alert("Course soft deleted:", data))
+          .catch((err) => alert(err));
+      }
+
+      if (editBtn) {
+        const row = editBtn.closest("tr");
+        if (row.classList.contains("editing")) return; // prevent multiple edits
+
+        row.classList.add("editing");
+        const cells = row.querySelectorAll("td");
+
+        // replace text with input fields
+        cells[0].innerHTML = `<input value="${cells[0].textContent}">`;
+        cells[1].innerHTML = `<input value="${cells[1].textContent}">`;
+        cells[2].innerHTML = `<input value="${cells[2].textContent}">`;
+
+        // swap buttons
+        editBtn.textContent = "Save";
+        editBtn.classList.remove("editBtn");
+        editBtn.classList.add("saveBtn");
+      }
+
+      if (saveBtn) {
+        e.stopPropagation();
+
+        const row = saveBtn.closest("tr");
+        const courseId = row.dataset.id;
+        const cells = row.querySelectorAll("td");
+
+        const editedCourse = {
+          name: cells[0].querySelector("input").value,
+          code: cells[1].querySelector("input").value,
+          credit: cells[2].querySelector("input").value,
+        };
+
+        // update table cells
+        cells[0].textContent = editedCourse.name;
+        cells[1].textContent = editedCourse.code;
+        cells[2].textContent = editedCourse.credit;
+
+        // PATCH to JSON server
+        fetch(`http://localhost:3000/courses/${courseId}`, {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(editedCourse),
+        })
+          .then((res) => res.json())
+          .then((data) => alert("Course updated:", data))
+          .catch((err) => alert(err));
+
+        // reset buttons and editing class
+        row.classList.remove("editing");
+        saveBtn.textContent = "Edit";
+        saveBtn.classList.remove("saveBtn");
+        saveBtn.classList.add("editBtn");
+      }
+    });
 
     semBtn.append(table);
     lastSemesterBtn = semBtn;

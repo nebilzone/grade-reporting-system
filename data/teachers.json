@@ -1,0 +1,127 @@
+{
+    "teachers": [
+    {
+      "fullName": "Natnael Abebaw",
+      "email": "nati@example.com",
+      "password": "4568",
+      "gender": "Male",
+      "phone": "+251948769744",
+      "nationalId": "67234",
+      "role": "teachers",
+      "departement": "software",
+      "documents": {
+        "cv": "cv (1).pdf",
+        "degree": "roadmap.pdf",
+        "masters": "Not uploaded",
+        "phd": "Not uploaded"
+      },
+      "status": "active",
+      "id": 1
+    },
+    {
+      "fullName": "Nebil Abdo",
+      "email": "child@example.com",
+      "password": "1234",
+      "gender": "Male",
+      "phone": "+251948769744",
+      "nationalId": "234",
+      "role": "teachers",
+      "departement": "computer",
+      "documents": {
+        "cv": "cv (1).pdf",
+        "degree": "roadmap.pdf",
+        "masters": "Not uploaded",
+        "phd": "Not uploaded"
+      },
+      "status": "active",
+      "id": 2
+    },
+    {
+      "fullName": "Natnael Abebaw",
+      "email": "nati@example.com",
+      "password": "4568",
+      "gender": "Male",
+      "phone": "+251948769744",
+      "nationalId": "67234",
+      "role": "teachers",
+      "departement": "software",
+      "documents": {
+        "cv": "cv (1).pdf",
+        "degree": "roadmap.pdf",
+        "masters": "Not uploaded",
+        "phd": "Not uploaded"
+      },
+      "status": "active",
+      "id": 3
+    },
+    {
+      "fullName": "Nebil Abdo",
+      "email": "child@example.com",
+      "password": "1234",
+      "gender": "Male",
+      "phone": "+251948769744",
+      "nationalId": "234",
+      "role": "teachers",
+      "departement": "computer",
+      "documents": {
+        "cv": "cv (1).pdf",
+        "degree": "roadmap.pdf",
+        "masters": "Not uploaded",
+        "phd": "Not uploaded"
+      },
+      "status": "active",
+      "id": 4
+    }
+  ],
+  "registrations": [],
+  "colleges": [
+    {
+      "name": "College of computing and informatics",
+      "collegeID": "CCI",
+      "status": "active",
+      "id": 1
+    },
+    {
+      "name": "College of computing and statistics",
+      "collegeID": "CCS",
+      "status": "active",
+      "id": 2
+    },
+    {
+      "name": "College of health",
+      "collegeID": "CMH",
+      "status": "active",
+      "id": 3
+    },
+    {
+      "name": "College of agriculture",
+      "collegeID": "CA",
+      "status": "active",
+      "id": 4
+    },
+    {
+      "name": "College of Humanity",
+      "collegeID": "CH",
+      "status": "active",
+      "id": 5
+    },
+    {
+      "name": "College of Law",
+      "collegeID": "CL",
+      "status": "active",
+      "id": 6
+    },
+    {
+      "name": "College of Engineering",
+      "collegeID": "CE",
+      "status": "active",
+      "id": 7
+    },
+    {
+      "name": "College of electric",
+      "collegeID": "CCE",
+      "status": "pending",
+      "id": 8
+    }
+  ]
+}
