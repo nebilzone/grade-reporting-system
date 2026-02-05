@@ -6,6 +6,8 @@
       "email": "nebilbromance@gmail.com",
       "password": "rsaw",
       "year": "2016",
+      "track": "Natural",
+
       "role": "students",
       "gender": "Male",
       "documents": {
@@ -21,6 +23,8 @@
       "email": "nebilbromance1@gmail.com",
       "password": "rsaw44",
       "year": "2016",
+      "track": "Natural",
+
       "role": "students",
       "gender": "Male",
       "documents": {
@@ -36,6 +40,8 @@
       "email": "nebilbromance2@gmail.com",
       "password": "rsaw88",
       "year": "2016",
+      "track": "Natural",
+
       "role": "students",
       "gender": "Male",
       "documents": {
@@ -51,6 +57,8 @@
       "email": "nebilbromance2@gmail.com",
       "password": "rsaw88",
       "year": "2016",
+      "track": "Natural",
+
       "role": "students",
       "gender": "Male",
       "documents": {
@@ -66,6 +74,8 @@
       "email": "ekru6482@gmail.com",
       "password": "ekram",
       "year": "2016",
+      "track": "Natural",
+
       "role": "students",
       "gender": "Female",
       "documents": {
@@ -81,6 +91,8 @@
       "email": "child@gmail.com",
       "password": "bjgh",
       "year": "2016",
+      "track": "Natural",
+
       "role": "students",
       "gender": "Male",
       "documents": {
@@ -96,6 +108,8 @@
       "email": "parent@example.com",
       "password": "nati",
       "year": "2016",
+      "track": "Social",
+
       "role": "students",
       "gender": "Male",
       "documents": {
@@ -111,6 +125,8 @@
       "email": "abdu@gmail.com",
       "password": "w3r",
       "year": "2016",
+      "track": "Social",
+
       "role": "students",
       "gender": "Male",
       "documents": {
@@ -126,6 +142,8 @@
       "email": "muaz@gmail.com",
       "password": "edgf",
       "year": "2017",
+      "track": "Social",
+
       "role": "students",
       "gender": "Male",
       "documents": {
@@ -141,6 +159,8 @@
       "email": "nati@gmail.com",
       "password": "cgdhwf",
       "year": "2017",
+      "track": "Social",
+
       "role": "students",
       "gender": "Male",
       "documents": {
@@ -156,6 +176,8 @@
       "email": "ealde@gmail.com",
       "password": "cdh",
       "year": "2017",
+      "track": "Social",
+
       "role": "students",
       "gender": "Female",
       "documents": {
@@ -171,6 +193,8 @@
       "email": "nejmi@gmail.com",
       "password": "dfs",
       "year": "2017",
+      "track": "Social",
+
       "role": "students",
       "gender": "Female",
       "documents": {
@@ -186,6 +210,8 @@
       "email": "firdi@gmail.com",
       "password": "dejh",
       "year": "2017",
+      "track": "Social",
+
       "role": "students",
       "gender": "Female",
       "documents": {
@@ -201,6 +227,8 @@
       "email": "hanan@gmail.com",
       "password": "sdh",
       "year": "2017",
+      "track": "Social",
+
       "role": "students",
       "gender": "Female",
       "documents": {
@@ -216,6 +244,8 @@
       "email": "lamri@gmail.com",
       "password": "cdjchd",
       "year": "2017",
+      "track": "Social",
+
       "role": "students",
       "gender": "Female",
       "documents": {
@@ -231,6 +261,8 @@
       "email": "mfeti@gmail.com",
       "password": "mfeti",
       "year": "2017",
+      "track": "Social",
+
       "role": "students",
       "gender": "Female",
       "documents": {
@@ -246,6 +278,8 @@
       "email": "mame@gmail.com",
       "password": "asdf",
       "year": "2017",
+      "track": "Social",
+
       "role": "students",
       "gender": "Female",
       "documents": {
@@ -261,6 +295,8 @@
       "email": "zoba@gmail.com",
       "password": "def",
       "year": "2018",
+      "track": "Natural",
+
       "role": "students",
       "gender": "Female",
       "documents": {
@@ -276,6 +312,8 @@
       "email": "child@gmail.com",
       "password": "cf g",
       "year": "2018",
+      "track": "Natural",
+
       "role": "students",
       "gender": "Male",
       "documents": {
@@ -432,6 +470,8 @@
       "email": "abdifekeda0@gmail.com",
       "password": "ABDIfEKEDA2@",
       "year": 2018,
+      "track": "Natural",
+
       "role": "students",
       "gender": "Male",
       "documents": {
@@ -440,6 +480,39 @@
         "transcript": "cv (1).pdf"
       },
       "status": "approved"
+    },
+    {
+      "id": 1770302504152,
+      "fullName": "Nebil Abdosh",
+      "email": "nebilbromance@gmail.com",
+      "password": "@Nebil4488",
+      "year": 2018,
+      "track": "Natural",
+
+      "role": "students",
+      "gender": "Male",
+      "documents": {
+        "grade8": "cv (1).pdf",
+        "grade12": "cv (1).pdf",
+        "transcript": "cv (1).pdf"
+      },
+      "status": "Pending"
+    },
+    {
+      "id": 1770302731383,
+      "fullName": "Nebil Abdoshhhhh",
+      "email": "nebilbromance@gmail.com",
+      "password": "@Nebil56@",
+      "year": 2018,
+      "track": "Natural",
+      "role": "students",
+      "gender": "Male",
+      "documents": {
+        "grade8": "cv (1).pdf",
+        "grade12": "cv (1).pdf",
+        "transcript": "cv (1).pdf"
+      },
+      "status": "Pending"
     }
   ],
   "students": [
@@ -728,13 +801,13 @@
     {
       "name": "College of Engineering",
       "collegeID": "CE",
-      "status": "active",
+      "status": "inactive",
       "id": 7
     },
     {
       "name": "College of electric",
       "collegeID": "CCE",
-      "status": "pending",
+      "status": "inactive",
       "id": 8
     }
   ],

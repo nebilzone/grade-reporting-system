@@ -124,3 +124,8 @@ h1 {
 .semOfDept {
   margin-left: 20px;
 }
+.inactive {
+  opacity: 0.5;
+  pointer-events: none;
+}
+

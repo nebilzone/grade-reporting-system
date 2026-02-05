@@ -93,6 +93,7 @@ forms.addEventListener("submit", async (e) => {
     email: email,
     password: password,
     year: etYear,
+    track:event.freshman.value,
     role: "students",
     gender: document.querySelector('input[name="gender"]:checked')?.value || 0,
     documents: {
@@ -103,7 +104,7 @@ forms.addEventListener("submit", async (e) => {
     status: "Pending",
   };
   if (name && email && password) {
-    await fetch("http://localhost:3000/applications", {
+    await fetch("http://localhost:3000/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

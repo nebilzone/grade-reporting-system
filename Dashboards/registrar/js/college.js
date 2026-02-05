@@ -87,8 +87,9 @@ addingCollegeForm.addEventListener("submit", async function (e) {
 });
 
 async function fetchingCollege() {
-  const response = await fetch(" http://localhost:3000/colleges");
-  return await response.json();
+  const response = await fetch("http://localhost:3000/colleges");
+  const json = await response.json();
+  return json.filter((item) => item.status === "active");
 }
 async function fetchinDepartement(id) {
   const response = await fetch("http://localhost:3000/departments");
@@ -96,18 +97,86 @@ async function fetchinDepartement(id) {
   return json.filter((item) => item.collegeId == id);
 }
 
+const customMenu = document.createElement("div");
+customMenu.id = "customMenu";
+customMenu.style =
+  "display:none; position:absolute; background:#fff; border:1px solid #ccc; padding:5px; border-radius:5px; z-index:1000;";
+customMenu.innerHTML = `
+  <div id="removeOption" style="cursor:pointer; padding:4px; ">Remove</div>
+  <div id="cancelOption" style="cursor:pointer; padding:4px;">Cancel</div>
+`;
+document.body.appendChild(customMenu);
+
+let currentButton = null;
+
+document.addEventListener("click", function (e) {
+  if (!customMenu.contains(e.target)) {
+    customMenu.style.display = "none";
+    currentButton = null;
+  }
+});
+
+customMenu
+  .querySelector("#removeOption")
+  .addEventListener("click", async function () {
+    const colleges = await fetchingCollege();
+    if (currentButton) {
+      const colleges = await fetchingCollege();
+      const college = colleges.find(
+        (c) => c.collegeID === currentButton.dataset.id,
+      );
+      if (!college) return;
+
+      await fetch(`http://localhost:3000/colleges/${college.id}`, {
+        // numeric id
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ status: "inactive" }),
+      });
+
+      customMenu.style.display = "none";
+      currentButton = null;
+      console.log(colleges);
+    }
+  });
+
+customMenu
+  .querySelector("#cancelOption")
+  .addEventListener("click", function () {
+    customMenu.style.display = "none";
+    currentButton = null;
+  });
+
+function attachRightClickToButtons() {
+  const collegeTabBtn = document.querySelectorAll(".tab-btn");
+  collegeTabBtn.forEach((button) => {
+    if (!button.dataset.rightClickAttached) {
+      button.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+        currentButton = button;
+        customMenu.style.top = e.pageY + "px";
+        customMenu.style.left = e.pageX + "px";
+        customMenu.style.display = "block";
+      });
+      button.dataset.rightClickAttached = "true";
+    }
+  });
+}
+
 collegeContainer.addEventListener("click", async function (e) {
   const event = e.target.closest("button");
   if (!event) return;
-  const collegeTabBtn = document.querySelectorAll(".tab-btn");
+  attachRightClickToButtons();
 
+  const collegeTabBtn = document.querySelectorAll(".tab-btn");
   collegeTabBtn.forEach((b) => b.classList.remove("active"));
   event.classList.add("active");
+
   departementContainer.innerHTML = "";
   const departements = await fetchinDepartement(event.dataset.id);
   for (const eachDepartement of departements) {
     for (const departement in eachDepartement) {
-      if (departement == "name") {
+      if (departement === "name") {
         const buttons = document.createElement("button");
         buttons.textContent = `▶ ${eachDepartement[departement]}`;
         buttons.type = "button";
@@ -117,6 +186,7 @@ collegeContainer.addEventListener("click", async function (e) {
     }
   }
 });
+
 async function fetchingCourse() {
   const response = await fetch("http://localhost:3000/courses");
   const courses = await response.json();
