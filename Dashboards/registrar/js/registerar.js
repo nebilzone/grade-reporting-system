@@ -137,11 +137,12 @@ async function display() {
             email: object.email,
             password: object.password,
             gender: object.gender,
-            year: object.year,
+            batch: object.year,
             level: "FreshMan",
+            year: 1,
+            semester: 1,
             status: "active",
           };
-
 
           await fetch("http://localhost:5000/api/send-approval", {
             method: "POST",
@@ -152,7 +153,7 @@ async function display() {
               name: object.fullName,
               email: object.email,
               password: object.password,
-              studentId: `UGPR${Id.toString().padStart(4, "0")}/${ethiopianYear%100}`,
+              studentId: `UGPR${Id.toString().padStart(4, "0")}/${ethiopianYear % 100}`,
             }),
           });
 

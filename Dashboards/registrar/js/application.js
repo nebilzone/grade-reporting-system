@@ -1,7 +1,7 @@
 const pageContent = document.querySelector(".pageContent");
 
 async function fetchingFunc() {
-  const application = await fetch("http://localhost:3000/applications");
+  const application = await fetch("http://localhost:3000/users");
   return await application.json();
 }
 async function display() {

@@ -1,5 +1,5 @@
 {
-    "students": [
+  "students": [
     {
       "id": "UGPR0001/2018",
       "fullName": "abdosh",
@@ -8,6 +8,8 @@
       "gender": "Male",
       "year": "2018",
       "level": "Freshman",
+      "semester": 1,
+
       "status": "active"
     },
     {
@@ -18,6 +20,8 @@
       "gender": "Male",
       "year": "2016",
       "level": "Freshman",
+      "semester": 1,
+
       "status": "Pending"
     },
     {

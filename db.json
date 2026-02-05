@@ -522,8 +522,13 @@
       "email": "child@gmail.com",
       "password": "fdrr",
       "gender": "Male",
-      "year": "2018",
-      "level": "Freshman",
+      "track": "Natural",
+
+      "batch": "2018",
+      "level": "FreshMan",
+      "year": 1,
+      "semester": 1,
+
       "status": "active"
     },
     {
@@ -532,8 +537,13 @@
       "email": "abdu@gmail.com",
       "password": "w3r",
       "gender": "Male",
-      "year": "2016",
-      "level": "Freshman",
+      "track": "Natural",
+
+      "batch": "2016",
+      "level": "FreshMan",
+      "year": 1,
+      "semester": 1,
+
       "status": "Pending"
     },
     {
@@ -542,8 +552,13 @@
       "email": "child@gmail.com",
       "password": "bjgh",
       "gender": "Male",
-      "year": "2016",
-      "level": "Freshman",
+      "track": "Natural",
+
+      "batch": "2016",
+      "level": "FreshMan",
+      "year": 1,
+      "semester": 1,
+
       "status": "Pending"
     },
     {
@@ -552,8 +567,13 @@
       "email": "child@gmail.com",
       "password": "fdrr",
       "gender": "Male",
-      "level": "Freshman",
-      "year": "2018",
+      "track": "Natural",
+
+      "batch": "2018",
+      "level": "FreshMan",
+      "year": 1,
+      "semester": 1,
+
       "status": "active"
     },
     {
@@ -562,8 +582,13 @@
       "email": "child@gmail.com",
       "password": "cf g",
       "gender": "Male",
-      "year": "2018",
+      "track": "Natural",
+
+      "batch": "2018",
       "level": "FreshMan",
+      "year": 1,
+      "semester": 1,
+
       "status": "active"
     },
     {
@@ -572,8 +597,13 @@
       "email": "ealde@gmail.com",
       "password": "cdh",
       "gender": "Female",
-      "year": "2017",
+      "track": "Natural",
+
+      "batch": "2017",
       "level": "FreshMan",
+      "year": 1,
+      "semester": 1,
+
       "status": "active"
     },
     {
@@ -582,8 +612,13 @@
       "email": "ekru6482@gmail.com",
       "password": "ekram",
       "gender": "Female",
-      "year": "2016",
+      "track": "Natural",
+
+      "batch": "2016",
       "level": "FreshMan",
+      "year": 1,
+      "semester": 1,
+
       "status": "active"
     },
     {
@@ -592,8 +627,13 @@
       "email": "firdi@gmail.com",
       "password": "dejh",
       "gender": "Female",
-      "year": "2017",
+      "track": "Natural",
+
+      "batch": "2017",
       "level": "FreshMan",
+      "year": 1,
+      "semester": 1,
+
       "status": "active"
     },
     {
@@ -602,8 +642,13 @@
       "email": "hanan@gmail.com",
       "password": "sdh",
       "gender": "Female",
-      "year": "2017",
+      "track": "Natural",
+
+      "batch": "2017",
       "level": "FreshMan",
+      "year": 1,
+      "semester": 1,
+
       "status": "active"
     },
     {
@@ -612,8 +657,13 @@
       "email": "lamri@gmail.com",
       "password": "cdjchd",
       "gender": "Female",
-      "year": "2017",
+      "track": "Natural",
+
+      "batch": "2017",
       "level": "FreshMan",
+      "year": 1,
+      "semester": 1,
+
       "status": "active"
     },
     {
@@ -622,8 +672,13 @@
       "email": "ekru6482@gmail.com",
       "password": "ekram",
       "gender": "Female",
-      "year": "2016",
+      "track": "Natural",
+
+      "batch": "2016",
       "level": "FreshMan",
+      "year": 1,
+      "semester": 1,
+
       "status": "active"
     },
     {
@@ -632,8 +687,13 @@
       "email": "ekru6482@gmail.com",
       "password": "ekram",
       "gender": "Female",
-      "year": "2016",
+      "track": "Natural",
+
+      "batch": "2016",
       "level": "FreshMan",
+      "year": 1,
+      "semester": 1,
+
       "status": "active"
     },
     {
@@ -642,8 +702,13 @@
       "email": "mfeti@gmail.com",
       "password": "mfeti",
       "gender": "Female",
-      "year": "2017",
+      "track": "Social",
+
+      "batch": "2017",
       "level": "FreshMan",
+      "year": 1,
+      "semester": 1,
+
       "status": "active"
     },
     {
@@ -652,8 +717,12 @@
       "email": "ekru6482@gmail.com",
       "password": "ekram",
       "gender": "Female",
-      "year": "2016",
+      "track": "Social",
+
+      "batch": "2016",
       "level": "FreshMan",
+      "year": 1,
+      "semester": 1,
       "status": "active"
     },
     {
@@ -662,8 +731,13 @@
       "email": "ekru6482@gmail.com",
       "password": "ekram",
       "gender": "Female",
-      "year": "2016",
+      "track": "Social",
+      "batch": "2016",
+
       "level": "FreshMan",
+      "year": 1,
+      "semester": 1,
+
       "status": "active"
     },
     {
@@ -672,8 +746,11 @@
       "email": "abdifekeda0@gmail.com",
       "password": "ABDIfEKEDA2@",
       "gender": "Male",
-      "year": 2018,
+      "track": "Social",
+      "batch": 2018,
       "level": "FreshMan",
+      "year": 1,
+      "semester": 1,
       "status": "active"
     },
     {
@@ -682,8 +759,13 @@
       "email": "mame@gmail.com",
       "password": "asdf",
       "gender": "Female",
-      "year": "2017",
+      "track": "Social",
+
+      "batch": "2017",
       "level": "FreshMan",
+      "year": 1,
+      "semester": 1,
+
       "status": "active"
     }
   ],
