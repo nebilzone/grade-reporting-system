@@ -18,3 +18,14 @@ h1 {
   padding: 20px;
   color: #435580;
 }
+#teacherForm {
+  margin-top: 20px;
+}
+
+.formContainer select {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+  width: 300px;
+}
+

@@ -1,60 +1,161 @@
 const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-const message = document.getElementById("portalMessage");
-const forms=document.querySelector('.formContainer');
+
 if (!currentUser || currentUser.role !== "teachers") {
-  window.location.href = "../../login.html";
+  window.location.href = "../../index.html";
 }
-fetch(`http://localhost:3000/users/${currentUser.id}`)
-  .then((res) => res.json())
-  .then((data) => {
-    console.log("My data only:", data);
-    document.querySelector("#studentName").textContent = data.fullName;
-    document.querySelector("#studentEmail").textContent = data.email;
-    document.querySelector("#studentTrack").textContent = data.departments;
-  });
+const message = document.getElementById("portalMessage");
+const formWrapper = document.getElementById("teacherForm");
+const formContainer = document.querySelector(".formContainer");
 
 async function fetchingDepartements() {
   const res = await fetch("http://localhost:3000/departments");
   return await res.json();
 }
-function getSubmissionWindows(year) {
-  return [
-    {
-      semester: 1,
-      start: new Date(year, 8, 11), // Meskerem 1 ≈ Sep 11
-      end: new Date(year, 9, 10), // Meskerem 30 ≈ Oct 10
-    },
-    {
-      semester: 2,
-      start: new Date(year, 0, 10), // Tir 1 ≈ Jan 10 (next year)
-      end: new Date(year, 1, 8), // Tir 30 ≈ Feb 8 (next year)
-    },
-  ];
-}
-function isPortalOpen() {
-  const today = new Date(); // Today’s date
-  const windows = getSubmissionWindows(today.getFullYear()); // Get windows for this year
-  return (
-    windows.find((window) => today >= window.start && today <= window.end) ||
-    null
+
+async function fetchingCourses(deptId, semester) {
+  const res = await fetch("http://localhost:3000/courses");
+  const data = await res.json();
+  return data.filter(
+    c => c.departementId == deptId && c.semester == semester
   );
 }
+
+
+function getSubmissionWindows(year) {
+  return [
+    { semester: 1, start: new Date(year, 8, 11), end: new Date(year, 9, 10) },
+    { semester: 2, start: new Date(year, 0, 10), end: new Date(year, 1, 28) },
+  ];
+}
+
+function isPortalOpen() {
+  const today = new Date();
+  const windows = getSubmissionWindows(today.getFullYear());
+  return windows.find(w => today >= w.start && today <= w.end) || null;
+}
+
 const activeSemester = isPortalOpen();
-async function formOpening(){
-    if (activeSemester) {
-  message.textContent = `Portal is OPEN for Semester ${activeSemester.semester}. You can fill the form now.`;
-  const departements=await fetchingDepartements();
-  const selectform=document.createElement('select');
-  for(const departement of departements){
-    const option=document.createElement('option');
-    option.textContent=departement.name;
-    selectform.append(option)
+
+
+async function formOpening() {
+  if (!activeSemester) {
+    message.textContent = "Form submission portal is CLOSED.";
+    formWrapper.style.display = "none";
+    return;
   }
-forms.append(selectform)
-  document.getElementById("teacherForm").style.display = "block";
-} else {
-  message.textContent = "Form submission portal is CLOSED for now.";
-  document.getElementById("teacherForm").style.display = "none";
+
+  message.textContent =
+    `Portal is OPEN for Semester ${activeSemester.semester}`;
+  formWrapper.style.display = "block";
+
+  formContainer.innerHTML = "";
+
+
+  const deptSelect = document.createElement("select");
+  const yearSelect = document.createElement("select");
+  const courseSelect = document.createElement("select");
+  const submitBtn = document.createElement("button");
+
+  deptSelect.className = "departmentSelection";
+  yearSelect.className = "yearSelection";
+  courseSelect.className = "courseSelection";
+
+  submitBtn.type = "submit";
+  submitBtn.textContent = "Submit";
+  submitBtn.style.marginTop = "15px";
+
+  formContainer.append(deptSelect, yearSelect, courseSelect, submitBtn);
+
+
+  deptSelect.innerHTML = `<option value="">Select Department</option>`;
+  const departments = await fetchingDepartements();
+
+  for (const dept of departments) {
+    const option = document.createElement("option");
+    option.textContent = dept.name;
+    option.dataset.id = dept.departementId;
+    deptSelect.append(option);
+  }
+
+  let cachedCourses = [];
+
+
+  deptSelect.addEventListener("change", async () => {
+    yearSelect.innerHTML = "";
+    courseSelect.innerHTML = "";
+
+    const selected =
+      deptSelect.options[deptSelect.selectedIndex];
+
+    if (!selected.dataset.id) return;
+
+    const deptId = selected.dataset.id;
+
+    cachedCourses =
+      await fetchingCourses(deptId, activeSemester.semester);
+
+    const years = [...new Set(cachedCourses.map(c => c.year))];
+
+    yearSelect.innerHTML = `<option value="">Select Year</option>`;
+
+    for (const y of years) {
+      const option = document.createElement("option");
+      option.value = y;
+      option.textContent = `Year ${y}`;
+      yearSelect.append(option);
+    }
+  });
+
+
+  yearSelect.addEventListener("change", () => {
+    courseSelect.innerHTML = "";
+
+    const selectedYear = yearSelect.value;
+    if (!selectedYear) return;
+
+    for (const c of cachedCourses) {
+      if (c.year == selectedYear) {
+        const option = document.createElement("option");
+        option.value = c.id;
+        option.textContent = c.name;
+        courseSelect.append(option);
+      }
+    }
+  });
+
+
+  formContainer.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const deptOption =
+      deptSelect.options[deptSelect.selectedIndex];
+
+    const submission = {
+      teacherId: currentUser.id,
+      departmentId: deptOption?.dataset.id,
+      year: yearSelect.value,
+      courseId: courseSelect.value,
+      semester: activeSemester.semester,
+      submittedAt: new Date().toISOString(),
+      status: "pending"
+    };
+
+    if (
+      !submission.departmentId ||
+      !submission.year ||
+      !submission.courseId
+    ) {
+      alert("Please complete all selections.");
+      return;
+    }
+
+    await fetch("http://localhost:3000/teacherSubmissions", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(submission)
+    });
+
+    alert("Submitted successfully!");
+  });
 }
-}
+
 formOpening();
