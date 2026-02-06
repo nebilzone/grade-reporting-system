@@ -165,7 +165,7 @@ async function display() {
           await fetch(`http://localhost:3000/users/${object.id}`, {
             method: "PATCH",
             headers: { "content-type": "application/json" },
-            body: JSON.stringify({ status: "approved" }),
+            body: JSON.stringify({ status: "active" }),
           });
         });
         td.style.borderTop = "1px solid #c1babaff";

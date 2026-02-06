@@ -7,7 +7,6 @@
       "password": "rsaw",
       "year": "2016",
       "track": "Natural",
-
       "role": "students",
       "gender": "Male",
       "documents": {
@@ -15,16 +14,20 @@
         "grade12": "Group members.pdf",
         "transcript": "roadmap.pdf"
       },
-      "status": "approved"
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": 1770367437455,
+        "lastLogin": null
+      },
+      "status": "active"
     },
     {
       "id": 1769587076156,
       "fullName": "Noble Abdo",
       "email": "nebilbromance1@gmail.com",
-      "password": "rsaw44",
+      "password": "rsaw4488",
       "year": "2016",
       "track": "Natural",
-
       "role": "students",
       "gender": "Male",
       "documents": {
@@ -32,22 +35,10 @@
         "grade12": "Group members.pdf",
         "transcript": "roadmap.pdf"
       },
-      "status": "approved"
-    },
-    {
-      "id": 1769587076188,
-      "fullName": "Nebil Abdo",
-      "email": "nebilbromance2@gmail.com",
-      "password": "rsaw88",
-      "year": "2016",
-      "track": "Natural",
-
-      "role": "students",
-      "gender": "Male",
-      "documents": {
-        "grade8": "cv (1).pdf",
-        "grade12": "Group members.pdf",
-        "transcript": "roadmap.pdf"
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": null
       },
       "status": "active"
     },
@@ -58,13 +49,38 @@
       "password": "rsaw88",
       "year": "2016",
       "track": "Natural",
-
       "role": "students",
       "gender": "Male",
       "documents": {
         "grade8": "cv (1).pdf",
         "grade12": "Group members.pdf",
         "transcript": "roadmap.pdf"
+      },
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": null
+      },
+      "status": "active"
+    },
+    {
+      "id": 1769587076188,
+      "fullName": "Nebil Abdo",
+      "email": "nebilbromance2@gmail.com",
+      "password": "rsaw88",
+      "year": "2016",
+      "track": "Natural",
+      "role": "students",
+      "gender": "Male",
+      "documents": {
+        "grade8": "cv (1).pdf",
+        "grade12": "Group members.pdf",
+        "transcript": "roadmap.pdf"
+      },
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": null
       },
       "status": "active"
     },
@@ -75,7 +91,6 @@
       "password": "ekram",
       "year": "2016",
       "track": "Natural",
-
       "role": "students",
       "gender": "Female",
       "documents": {
@@ -83,7 +98,12 @@
         "grade12": "Staff Evaluation Docs.pdf",
         "transcript": "Computer Security Chapter One.pdf"
       },
-      "status": "approved"
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": null
+      },
+      "status": "active"
     },
     {
       "id": 1769610864139,
@@ -92,7 +112,6 @@
       "password": "bjgh",
       "year": "2016",
       "track": "Natural",
-
       "role": "students",
       "gender": "Male",
       "documents": {
@@ -100,7 +119,12 @@
         "grade12": "Staff Evaluation Docs.pdf",
         "transcript": "roadmap.pdf"
       },
-      "status": "approved"
+      "auth": {
+        "failedAttempts": 3,
+        "lockUntil": null,
+        "lastLogin": null
+      },
+      "status": "active"
     },
     {
       "id": 1769611795059,
@@ -109,13 +133,17 @@
       "password": "nati",
       "year": "2016",
       "track": "Social",
-
       "role": "students",
       "gender": "Male",
       "documents": {
         "grade8": "roadmap.pdf",
         "grade12": "Group members.pdf",
         "transcript": "roadmap.pdf"
+      },
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": null
       },
       "status": "Pending"
     },
@@ -126,7 +154,6 @@
       "password": "w3r",
       "year": "2016",
       "track": "Social",
-
       "role": "students",
       "gender": "Male",
       "documents": {
@@ -134,7 +161,12 @@
         "grade12": "Staff Evaluation Docs.pdf",
         "transcript": "Group members.pdf"
       },
-      "status": "approved"
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": 1770367086366
+      },
+      "status": "active"
     },
     {
       "id": 1769662164756,
@@ -143,13 +175,17 @@
       "password": "edgf",
       "year": "2017",
       "track": "Social",
-
       "role": "students",
       "gender": "Male",
       "documents": {
         "grade8": "Full Research Outline for Research Methods In CS.pdf",
         "grade12": "roadmap.pdf",
         "transcript": "Full Research Outline for Research Methods In CS.pdf"
+      },
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": null
       },
       "status": "Pending"
     },
@@ -160,13 +196,17 @@
       "password": "cgdhwf",
       "year": "2017",
       "track": "Social",
-
       "role": "students",
       "gender": "Male",
       "documents": {
         "grade8": "roadmap.pdf",
         "grade12": "Group members.pdf",
         "transcript": "Document1.pdf"
+      },
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": null
       },
       "status": "Pending"
     },
@@ -177,7 +217,6 @@
       "password": "cdh",
       "year": "2017",
       "track": "Social",
-
       "role": "students",
       "gender": "Female",
       "documents": {
@@ -185,7 +224,12 @@
         "grade12": "Mesobinternshipreport.pdf",
         "transcript": "cv (1).pdf"
       },
-      "status": "approved"
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": null
+      },
+      "status": "active"
     },
     {
       "id": 1769662316997,
@@ -194,13 +238,17 @@
       "password": "dfs",
       "year": "2017",
       "track": "Social",
-
       "role": "students",
       "gender": "Female",
       "documents": {
         "grade8": "cv (1).pdf",
         "grade12": "Full Research Outline for Research Methods In CS.pdf",
         "transcript": "Mesobinternshipreport.pdf"
+      },
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": null
       },
       "status": "Pending"
     },
@@ -211,7 +259,6 @@
       "password": "dejh",
       "year": "2017",
       "track": "Social",
-
       "role": "students",
       "gender": "Female",
       "documents": {
@@ -219,7 +266,12 @@
         "grade12": "Chapter Five.pdf",
         "transcript": "Group members.pdf"
       },
-      "status": "approved"
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": null
+      },
+      "status": "active"
     },
     {
       "id": 1769662583646,
@@ -228,7 +280,6 @@
       "password": "sdh",
       "year": "2017",
       "track": "Social",
-
       "role": "students",
       "gender": "Female",
       "documents": {
@@ -236,7 +287,12 @@
         "grade12": "Mesobinternshipreport.pdf",
         "transcript": "roadmap.pdf"
       },
-      "status": "approved"
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": null
+      },
+      "status": "active"
     },
     {
       "id": 1769662618489,
@@ -245,7 +301,6 @@
       "password": "cdjchd",
       "year": "2017",
       "track": "Social",
-
       "role": "students",
       "gender": "Female",
       "documents": {
@@ -253,7 +308,12 @@
         "grade12": "Group members.pdf",
         "transcript": "roadmap.pdf"
       },
-      "status": "approved"
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": null
+      },
+      "status": "active"
     },
     {
       "id": 1769662666431,
@@ -262,7 +322,6 @@
       "password": "mfeti",
       "year": "2017",
       "track": "Social",
-
       "role": "students",
       "gender": "Female",
       "documents": {
@@ -270,7 +329,12 @@
         "grade12": "Mesobinternshipreport.pdf",
         "transcript": "roadmap.pdf"
       },
-      "status": "approved"
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": null
+      },
+      "status": "active"
     },
     {
       "id": 1769662725525,
@@ -279,7 +343,6 @@
       "password": "asdf",
       "year": "2017",
       "track": "Social",
-
       "role": "students",
       "gender": "Female",
       "documents": {
@@ -287,7 +350,12 @@
         "grade12": "Mesobinternshipreport.pdf",
         "transcript": "Mesobinternshipreport.pdf"
       },
-      "status": "approved"
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": null
+      },
+      "status": "active"
     },
     {
       "id": 1769662774456,
@@ -296,7 +364,6 @@
       "password": "def",
       "year": "2018",
       "track": "Natural",
-
       "role": "students",
       "gender": "Female",
       "documents": {
@@ -304,16 +371,20 @@
         "grade12": "Group members.pdf",
         "transcript": "Group members.pdf"
       },
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": null
+      },
       "status": "Pending"
     },
     {
       "id": 1769681401353,
       "fullName": "bn",
       "email": "child@gmail.com",
-      "password": "cf g",
+      "password": "cfg",
       "year": "2018",
       "track": "Natural",
-
       "role": "students",
       "gender": "Male",
       "documents": {
@@ -321,7 +392,12 @@
         "grade12": "Mesobinternshipreport.pdf",
         "transcript": "Mesobinternshipreport.pdf"
       },
-      "status": "approved"
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": null
+      },
+      "status": "active"
     },
     {
       "id": 1769691004228,
@@ -336,7 +412,12 @@
         "grade12": "Staff Evaluation Docs.pdf",
         "transcript": "Mesobinternshipreport.pdf"
       },
-      "status": "approved"
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": null
+      },
+      "status": "active"
     },
     {
       "id": 1769783873758,
@@ -354,7 +435,12 @@
         "masters": "Not uploaded",
         "phd": "Not uploaded"
       },
-      "status": "approved"
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": null
+      },
+      "status": "active"
     },
     {
       "id": 1769783873745,
@@ -372,7 +458,12 @@
         "masters": "Not uploaded",
         "phd": "Not uploaded"
       },
-      "status": "approved"
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": null
+      },
+      "status": "active"
     },
     {
       "id": 1769957309179,
@@ -389,6 +480,11 @@
         "degree": "cv (1).pdf",
         "masters": "cv (1).pdf",
         "phd": "cv (1).pdf"
+      },
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": null
       },
       "status": "Pending"
     },
@@ -408,6 +504,11 @@
         "masters": "cv (1).pdf",
         "phd": "Not uploaded"
       },
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": null
+      },
       "status": "Pending"
     },
     {
@@ -425,6 +526,11 @@
         "degree": "cv (1).pdf",
         "masters": "Not uploaded",
         "phd": "Not uploaded"
+      },
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": null
       },
       "status": "Pending"
     },
@@ -444,6 +550,11 @@
         "masters": "Not uploaded",
         "phd": "Not uploaded"
       },
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": null
+      },
       "status": "Pending"
     },
     {
@@ -462,6 +573,11 @@
         "masters": "Not uploaded",
         "phd": "Not uploaded"
       },
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": null
+      },
       "status": "Pending"
     },
     {
@@ -471,7 +587,6 @@
       "password": "ABDIfEKEDA2@",
       "year": 2018,
       "track": "Natural",
-
       "role": "students",
       "gender": "Male",
       "documents": {
@@ -479,22 +594,31 @@
         "grade12": "cv (1).pdf",
         "transcript": "cv (1).pdf"
       },
-      "status": "approved"
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": null
+      },
+      "status": "active"
     },
     {
       "id": 1770302504152,
       "fullName": "Nebil Abdosh",
       "email": "nebilbromance@gmail.com",
-      "password": "@Nebil4488",
+      "password": "@Nebil448",
       "year": 2018,
       "track": "Natural",
-
       "role": "students",
       "gender": "Male",
       "documents": {
         "grade8": "cv (1).pdf",
         "grade12": "cv (1).pdf",
         "transcript": "cv (1).pdf"
+      },
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": null
       },
       "status": "Pending"
     },
@@ -512,6 +636,11 @@
         "grade12": "cv (1).pdf",
         "transcript": "cv (1).pdf"
       },
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": null
+      },
       "status": "Pending"
     }
   ],
@@ -523,12 +652,10 @@
       "password": "fdrr",
       "gender": "Male",
       "track": "Natural",
-
       "batch": "2018",
       "level": "FreshMan",
       "year": 1,
       "semester": 1,
-
       "status": "active"
     },
     {
@@ -538,12 +665,10 @@
       "password": "w3r",
       "gender": "Male",
       "track": "Natural",
-
       "batch": "2016",
       "level": "FreshMan",
       "year": 1,
       "semester": 1,
-
       "status": "Pending"
     },
     {
@@ -553,12 +678,10 @@
       "password": "bjgh",
       "gender": "Male",
       "track": "Natural",
-
       "batch": "2016",
       "level": "FreshMan",
       "year": 1,
       "semester": 1,
-
       "status": "Pending"
     },
     {
@@ -568,12 +691,10 @@
       "password": "fdrr",
       "gender": "Male",
       "track": "Natural",
-
       "batch": "2018",
       "level": "FreshMan",
       "year": 1,
       "semester": 1,
-
       "status": "active"
     },
     {
@@ -583,12 +704,10 @@
       "password": "cf g",
       "gender": "Male",
       "track": "Natural",
-
       "batch": "2018",
       "level": "FreshMan",
       "year": 1,
       "semester": 1,
-
       "status": "active"
     },
     {
@@ -598,12 +717,10 @@
       "password": "cdh",
       "gender": "Female",
       "track": "Natural",
-
       "batch": "2017",
       "level": "FreshMan",
       "year": 1,
       "semester": 1,
-
       "status": "active"
     },
     {
@@ -613,12 +730,10 @@
       "password": "ekram",
       "gender": "Female",
       "track": "Natural",
-
       "batch": "2016",
       "level": "FreshMan",
       "year": 1,
       "semester": 1,
-
       "status": "active"
     },
     {
@@ -628,12 +743,10 @@
       "password": "dejh",
       "gender": "Female",
       "track": "Natural",
-
       "batch": "2017",
       "level": "FreshMan",
       "year": 1,
       "semester": 1,
-
       "status": "active"
     },
     {
@@ -643,12 +756,10 @@
       "password": "sdh",
       "gender": "Female",
       "track": "Natural",
-
       "batch": "2017",
       "level": "FreshMan",
       "year": 1,
       "semester": 1,
-
       "status": "active"
     },
     {
@@ -658,12 +769,10 @@
       "password": "cdjchd",
       "gender": "Female",
       "track": "Natural",
-
       "batch": "2017",
       "level": "FreshMan",
       "year": 1,
       "semester": 1,
-
       "status": "active"
     },
     {
@@ -673,12 +782,10 @@
       "password": "ekram",
       "gender": "Female",
       "track": "Natural",
-
       "batch": "2016",
       "level": "FreshMan",
       "year": 1,
       "semester": 1,
-
       "status": "active"
     },
     {
@@ -688,12 +795,10 @@
       "password": "ekram",
       "gender": "Female",
       "track": "Natural",
-
       "batch": "2016",
       "level": "FreshMan",
       "year": 1,
       "semester": 1,
-
       "status": "active"
     },
     {
@@ -703,12 +808,10 @@
       "password": "mfeti",
       "gender": "Female",
       "track": "Social",
-
       "batch": "2017",
       "level": "FreshMan",
       "year": 1,
       "semester": 1,
-
       "status": "active"
     },
     {
@@ -718,7 +821,6 @@
       "password": "ekram",
       "gender": "Female",
       "track": "Social",
-
       "batch": "2016",
       "level": "FreshMan",
       "year": 1,
@@ -733,11 +835,9 @@
       "gender": "Female",
       "track": "Social",
       "batch": "2016",
-
       "level": "FreshMan",
       "year": 1,
       "semester": 1,
-
       "status": "active"
     },
     {
@@ -760,12 +860,10 @@
       "password": "asdf",
       "gender": "Female",
       "track": "Social",
-
       "batch": "2017",
       "level": "FreshMan",
       "year": 1,
       "semester": 1,
-
       "status": "active"
     }
   ],
