@@ -16,7 +16,7 @@
       },
       "auth": {
         "failedAttempts": 0,
-        "lockUntil": 1770367437455,
+        "lockUntil": 1770382217202,
         "lastLogin": null
       },
       "status": "active"
@@ -59,7 +59,7 @@
       "auth": {
         "failedAttempts": 0,
         "lockUntil": null,
-        "lastLogin": null
+        "lastLogin": 1770381081210
       },
       "status": "active"
     },
@@ -509,7 +509,7 @@
         "lockUntil": null,
         "lastLogin": null
       },
-      "status": "Pending"
+      "status": "active"
     },
     {
       "id": 1769957535850,
@@ -532,12 +532,12 @@
         "lockUntil": null,
         "lastLogin": null
       },
-      "status": "Pending"
+      "status": "active"
     },
     {
       "id": 1769959338269,
       "fullName": "Nebil Abdo",
-      "email": "nebilbromance@gmail.com",
+      "email": "nebilbromance88@gmail.com",
       "password": "@Nebilabdo45",
       "role": "teachers",
       "phone": "+251948769744",
@@ -553,9 +553,9 @@
       "auth": {
         "failedAttempts": 0,
         "lockUntil": null,
-        "lastLogin": null
+        "lastLogin": 1770382075141
       },
-      "status": "Pending"
+      "status": "active"
     },
     {
       "id": 1769972298590,

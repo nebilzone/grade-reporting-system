@@ -84,6 +84,16 @@ loginForm.addEventListener("submit", async (e) => {
     showError("Email or password is incorrect");
     return;
   }
+  localStorage.setItem(
+  "currentUser",
+  JSON.stringify({
+    id: user.id,
+    role: user.role,
+    email: user.email,
+    fullName: user.fullName
+  })
+);
+
 
   await updateUser(user.id, {
     auth: {

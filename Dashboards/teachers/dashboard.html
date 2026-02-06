@@ -1,11 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1>teachers</h1>
-</body>
+    <link rel="stylesheet" href="../../components/sidebar.css" />
+    <link rel="stylesheet" href="./dasboard.css" />
+  </head>
+  <body>
+    <div class="sidebarContainer"></div>
+    <div class="pageContent">
+      <h1>Teachers dashboard</h1>
+      <h1 id="studentName">n</h1>
+      <h3 id="studentEmail">n</h3>
+      <h3 id="studentTrack">n</h3>
+
+      <h2>Teacher Course Submission Form</h2>
+      <div id="teacherForm" style="display: none">
+        <form class="formContainer">
+          <label>Select courses you can teach:</label><br />
+          
+        </form>
+      </div>
+      <p id="portalMessage"></p>
+    </div>
+    <script src="./dashboard.js"></script>
+    <script src="./sidebar.js"></script>
+  </body>
 </html>
