@@ -461,7 +461,7 @@
       "auth": {
         "failedAttempts": 0,
         "lockUntil": null,
-        "lastLogin": null
+        "lastLogin": 1770447415632
       },
       "status": "active"
     },
@@ -656,7 +656,8 @@
       "level": "FreshMan",
       "year": 1,
       "semester": 1,
-      "status": "active"
+      "status": "active",
+      "section": "FN-1"
     },
     {
       "id": "UGPR0002/2018",
@@ -669,7 +670,8 @@
       "level": "FreshMan",
       "year": 1,
       "semester": 1,
-      "status": "Pending"
+      "status": "Pending",
+      "section": "FN-2"
     },
     {
       "id": "UGPR0003/2018",
@@ -682,7 +684,8 @@
       "level": "FreshMan",
       "year": 1,
       "semester": 1,
-      "status": "Pending"
+      "status": "Pending",
+      "section": "FN-2"
     },
     {
       "id": "UGPR0004/2018",
@@ -695,7 +698,8 @@
       "level": "FreshMan",
       "year": 1,
       "semester": 1,
-      "status": "active"
+      "status": "active",
+      "section": "FN-1"
     },
     {
       "id": "UGPR0005/2018",
@@ -708,7 +712,8 @@
       "level": "FreshMan",
       "year": 1,
       "semester": 1,
-      "status": "active"
+      "status": "active",
+      "section": "FN-2"
     },
     {
       "id": "UGPR0006/2018",
@@ -721,7 +726,8 @@
       "level": "FreshMan",
       "year": 1,
       "semester": 1,
-      "status": "active"
+      "status": "active",
+      "section": "FN-1"
     },
     {
       "id": "UGPR0007/2018",
@@ -734,7 +740,8 @@
       "level": "FreshMan",
       "year": 1,
       "semester": 1,
-      "status": "active"
+      "status": "active",
+      "section": "FN-2"
     },
     {
       "id": "UGPR0008/2018",
@@ -747,7 +754,8 @@
       "level": "FreshMan",
       "year": 1,
       "semester": 1,
-      "status": "active"
+      "status": "active",
+      "section": "FN-1"
     },
     {
       "id": "UGPR0009/2018",
@@ -760,7 +768,8 @@
       "level": "FreshMan",
       "year": 1,
       "semester": 1,
-      "status": "active"
+      "status": "active",
+      "section": "FN-2"
     },
     {
       "id": "UGPR0010/2018",
@@ -773,7 +782,8 @@
       "level": "FreshMan",
       "year": 1,
       "semester": 1,
-      "status": "active"
+      "status": "active",
+      "section": "FN-1"
     },
     {
       "id": "UGPR0011/2018",
@@ -786,7 +796,8 @@
       "level": "FreshMan",
       "year": 1,
       "semester": 1,
-      "status": "active"
+      "status": "active",
+      "section": "FN-1"
     },
     {
       "id": "UGPR0012/2018",
@@ -799,7 +810,8 @@
       "level": "FreshMan",
       "year": 1,
       "semester": 1,
-      "status": "active"
+      "status": "active",
+      "section": "FN-2"
     },
     {
       "id": "UGPR0013/2018",
@@ -812,7 +824,8 @@
       "level": "FreshMan",
       "year": 1,
       "semester": 1,
-      "status": "active"
+      "status": "active",
+      "section": "FS-1"
     },
     {
       "id": "UGPR0014/2018",
@@ -825,7 +838,8 @@
       "level": "FreshMan",
       "year": 1,
       "semester": 1,
-      "status": "active"
+      "status": "active",
+      "section": "FS-1"
     },
     {
       "id": "UGPR0015/2018",
@@ -838,7 +852,8 @@
       "level": "FreshMan",
       "year": 1,
       "semester": 1,
-      "status": "active"
+      "status": "active",
+      "section": "FS-1"
     },
     {
       "id": "UGPR0016/2018",
@@ -851,7 +866,8 @@
       "level": "FreshMan",
       "year": 1,
       "semester": 1,
-      "status": "active"
+      "status": "active",
+      "section": "FS-1"
     },
     {
       "id": "UGPR0017/2018",
@@ -864,7 +880,8 @@
       "level": "FreshMan",
       "year": 1,
       "semester": 1,
-      "status": "active"
+      "status": "active",
+      "section": "FS-1"
     }
   ],
   "teachers": [
@@ -1107,10 +1124,30 @@
       "departmentId": null,
       "year": "1",
       "courseId": "FRESH-COM-106",
-      "semester": 2,
+      "semester": 1,
       "submittedAt": "2026-02-07T06:21:26.564Z",
       "status": "pending",
       "id": 1
+    },
+    {
+      "teacherId": 1769783873745,
+      "departmentId": "CS",
+      "year": "2",
+      "courseId": "CS-SO-206",
+      "semester": 1,
+      "submittedAt": "2026-02-07T06:57:18.581Z",
+      "status": "pending",
+      "id": 2
+    },
+    {
+      "teacherId": 1769783873745,
+      "departmentId": null,
+      "year": "1",
+      "courseId": "FRESH-COM-107",
+      "semester": 1,
+      "submittedAt": "2026-02-07T06:57:31.766Z",
+      "status": "pending",
+      "id": 3
     }
   ],
   "courses": [
@@ -3135,9 +3172,10 @@
       "name": "Data Structures & Algorithms",
       "year": 1,
       "semester": 2,
-      "credit": 4,
+      "credit": "4",
       "departementId": "CS",
-      "active": true
+      "active": true,
+      "code": "undefined"
     },
     {
       "id": "CS-FR-107",

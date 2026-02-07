@@ -1,15 +1,32 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-     <div class="sidebarContainer"></div>
+    <link rel="stylesheet" href="../../components/sidebar.css" />
+    <link rel="stylesheet" href="./css/freshman.css" />
+  </head>
+  <body>
+    <div class="sidebarContainer"></div>
     <div class="pageContent">
       <h1>Freshman dashboards</h1>
+      <div class="freshcontainer">
+        <button type="button" data-type="students" data-id="Natural">
+          Natural Students
+        </button>
+        <button type="button" data-type="students" data-id="Social">
+          Social Students
+        </button>
+        <button type="button" data-type="courses" data-id="Natural">
+          Natural Courses
+        </button>
+        <button type="button" data-type="courses" data-id="Social">
+          Social Courses
+        </button>
+      </div>
     </div>
-</body>
+    <script src="./js/default.js"></script>
+    <script src="./js/freshman.js"></script>
+  </body>
 </html>
