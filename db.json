@@ -461,7 +461,7 @@
       "auth": {
         "failedAttempts": 0,
         "lockUntil": null,
-        "lastLogin": 1770447415632
+        "lastLogin": 1770475524300
       },
       "status": "active"
     },
@@ -1126,7 +1126,7 @@
       "courseId": "FRESH-COM-106",
       "semester": 1,
       "submittedAt": "2026-02-07T06:21:26.564Z",
-      "status": "pending",
+      "status": "approved",
       "id": 1
     },
     {
@@ -1146,9 +1146,30 @@
       "courseId": "FRESH-COM-107",
       "semester": 1,
       "submittedAt": "2026-02-07T06:57:31.766Z",
-      "status": "pending",
+      "status": "approved",
       "id": 3
+    },
+    {
+      "teacherId": 1769783873745,
+      "departmentId": null,
+      "year": "1",
+      "courseId": "FRESH-COM-101",
+      "semester": 1,
+      "submittedAt": "2026-03-07T06:57:31.766Z",
+      "status": "approved",
+      "id": 4
+    },
+    {
+      "teacherId": 1769783873745,
+      "departmentId": null,
+      "year": "1",
+      "courseId": "FRESH-COM-102",
+      "semester": 1,
+      "submittedAt": "2026-03-07T06:57:31.766Z",
+      "status": "approved",
+      "id": 4
     }
+
   ],
   "courses": [
     {

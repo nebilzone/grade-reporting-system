@@ -2,7 +2,9 @@ const tabBtnContainer = document.querySelector(".tabBtncontainer");
 const tableContiner = document.querySelector(".tableContainer");
 async function fetchingTeacherSubmission() {
   const res = await fetch("http://localhost:3000/teacherSubmissions");
-  return await res.json();
+
+   const json=await res.json();
+    return json.filter(item=>item.status=='pending')
 }
 tabBtnContainer.addEventListener("click", async function (e) {
   const button = e.target.closest("button");
@@ -27,7 +29,6 @@ tabBtnContainer.addEventListener("click", async function (e) {
       </tr>
     `;
 
- 
   if (btnId == "freshman") {
     freshTeacher = fetchingTeacher.filter((item) => item.departmentId === null);
 
@@ -51,12 +52,18 @@ tabBtnContainer.addEventListener("click", async function (e) {
       approveBtn.textContent = "aprove";
       const rejectBtn = document.createElement("button");
       rejectBtn.textContent = "reject";
-
+      approveBtn.addEventListener("click", async function (e) {
+        e.preventDefault();
+        await fetch(`http://localhost:3000/teacherSubmissions/${teacher.id}`,{
+            method:'PATCH',
+            headers:{"Content-Type": "application/json"},
+            body:JSON.stringify({status:'approved'})
+        })
+      });
       tr.append(approveBtn, rejectBtn);
       table.append(tr);
     }
   } else {
-    console.log("nebex");
     departementTeacher = fetchingTeacher.filter(
       (item) => item.departmentId !== null,
     );
@@ -75,11 +82,13 @@ tabBtnContainer.addEventListener("click", async function (e) {
       approveBtn.textContent = "aprove";
       const rejectBtn = document.createElement("button");
       rejectBtn.textContent = "reject";
-
+      approveBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        console.log("neba");
+      });
       tr.append(approveBtn, rejectBtn);
       table.append(tr);
     }
-    console.log(departementTeacher);
   }
   tableContiner.append(table);
 });
