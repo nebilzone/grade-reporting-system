@@ -1101,6 +1101,18 @@
       "departementId": "AGRI"
     }
   ],
+  "teacherSubmissions": [
+    {
+      "teacherId": 1769959338269,
+      "departmentId": null,
+      "year": "1",
+      "courseId": "FRESH-COM-106",
+      "semester": 2,
+      "submittedAt": "2026-02-07T06:21:26.564Z",
+      "status": "pending",
+      "id": 1
+    }
+  ],
   "courses": [
     {
       "id": "FRESH-COM-101",
@@ -1244,51 +1256,6 @@
       "track": "Natural",
       "semester": 2,
       "credit": 3,
-      "active": true
-    },
-    {
-      "id": "SE-FR-101",
-      "name": "Introduction to Programming",
-      "year": 1,
-      "semester": 1,
-      "credit": 3,
-      "departementId": "SE",
-      "active": true
-    },
-    {
-      "id": "SE-FR-102",
-      "name": "Calculus I",
-      "year": 1,
-      "semester": 1,
-      "credit": 4,
-      "departementId": "SE",
-      "active": true
-    },
-    {
-      "id": "SE-FR-103",
-      "name": "Physics I",
-      "year": 1,
-      "semester": 1,
-      "credit": 3,
-      "departementId": "SE",
-      "active": true
-    },
-    {
-      "id": "SE-FR-104",
-      "name": "English Communication",
-      "year": 1,
-      "semester": 1,
-      "credit": 2,
-      "departementId": "SE",
-      "active": true
-    },
-    {
-      "id": "SE-FR-105",
-      "name": "Introduction to IT",
-      "year": 1,
-      "semester": 1,
-      "credit": 2,
-      "departementId": "SE",
       "active": true
     },
     {
@@ -1679,51 +1646,6 @@
       "active": true
     },
     {
-      "id": "EE-FR-101",
-      "name": "Calculus I",
-      "year": 1,
-      "semester": 1,
-      "credit": 4,
-      "departementId": "EE",
-      "active": true
-    },
-    {
-      "id": "EE-FR-102",
-      "name": "Physics I",
-      "year": 1,
-      "semester": 1,
-      "credit": 3,
-      "departementId": "EE",
-      "active": true
-    },
-    {
-      "id": "EE-FR-103",
-      "name": "Introduction to Electrical Engineering",
-      "year": 1,
-      "semester": 1,
-      "credit": 3,
-      "departementId": "EE",
-      "active": true
-    },
-    {
-      "id": "EE-FR-104",
-      "name": "Computer Programming",
-      "year": 1,
-      "semester": 1,
-      "credit": 3,
-      "departementId": "EE",
-      "active": true
-    },
-    {
-      "id": "EE-FR-105",
-      "name": "English Communication",
-      "year": 1,
-      "semester": 1,
-      "credit": 2,
-      "departementId": "EE",
-      "active": true
-    },
-    {
       "id": "EE-FR-106",
       "name": "Calculus II",
       "year": 1,
@@ -2099,51 +2021,6 @@
       "semester": 2,
       "credit": 2,
       "departementId": "EE",
-      "active": true
-    },
-    {
-      "id": "ME-FR-101",
-      "name": "Calculus I",
-      "year": 1,
-      "semester": 1,
-      "credit": 4,
-      "departementId": "ME",
-      "active": true
-    },
-    {
-      "id": "ME-FR-102",
-      "name": "Physics I",
-      "year": 1,
-      "semester": 1,
-      "credit": 3,
-      "departementId": "ME",
-      "active": true
-    },
-    {
-      "id": "ME-FR-103",
-      "name": "Engineering Mechanics",
-      "year": 1,
-      "semester": 1,
-      "credit": 3,
-      "departementId": "ME",
-      "active": true
-    },
-    {
-      "id": "ME-FR-104",
-      "name": "Introduction to Mechanical Engineering",
-      "year": 1,
-      "semester": 1,
-      "credit": 3,
-      "departementId": "ME",
-      "active": true
-    },
-    {
-      "id": "ME-FR-105",
-      "name": "Engineering Drawing",
-      "year": 1,
-      "semester": 1,
-      "credit": 2,
-      "departementId": "ME",
       "active": true
     },
     {
@@ -2525,51 +2402,6 @@
       "active": true
     },
     {
-      "id": "CE-FR-101",
-      "name": "Calculus I",
-      "year": 1,
-      "semester": 1,
-      "credit": 4,
-      "departementId": "CE",
-      "active": true
-    },
-    {
-      "id": "CE-FR-102",
-      "name": "Physics I",
-      "year": 1,
-      "semester": 1,
-      "credit": 3,
-      "departementId": "CE",
-      "active": true
-    },
-    {
-      "id": "CE-FR-103",
-      "name": "Introduction to Civil Engineering",
-      "year": 1,
-      "semester": 1,
-      "credit": 3,
-      "departementId": "CE",
-      "active": true
-    },
-    {
-      "id": "CE-FR-104",
-      "name": "Engineering Drawing",
-      "year": 1,
-      "semester": 1,
-      "credit": 2,
-      "departementId": "CE",
-      "active": true
-    },
-    {
-      "id": "CE-FR-105",
-      "name": "English Communication",
-      "year": 1,
-      "semester": 1,
-      "credit": 2,
-      "departementId": "CE",
-      "active": true
-    },
-    {
       "id": "CE-FR-106",
       "name": "Calculus II",
       "year": 1,
@@ -2939,60 +2771,6 @@
       "active": true
     },
     {
-      "id": "LAW-FR-101",
-      "name": "Introduction to Law",
-      "year": 1,
-      "semester": 1,
-      "credit": 3,
-      "departementId": "LAW",
-      "active": true
-    },
-    {
-      "id": "LAW-FR-102",
-      "name": "Legal Methods and Research",
-      "year": 1,
-      "semester": 1,
-      "credit": 3,
-      "departementId": "LAW",
-      "active": true
-    },
-    {
-      "id": "LAW-FR-103",
-      "name": "Constitutional Law I",
-      "year": 1,
-      "semester": 1,
-      "credit": 3,
-      "departementId": "LAW",
-      "active": true
-    },
-    {
-      "id": "LAW-FR-104",
-      "name": "English for Legal Studies",
-      "year": 1,
-      "semester": 1,
-      "credit": 2,
-      "departementId": "LAW",
-      "active": true
-    },
-    {
-      "id": "LAW-FR-105",
-      "name": "History of Law",
-      "year": 1,
-      "semester": 1,
-      "credit": 2,
-      "departementId": "LAW",
-      "active": true
-    },
-    {
-      "id": "LAW-FR-106",
-      "name": "Criminal Law I",
-      "year": 1,
-      "semester": 2,
-      "credit": 3,
-      "departementId": "LAW",
-      "active": true
-    },
-    {
       "id": "LAW-FR-107",
       "name": "Contract Law I",
       "year": 1,
@@ -3353,52 +3131,6 @@
       "active": true
     },
     {
-      "id": "CS-FR-101",
-      "name": "Introduction to Programming2",
-      "year": 1,
-      "semester": 1,
-      "credit": "4",
-      "departementId": "CS",
-      "active": true,
-      "code": "neba"
-    },
-    {
-      "id": "CS-FR-102",
-      "name": "Discrete Mathematics",
-      "year": 1,
-      "semester": 1,
-      "credit": 3,
-      "departementId": "CS",
-      "active": true
-    },
-    {
-      "id": "CS-FR-103",
-      "name": "Calculus for Computer Science",
-      "year": 1,
-      "semester": 1,
-      "credit": 3,
-      "departementId": "CS",
-      "active": true
-    },
-    {
-      "id": "CS-FR-104",
-      "name": "Digital Logic Design",
-      "year": 1,
-      "semester": 1,
-      "credit": 3,
-      "departementId": "CS",
-      "active": false
-    },
-    {
-      "id": "CS-FR-105",
-      "name": "Academic Writing",
-      "year": 1,
-      "semester": 1,
-      "credit": 2,
-      "departementId": "CS",
-      "active": true
-    },
-    {
       "id": "CS-FR-106",
       "name": "Data Structures & Algorithms",
       "year": 1,
@@ -3702,51 +3434,6 @@
       "semester": 2,
       "credit": 4,
       "departementId": "CS",
-      "active": true
-    },
-    {
-      "id": "IT-FR-101",
-      "name": "IT Fundamentals",
-      "year": 1,
-      "semester": 1,
-      "credit": 3,
-      "departementId": "IT",
-      "active": true
-    },
-    {
-      "id": "IT-FR-102",
-      "name": "Programming for IT",
-      "year": 1,
-      "semester": 1,
-      "credit": 4,
-      "departementId": "IT",
-      "active": true
-    },
-    {
-      "id": "IT-FR-103",
-      "name": "Computer Hardware & Maintenance",
-      "year": 1,
-      "semester": 1,
-      "credit": 3,
-      "departementId": "IT",
-      "active": true
-    },
-    {
-      "id": "IT-FR-104",
-      "name": "Mathematics for IT",
-      "year": 1,
-      "semester": 1,
-      "credit": 3,
-      "departementId": "IT",
-      "active": true
-    },
-    {
-      "id": "IT-FR-105",
-      "name": "Communication Skills I",
-      "year": 1,
-      "semester": 1,
-      "credit": 2,
-      "departementId": "IT",
       "active": true
     },
     {
@@ -4056,87 +3743,6 @@
       "active": true
     },
     {
-      "id": "IS-FR-101",
-      "name": "Introduction to Information Systems",
-      "year": 1,
-      "semester": 1,
-      "credit": 3,
-      "departementId": "IS",
-      "active": true
-    },
-    {
-      "id": "IS-FR-102",
-      "name": "Business Fundamentals",
-      "year": 1,
-      "semester": 1,
-      "credit": 3,
-      "departementId": "IS",
-      "active": true
-    },
-    {
-      "id": "IS-FR-103",
-      "name": "Programming for Business",
-      "year": 1,
-      "semester": 1,
-      "credit": 3,
-      "departementId": "IS",
-      "active": true
-    },
-    {
-      "id": "IS-FR-104",
-      "name": "Mathematics for Business",
-      "year": 1,
-      "semester": 1,
-      "credit": 3,
-      "departementId": "IS",
-      "active": true
-    },
-    {
-      "id": "IS-FR-105",
-      "name": "Business Communication",
-      "year": 1,
-      "semester": 1,
-      "credit": 2,
-      "departementId": "IS",
-      "active": true
-    },
-    {
-      "id": "IS-FR-106",
-      "name": "Database Design & Management",
-      "year": 1,
-      "semester": 2,
-      "credit": 4,
-      "departementId": "IS",
-      "active": true
-    },
-    {
-      "id": "IS-FR-107",
-      "name": "Systems Analysis",
-      "year": 1,
-      "semester": 2,
-      "credit": 3,
-      "departementId": "IS",
-      "active": true
-    },
-    {
-      "id": "IS-FR-108",
-      "name": "Business Statistics",
-      "year": 1,
-      "semester": 2,
-      "credit": 3,
-      "departementId": "IS",
-      "active": true
-    },
-    {
-      "id": "IS-FR-109",
-      "name": "Web Design for Business",
-      "year": 1,
-      "semester": 2,
-      "credit": 3,
-      "departementId": "IS",
-      "active": true
-    },
-    {
       "id": "IS-FR-110",
       "name": "Financial Accounting",
       "year": 1,
@@ -4404,51 +4010,6 @@
       "semester": 2,
       "credit": 4,
       "departementId": "IS",
-      "active": true
-    },
-    {
-      "id": "IF-FR-101",
-      "name": "Introduction to Information Science",
-      "year": 1,
-      "semester": 1,
-      "credit": 3,
-      "departementId": "IF",
-      "active": true
-    },
-    {
-      "id": "IF-FR-102",
-      "name": "Information Organization",
-      "year": 1,
-      "semester": 1,
-      "credit": 3,
-      "departementId": "IF",
-      "active": true
-    },
-    {
-      "id": "IF-FR-103",
-      "name": "Foundations of Computing",
-      "year": 1,
-      "semester": 1,
-      "credit": 3,
-      "departementId": "IF",
-      "active": true
-    },
-    {
-      "id": "IF-FR-104",
-      "name": "Research Methods I",
-      "year": 1,
-      "semester": 1,
-      "credit": 3,
-      "departementId": "IF",
-      "active": true
-    },
-    {
-      "id": "IF-FR-105",
-      "name": "Academic Writing & Communication",
-      "year": 1,
-      "semester": 1,
-      "credit": 2,
-      "departementId": "IF",
       "active": true
     },
     {

@@ -3,10 +3,12 @@ const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 if (!currentUser || currentUser.role !== "teachers") {
   window.location.href = "../../index.html";
 }
+
 const message = document.getElementById("portalMessage");
 const formWrapper = document.getElementById("teacherForm");
 const formContainer = document.querySelector(".formContainer");
-
+const teacherFrom=document.querySelector('.formFilling');
+const logOutBtn=document.querySelector('.log-outBtn');
 async function fetchingDepartements() {
   const res = await fetch("http://localhost:3000/departments");
   return await res.json();
@@ -16,10 +18,14 @@ async function fetchingCourses(deptId, semester) {
   const res = await fetch("http://localhost:3000/courses");
   const data = await res.json();
   return data.filter(
-    c => c.departementId == deptId && c.semester == semester
+    (c) => c.departementId == deptId && c.semester == semester
   );
 }
 
+async function fetchAllCourses() {
+  const res = await fetch("http://localhost:3000/courses");
+  return await res.json();
+}
 
 function getSubmissionWindows(year) {
   return [
@@ -31,11 +37,10 @@ function getSubmissionWindows(year) {
 function isPortalOpen() {
   const today = new Date();
   const windows = getSubmissionWindows(today.getFullYear());
-  return windows.find(w => today >= w.start && today <= w.end) || null;
+  return windows.find((w) => today >= w.start && today <= w.end) || null;
 }
 
 const activeSemester = isPortalOpen();
-
 
 async function formOpening() {
   if (!activeSemester) {
@@ -44,61 +49,93 @@ async function formOpening() {
     return;
   }
 
-  message.textContent =
-    `Portal is OPEN for Semester ${activeSemester.semester}`;
+  message.textContent = `Portal is OPEN for Semester ${activeSemester.semester}`;
   formWrapper.style.display = "block";
 
   formContainer.innerHTML = "";
 
+  const courseTypeSelect = document.createElement("select");
+  courseTypeSelect.id = "courseType";
+  courseTypeSelect.className = "courseTypeSelection";
+  courseTypeSelect.innerHTML = `
+    <option value="">Select Type</option>
+    <option value="freshman">Freshman Courses</option>
+    <option value="department">Department Courses</option>
+  `;
 
   const deptSelect = document.createElement("select");
-  const yearSelect = document.createElement("select");
-  const courseSelect = document.createElement("select");
-  const submitBtn = document.createElement("button");
-
+  deptSelect.id = "department";
   deptSelect.className = "departmentSelection";
+  deptSelect.innerHTML = `<option value="">Select Department</option>`;
+  deptSelect.style.display = "none";
+
+  const yearSelect = document.createElement("select");
+  yearSelect.id = "year";
   yearSelect.className = "yearSelection";
+
+  const courseSelect = document.createElement("select");
+  courseSelect.id = "course";
   courseSelect.className = "courseSelection";
 
+  const submitBtn = document.createElement("button");
   submitBtn.type = "submit";
   submitBtn.textContent = "Submit";
   submitBtn.style.marginTop = "15px";
 
-  formContainer.append(deptSelect, yearSelect, courseSelect, submitBtn);
+  formContainer.append(courseTypeSelect, deptSelect, yearSelect, courseSelect, submitBtn);
 
-
-  deptSelect.innerHTML = `<option value="">Select Department</option>`;
   const departments = await fetchingDepartements();
-
   for (const dept of departments) {
     const option = document.createElement("option");
+    option.value = dept.departementId;
     option.textContent = dept.name;
-    option.dataset.id = dept.departementId;
     deptSelect.append(option);
   }
 
-  let cachedCourses = [];
+  const allCourses = await fetchAllCourses();
+  const freshCourses = allCourses.filter(
+    (c) => c.level === "Freshman" && c.semester === activeSemester.semester
+  );
 
+  let deptCourses = [];
+
+  courseTypeSelect.addEventListener("change", async () => {
+    yearSelect.innerHTML = "";
+    courseSelect.innerHTML = "";
+    deptCourses = [];
+    deptSelect.style.display = "none";
+
+    if (courseTypeSelect.value === "freshman") {
+      const option = document.createElement("option");
+      option.value = "1";
+      option.textContent = "Year 1";
+      yearSelect.append(option);
+
+      courseSelect.innerHTML = "";
+      for (const c of freshCourses) {
+        const opt = document.createElement("option");
+        opt.value = c.id;
+        opt.textContent = c.name;
+        courseSelect.append(opt);
+      }
+    } else if (courseTypeSelect.value === "department") {
+      deptSelect.style.display = "inline-block";
+      yearSelect.innerHTML = `<option value="">Select Year</option>`;
+      courseSelect.innerHTML = "";
+    }
+  });
 
   deptSelect.addEventListener("change", async () => {
     yearSelect.innerHTML = "";
     courseSelect.innerHTML = "";
 
-    const selected =
-      deptSelect.options[deptSelect.selectedIndex];
+    const deptId = deptSelect.value;
+    if (!deptId) return;
 
-    if (!selected.dataset.id) return;
+    deptCourses = await fetchingCourses(deptId, activeSemester.semester);
 
-    const deptId = selected.dataset.id;
-
-    cachedCourses =
-      await fetchingCourses(deptId, activeSemester.semester);
-
-    const years = [...new Set(cachedCourses.map(c => c.year))];
-
-    yearSelect.innerHTML = `<option value="">Select Year</option>`;
-
-    for (const y of years) {
+    const deptYears = [...new Set(deptCourses.map((c) => c.year))];
+    for (const y of deptYears) {
       const option = document.createElement("option");
       option.value = y;
       option.textContent = `Year ${y}`;
@@ -106,44 +143,37 @@ async function formOpening() {
     }
   });
 
-
   yearSelect.addEventListener("change", () => {
     courseSelect.innerHTML = "";
-
     const selectedYear = yearSelect.value;
     if (!selectedYear) return;
 
-    for (const c of cachedCourses) {
-      if (c.year == selectedYear) {
-        const option = document.createElement("option");
-        option.value = c.id;
-        option.textContent = c.name;
-        courseSelect.append(option);
+    if (courseTypeSelect.value === "department") {
+      for (const c of deptCourses) {
+        if (c.year == selectedYear) {
+          const option = document.createElement("option");
+          option.value = c.id;
+          option.textContent = c.name;
+          courseSelect.append(option);
+        }
       }
     }
   });
 
-
-  formContainer.addEventListener("submit", async (e) => {
+  teacherFrom.addEventListener("submit", async (e) => {
     e.preventDefault();
-    const deptOption =
-      deptSelect.options[deptSelect.selectedIndex];
 
     const submission = {
       teacherId: currentUser.id,
-      departmentId: deptOption?.dataset.id,
+      departmentId: courseTypeSelect.value === "department" ? deptSelect.value : null,
       year: yearSelect.value,
       courseId: courseSelect.value,
       semester: activeSemester.semester,
       submittedAt: new Date().toISOString(),
-      status: "pending"
+      status: "pending",
     };
 
-    if (
-      !submission.departmentId ||
-      !submission.year ||
-      !submission.courseId
-    ) {
+    if (!submission.year || !submission.courseId) {
       alert("Please complete all selections.");
       return;
     }
@@ -151,11 +181,17 @@ async function formOpening() {
     await fetch("http://localhost:3000/teacherSubmissions", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(submission)
+      body: JSON.stringify(submission),
     });
 
     alert("Submitted successfully!");
   });
 }
+logOutBtn.addEventListener('click',function(e){
+  e.preventDefault();
+  localStorage.removeItem("currentUser");
+
+  window.location.href = "../../index.html";
+})
 
 formOpening();
