@@ -1,8 +1,14 @@
 const loginForm = document.querySelector(".loginForm");
 const formContainer = document.querySelector(".formContainer");
 
+
 async function fetchUsers() {
   const res = await fetch("http://localhost:3000/users");
+  return await res.json();
+}
+
+async function fetchTeachers() {
+  const res = await fetch("http://localhost:3000/teachers");
   return await res.json();
 }
 
@@ -13,6 +19,7 @@ async function updateUser(id, data) {
     body: JSON.stringify(data),
   });
 }
+
 
 function showError(message) {
   const old = formContainer.querySelector(".error");
@@ -37,13 +44,14 @@ function redirectByRole(role) {
   }
 }
 
+
 loginForm.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const email = e.target.emailInput.value.trim();
   const password = e.target.passwordInput.value.trim();
-  const users = await fetchUsers();
 
+  const users = await fetchUsers();
   const user = users.find((u) => u.email === email);
 
   if (!user) {
@@ -63,6 +71,7 @@ loginForm.addEventListener("submit", async (e) => {
     return;
   }
 
+
   if (user.password !== password) {
     let attempts = user.auth.failedAttempts + 1;
 
@@ -80,19 +89,9 @@ loginForm.addEventListener("submit", async (e) => {
     }
 
     await updateUser(user.id, update);
-
     showError("Email or password is incorrect");
     return;
   }
-  localStorage.setItem(
-  "currentUser",
-  JSON.stringify({
-    id: user.id,
-    role: user.role,
-    email: user.email,
-    fullName: user.fullName
-  })
-);
 
 
   await updateUser(user.id, {
@@ -102,6 +101,33 @@ loginForm.addEventListener("submit", async (e) => {
       lastLogin: now,
     },
   });
+
+
+  let teacherId = null;
+
+  if (user.role === "teachers") {
+    const teachers = await fetchTeachers();
+    const teacher = teachers.find((t) => t.id === user.id);
+
+    if (!teacher) {
+      showError("Teacher record not found");
+      return;
+    }
+
+    teacherId = teacher.id;
+  }
+
+
+  localStorage.setItem(
+    "currentUser",
+    JSON.stringify({
+      userId: user.id,
+      teacherId: teacherId,
+      role: user.role,
+      email: user.email,
+      fullName: user.fullName,
+    })
+  );
 
   redirectByRole(user.role);
 });

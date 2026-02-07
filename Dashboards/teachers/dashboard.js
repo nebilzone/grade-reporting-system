@@ -1,5 +1,5 @@
 const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-
+console.log(currentUser)
 if (!currentUser || currentUser.role !== "teachers") {
   window.location.href = "../../index.html";
 }
@@ -164,7 +164,7 @@ async function formOpening() {
     e.preventDefault();
 
     const submission = {
-      teacherId: currentUser.id,
+      teacherId: currentUser.teacherId,
       departmentId: courseTypeSelect.value === "department" ? deptSelect.value : null,
       year: yearSelect.value,
       courseId: courseSelect.value,

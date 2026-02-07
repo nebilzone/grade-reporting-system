@@ -15,8 +15,8 @@
         "transcript": "roadmap.pdf"
       },
       "auth": {
-        "failedAttempts": 0,
-        "lockUntil": 1770382217202,
+        "failedAttempts": 1,
+        "lockUntil": null,
         "lastLogin": null
       },
       "status": "active"
@@ -330,9 +330,9 @@
         "transcript": "roadmap.pdf"
       },
       "auth": {
-        "failedAttempts": 0,
+        "failedAttempts": 3,
         "lockUntil": null,
-        "lastLogin": null
+        "lastLogin": 1770485802883
       },
       "status": "active"
     },
@@ -438,7 +438,7 @@
       "auth": {
         "failedAttempts": 0,
         "lockUntil": null,
-        "lastLogin": null
+        "lastLogin": 1770487292006
       },
       "status": "active"
     },
@@ -461,7 +461,7 @@
       "auth": {
         "failedAttempts": 0,
         "lockUntil": null,
-        "lastLogin": 1770475524300
+        "lastLogin": 1770487741912
       },
       "status": "active"
     },
@@ -469,12 +469,12 @@
       "id": 1769957309179,
       "fullName": "Nebil Abdo",
       "email": "nebilbromance@gmail.com",
-      "password": "@Nebilabdo43",
+      "password": "@Nebilabdo44",
       "role": "teachers",
       "phone": "+251948769744",
       "gender": "Male",
       "nationalID": "cvbnm",
-      "departments": "fregftr",
+      "departments": null,
       "documents": {
         "cv": "cv (1).pdf",
         "degree": "cv (1).pdf",
@@ -486,18 +486,18 @@
         "lockUntil": null,
         "lastLogin": null
       },
-      "status": "Pending"
+      "status": "active"
     },
     {
       "id": 1769957475113,
-      "fullName": "Nebil Abdo",
-      "email": "nebilbromance@gmail.com",
-      "password": "@Nebilbbf2dc",
+      "fullName": "Nihan Wemaye",
+      "email": "nihan@gmail.com",
+      "password": "@Nihan",
       "role": "teachers",
       "phone": "+251948769744",
       "gender": "Male",
       "nationalID": "cfvgrfdc",
-      "departments": "cfeds",
+      "departments": null,
       "documents": {
         "cv": "cv (1).pdf",
         "degree": "cv (1).pdf",
@@ -513,9 +513,9 @@
     },
     {
       "id": 1769957535850,
-      "fullName": "Nebil Abdo",
-      "email": "nebilbromance@gmail.com",
-      "password": "@Nebil23ec",
+      "fullName": "Mohammed Ahmed",
+      "email": "mfeti@gmail.com",
+      "password": "mfeti",
       "role": "teachers",
       "phone": "+251948769744",
       "gender": "Male",
@@ -536,9 +536,9 @@
     },
     {
       "id": 1769959338269,
-      "fullName": "Nebil Abdo",
-      "email": "nebilbromance88@gmail.com",
-      "password": "@Nebilabdo45",
+      "fullName": "muaz Abraham",
+      "email": "muaz@gmail.com",
+      "password": "@Muaz",
       "role": "teachers",
       "phone": "+251948769744",
       "gender": "Male",
@@ -559,9 +559,9 @@
     },
     {
       "id": 1769972298590,
-      "fullName": "Nebil Abdo",
-      "email": "nebilbromance@gmail.com",
-      "password": "@Nebil4488",
+      "fullName": "Ekram Tofik",
+      "email": "ekram@gmail.com",
+      "password": "@Ekram4488",
       "role": "teachers",
       "phone": "+1 (555) 123-4567",
       "gender": "Male",
@@ -576,9 +576,9 @@
       "auth": {
         "failedAttempts": 0,
         "lockUntil": null,
-        "lastLogin": null
+        "lastLogin": 1770488905559
       },
-      "status": "Pending"
+      "status": "active"
     },
     {
       "id": 1770205878553,
@@ -886,6 +886,8 @@
   ],
   "teachers": [
     {
+      "id": 1769587076198,
+
       "fullName": "Natnael Abebaw",
       "email": "nati@example.com",
       "password": "4568",
@@ -900,62 +902,168 @@
         "masters": "Not uploaded",
         "phd": "Not uploaded"
       },
-      "status": "active",
-      "id": 1
+      "status": "active"
     },
     {
+      "id": 1769783873758,
       "fullName": "Nebil Abdo",
       "email": "child@example.com",
       "password": "1234",
-      "gender": "Male",
-      "phone": "+251948769744",
-      "nationalId": "234",
       "role": "teachers",
-      "departement": "computer",
+      "phone": "+251948769744",
+      "gender": "Male",
+      "nationalID": "234",
+      "departments": "computer",
       "documents": {
         "cv": "cv (1).pdf",
         "degree": "roadmap.pdf",
         "masters": "Not uploaded",
         "phd": "Not uploaded"
       },
-      "status": "active",
-      "id": 2
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": 1770487292006
+      },
+      "status": "active"
     },
     {
+      "id": 1769783873745,
       "fullName": "Natnael Abebaw",
       "email": "nati@example.com",
       "password": "4568",
-      "gender": "Male",
-      "phone": "+251948769744",
-      "nationalId": "67234",
       "role": "teachers",
-      "departement": "software",
+      "phone": "+251948769744",
+      "gender": "Male",
+      "nationalID": "67234",
+      "departments": "software",
       "documents": {
         "cv": "cv (1).pdf",
         "degree": "roadmap.pdf",
         "masters": "Not uploaded",
         "phd": "Not uploaded"
       },
-      "status": "active",
-      "id": 3
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": 1770487741912
+      },
+      "status": "active"
     },
     {
+      "id": 1769957309179,
       "fullName": "Nebil Abdo",
-      "email": "child@example.com",
-      "password": "1234",
-      "gender": "Male",
-      "phone": "+251948769744",
-      "nationalId": "234",
+      "email": "nebilbromance@gmail.com",
+      "password": "@Nebilabdo44",
       "role": "teachers",
-      "departement": "computer",
+      "phone": "+251948769744",
+      "gender": "Male",
+      "nationalID": "cvbnm",
+      "departments": null,
       "documents": {
         "cv": "cv (1).pdf",
-        "degree": "roadmap.pdf",
+        "degree": "cv (1).pdf",
+        "masters": "cv (1).pdf",
+        "phd": "cv (1).pdf"
+      },
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": null
+      },
+      "status": "active"
+    },
+    {
+      "id": 1769957475113,
+      "fullName": "Nihan Wemaye",
+      "email": "nihan@gmail.com",
+      "password": "@Nihan",
+      "role": "teachers",
+      "phone": "+251948769744",
+      "gender": "Male",
+      "nationalID": "cfvgrfdc",
+      "departments": null,
+      "documents": {
+        "cv": "cv (1).pdf",
+        "degree": "cv (1).pdf",
+        "masters": "cv (1).pdf",
+        "phd": "Not uploaded"
+      },
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": null
+      },
+      "status": "active"
+    },
+    {
+      "id": 1769957535850,
+      "fullName": "Mohammed Ahmed",
+      "email": "mfeti@gmail.com",
+      "password": "mfeti",
+      "role": "teachers",
+      "phone": "+251948769744",
+      "gender": "Male",
+      "nationalID": "dcfvgbh",
+      "departments": "fregftr",
+      "documents": {
+        "cv": "cv (1).pdf",
+        "degree": "cv (1).pdf",
         "masters": "Not uploaded",
         "phd": "Not uploaded"
       },
-      "status": "active",
-      "id": 4
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": null
+      },
+      "status": "active"
+    },
+    {
+      "id": 1769959338269,
+      "fullName": "muaz Abraham",
+      "email": "muaz@gmail.com",
+      "password": "@Muaz",
+      "role": "teachers",
+      "phone": "+251948769744",
+      "gender": "Male",
+      "nationalID": "1234567898765432",
+      "departments": "vbfghg5",
+      "documents": {
+        "cv": "cv (1).pdf",
+        "degree": "cv (1).pdf",
+        "masters": "Not uploaded",
+        "phd": "Not uploaded"
+      },
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": 1770382075141
+      },
+      "status": "active"
+    },
+    {
+      "id": 1769972298590,
+      "fullName": "Ekram Tofik",
+      "email": "ekram@gmail.com",
+      "password": "@Ekram4488",
+      "role": "teachers",
+      "phone": "+1 (555) 123-4567",
+      "gender": "Male",
+      "nationalID": "1234567898765432",
+      "departments": "fregftr",
+      "documents": {
+        "cv": "cv (1).pdf",
+        "degree": "cv (1).pdf",
+        "masters": "Not uploaded",
+        "phd": "Not uploaded"
+      },
+      "auth": {
+        "failedAttempts": 0,
+        "lockUntil": null,
+        "lastLogin": 1770488905559
+      },
+      "status": "active"
     }
   ],
   "colleges": [
@@ -1168,8 +1276,17 @@
       "submittedAt": "2026-03-07T06:57:31.766Z",
       "status": "approved",
       "id": 4
+    },
+    {
+      "teacherId": 1769783873758,
+      "departmentId": null,
+      "year": "1",
+      "courseId": "FRESH-COM-106",
+      "semester": 2,
+      "submittedAt": "2026-02-07T15:33:43.340Z",
+      "status": "pending",
+      "id": 5
     }
-
   ],
   "courses": [
     {
