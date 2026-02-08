@@ -11,6 +11,26 @@ async function fetchingTeacherSubmission(status) {
   const json = await res.json();
   return json.filter((item) => item.status == status);
 }
+
+async function fetchingSection(teacher) {
+  const res = await fetch("http://localhost:3000/students");
+
+  const json = await res.json();
+  if (teacher.startsWith("FRESH-COM")) {
+    return json.filter((item) => item.section);
+  } else if (teacher.startsWith("FRESH-NAT")) {
+    return json.filter((item) => item.section.startsWith("FN"));
+  } else if (teacher.startsWith("FRESH-SOC")) {
+    return json.filter((item) => item.section.startsWith("FS"));
+  }
+}
+
+async function fetchAssignedSections(teacherId) {
+  const res = await fetch("http://localhost:3000/teacherAssignments");
+  const json = await res.json();
+  return json.filter((item) => item.teacherId === teacherId);
+}
+
 let activeMainTab = null;
 
 mainTab.addEventListener("click", function (e) {
@@ -121,14 +141,14 @@ subTab.addEventListener("click", async function (e) {
       }
     }
     tableContiner.append(table);
-  }else if(activeMainTab === "assignBtn"){
-      let fetchingTeacher = await fetchingTeacherSubmission("approved");
+  } else if (activeMainTab === "assignBtn") {
+    let fetchingTeacher = await fetchingTeacherSubmission("approved");
 
-     let freshTeacher = [];
+    let freshTeacher = [];
     let departementTeacher = [];
-if (btnId == "freshman") {
+    if (btnId == "freshman") {
       freshTeacher = fetchingTeacher.filter(
-        (item) => item.departmentId === null
+        (item) => item.departmentId === null,
       );
 
       for (const teacher of freshTeacher) {
@@ -147,28 +167,74 @@ if (btnId == "freshman") {
           td.textContent = teacher[data];
           tr.append(td);
         }
-        const approveBtn = document.createElement("button");
-        approveBtn.textContent = "assign";
+        const assignBtn = document.createElement("button");
+        assignBtn.textContent = "assign";
+        tr.append(assignBtn);
 
-        // const rejectBtn = document.createElement("button");
-        // rejectBtn.textContent = "reject";
-        approveBtn.addEventListener("click", async function (e) {
+        const sectionAssign = new Set();
+        assignBtn.addEventListener("click", async function (e) {
           e.preventDefault();
-          await fetch(
-            `http://localhost:3000/teacherSubmissions/${teacher.id}`,
-            {
-              method: "PATCH",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({ status: "approved" }),
-            },
-          );
+          if (tr.querySelector("select")) return;
+
+          const sections = await fetchingSection(teacher.courseId);
+          const assigned = await fetchAssignedSections(teacher.teacherId);
+
+          const assignedSet = new Set(assigned.map((item) => item.section));
+
+          const select = document.createElement("select");
+          select.multiple = true;
+          select.style.minWidth = "50px";
+
+          const uniqueSections = new Set();
+
+          for (const student of sections) {
+            if (!uniqueSections.has(student.section)) {
+              uniqueSections.add(student.section);
+
+              const option = document.createElement("option");
+              option.value = student.section;
+              option.textContent = student.section;
+
+              if (assignedSet.has(student.section)) {
+                option.disabled = true;
+                option.textContent += " (assigned)";
+              }
+
+              select.append(option);
+            }
+          }
+
+          const saveBtn = document.createElement("button");
+          saveBtn.textContent = "Save";
+
+          saveBtn.addEventListener("click", async () => {
+            const selected = [...select.selectedOptions].map((o) => o.value);
+
+            for (const section of selected) {
+              await fetch("http://localhost:3000/teacherAssignments", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  teacherId: teacher.teacherId,
+                  courseId: teacher.courseId,
+                  section: section,
+                }),
+              });
+            }
+
+            alert("Assigned successfully");
+            select.remove();
+            saveBtn.remove();
+          });
+
+          tr.append(select, saveBtn);
         });
-        tr.append(approveBtn);
+
         table.append(tr);
       }
     } else {
       departementTeacher = fetchingTeacher.filter(
-        (item) => item.departmentId !== null &&item.status==='active',
+        (item) => item.departmentId !== null && item.status === "active",
       );
       for (const teacher of departementTeacher) {
         const tr = document.createElement("tr");
@@ -181,17 +247,16 @@ if (btnId == "freshman") {
           tr.append(td);
           console.log(teacher[data]);
         }
-        const approveBtn = document.createElement("button");
-        // approveBtn.textContent = "aprove";
-        // const rejectBtn = document.createElement("button");
-        // rejectBtn.textContent = "reject";
-        approveBtn.addEventListener("click", function (e) {
+        const assignBtn = document.createElement("button");
+
+        assignBtn.addEventListener("click", function (e) {
           e.preventDefault();
           console.log("neba");
         });
-        tr.append(approveBtn);
+        tr.append(assignBtn);
         table.append(tr);
       }
     }
-    tableContiner.append(table);  }
+    tableContiner.append(table);
+  }
 });

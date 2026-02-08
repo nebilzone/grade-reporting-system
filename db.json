@@ -1190,7 +1190,7 @@
       "courseId": "FRESH-COM-102",
       "semester": 1,
       "submittedAt": "2026-02-08T04:45:33.939Z",
-      "status": "approved"
+      "status": "active"
     },
     {
       "id": 2,
@@ -1200,7 +1200,7 @@
       "courseId": "FRESH-COM-101",
       "semester": 1,
       "submittedAt": "2026-02-08T04:47:13.518Z",
-      "status": "approved"
+      "status": "active"
     },
     {
       "id": 3,
@@ -1210,7 +1210,7 @@
       "courseId": "FRESH-COM-104",
       "semester": 1,
       "submittedAt": "2026-02-08T04:47:13.518Z",
-      "status": "approved"
+      "status": "active"
     },
     {
       "id": 4,
@@ -1220,7 +1220,7 @@
       "courseId": "FRESH-COM-103",
       "semester": 1,
       "submittedAt": "2026-02-08T04:47:13.518Z",
-      "status": "approved"
+      "status": "active"
     },
     {
       "id": 5,
@@ -1230,7 +1230,7 @@
       "courseId": "FRESH-NAT-101",
       "semester": 1,
       "submittedAt": "2026-02-08T04:47:13.518Z",
-      "status": "approved"
+      "status": "active"
     },
     {
       "id": 6,
@@ -1240,7 +1240,7 @@
       "courseId": "FRESH-SOC-101",
       "semester": 1,
       "submittedAt": "2026-02-08T04:47:13.518Z",
-      "status": "approved"
+      "status": "active"
     },
     {
       "id": 7,
@@ -1250,7 +1250,7 @@
       "courseId": "FRESH-SOC-102",
       "semester": 1,
       "submittedAt": "2026-02-08T04:47:13.518Z",
-      "status": "approved"
+      "status": "active"
     },
     {
       "id": 8,
@@ -1260,7 +1260,7 @@
       "courseId": "FRESH-NAT-103",
       "semester": 1,
       "submittedAt": "2026-02-08T04:47:13.518Z",
-      "status": "approved"
+      "status": "active"
     },
     {
       "teacherId": 1769783873758,
@@ -1271,6 +1271,188 @@
       "submittedAt": "2026-02-08T09:35:50.389Z",
       "status": "pending",
       "id": 9
+    }
+  ],
+  "teacherAssignments": [
+    {
+      "teacherId": 1769783873745,
+      "courseId": "FRESH-COM-102",
+      "section": "FN-1",
+      "id": 1
+    },
+    {
+      "teacherId": 1769783873745,
+      "courseId": "FRESH-COM-102",
+      "section": "FN-2",
+      "id": 2
+    },
+    {
+      "teacherId": 1769783873745,
+      "courseId": "FRESH-COM-102",
+      "section": "FS-3",
+      "id": 3
+    },
+    {
+      "teacherId": 1769783873745,
+      "courseId": "FRESH-COM-101",
+      "section": "FN-3",
+      "id": 4
+    },
+    {
+      "teacherId": 1769783873745,
+      "courseId": "FRESH-COM-101",
+      "section": "FS-2",
+      "id": 5
+    },
+    {
+      "teacherId": 1769972298590,
+      "courseId": "FRESH-COM-104",
+      "section": "FN-1",
+      "id": 6
+    },
+    {
+      "teacherId": 1769972298590,
+      "courseId": "FRESH-COM-104",
+      "section": "FN-3",
+      "id": 7
+    },
+    {
+      "teacherId": 1769972298590,
+      "courseId": "FRESH-COM-104",
+      "section": "FS-1",
+      "id": 8
+    },
+    {
+      "teacherId": 1769587076198,
+      "courseId": "FRESH-NAT-103",
+      "section": "FN-1",
+      "id": 9
+    },
+    {
+      "teacherId": 1769587076198,
+      "courseId": "FRESH-NAT-103",
+      "section": "FN-3",
+      "id": 10
+    },
+    {
+      "teacherId": 1769957309179,
+      "courseId": "FRESH-SOC-102",
+      "section": "FS-2",
+      "id": 11
+    },
+    {
+      "teacherId": 1769957309179,
+      "courseId": "FRESH-SOC-102",
+      "section": "FS-3",
+      "id": 12
+    },
+    {
+      "teacherId": 1769957309179,
+      "courseId": "FRESH-SOC-102",
+      "section": "FS-1",
+      "id": 13
+    },
+    {
+      "teacherId": 1769957475113,
+      "courseId": "FRESH-SOC-101",
+      "section": "FS-2",
+      "id": 14
+    },
+    {
+      "teacherId": 1769957475113,
+      "courseId": "FRESH-SOC-101",
+      "section": "FS-3",
+      "id": 15
+    },
+    {
+      "teacherId": 1769957475113,
+      "courseId": "FRESH-SOC-101",
+      "section": "FS-1",
+      "id": 16
+    },
+    {
+      "teacherId": 1769957535850,
+      "courseId": "FRESH-NAT-101",
+      "section": "FN-1",
+      "id": 17
+    },
+    {
+      "teacherId": 1769957535850,
+      "courseId": "FRESH-NAT-101",
+      "section": "FN-3",
+      "id": 18
+    },
+    {
+      "teacherId": 1769957535850,
+      "courseId": "FRESH-NAT-101",
+      "section": "FN-2",
+      "id": 19
+    },
+    {
+      "teacherId": 1769959338269,
+      "courseId": "FRESH-COM-103",
+      "section": "FN-1",
+      "id": 20
+    },
+    {
+      "teacherId": 1769959338269,
+      "courseId": "FRESH-COM-103",
+      "section": "FN-3",
+      "id": 21
+    },
+    {
+      "teacherId": 1769959338269,
+      "courseId": "FRESH-COM-103",
+      "section": "FN-2",
+      "id": 22
+    },
+    {
+      "teacherId": 1769959338269,
+      "courseId": "FRESH-COM-103",
+      "section": "FS-2",
+      "id": 23
+    },
+    {
+      "teacherId": 1769959338269,
+      "courseId": "FRESH-COM-103",
+      "section": "FS-3",
+      "id": 24
+    },
+    {
+      "teacherId": 1769959338269,
+      "courseId": "FRESH-COM-103",
+      "section": "FS-1",
+      "id": 25
+    },
+    {
+      "teacherId": 1769972298590,
+      "courseId": "FRESH-COM-104",
+      "section": "FN-2",
+      "id": 26
+    },
+    {
+      "teacherId": 1769972298590,
+      "courseId": "FRESH-COM-104",
+      "section": "FS-2",
+      "id": 27
+    },
+    {
+      "teacherId": 1769972298590,
+      "courseId": "FRESH-COM-104",
+      "section": "FS-3",
+      "id": 28
+    },
+    {
+      "teacherId": 1769783873745,
+      "courseId": "FRESH-COM-102",
+      "section": "FS-1",
+      "id": 29
+    },
+    {
+      "teacherId": 1769587076198,
+      "courseId": "FRESH-NAT-103",
+      "section": "FN-2",
+      "id": 30
     }
   ],
   "colleges": [
