@@ -145,7 +145,7 @@
         "lockUntil": null,
         "lastLogin": null
       },
-      "status": "Pending"
+      "status": "active"
     },
     {
       "id": 1769662017199,
@@ -187,7 +187,7 @@
         "lockUntil": null,
         "lastLogin": null
       },
-      "status": "Pending"
+      "status": "active"
     },
     {
       "id": 1769662208011,
@@ -208,7 +208,7 @@
         "lockUntil": null,
         "lastLogin": null
       },
-      "status": "Pending"
+      "status": "active"
     },
     {
       "id": 1769662252641,
@@ -250,7 +250,7 @@
         "lockUntil": null,
         "lastLogin": null
       },
-      "status": "Pending"
+      "status": "active"
     },
     {
       "id": 1769662364009,
@@ -376,7 +376,7 @@
         "lockUntil": null,
         "lastLogin": null
       },
-      "status": "Pending"
+      "status": "active"
     },
     {
       "id": 1769681401353,
@@ -461,7 +461,7 @@
       "auth": {
         "failedAttempts": 0,
         "lockUntil": null,
-        "lastLogin": 1770487741912
+        "lastLogin": 1770525927726
       },
       "status": "active"
     },
@@ -620,7 +620,7 @@
         "lockUntil": null,
         "lastLogin": null
       },
-      "status": "Pending"
+      "status": "active"
     },
     {
       "id": 1770302731383,
@@ -641,7 +641,7 @@
         "lockUntil": null,
         "lastLogin": null
       },
-      "status": "Pending"
+      "status": "active"
     }
   ],
   "students": [
@@ -671,7 +671,7 @@
       "year": 1,
       "semester": 1,
       "status": "Pending",
-      "section": "FN-2"
+      "section": "FN-3"
     },
     {
       "id": "UGPR0003/2018",
@@ -713,7 +713,7 @@
       "year": 1,
       "semester": 1,
       "status": "active",
-      "section": "FN-2"
+      "section": "FN-3"
     },
     {
       "id": "UGPR0006/2018",
@@ -727,7 +727,7 @@
       "year": 1,
       "semester": 1,
       "status": "active",
-      "section": "FN-1"
+      "section": "FN-2"
     },
     {
       "id": "UGPR0007/2018",
@@ -769,7 +769,7 @@
       "year": 1,
       "semester": 1,
       "status": "active",
-      "section": "FN-2"
+      "section": "FN-3"
     },
     {
       "id": "UGPR0010/2018",
@@ -783,7 +783,7 @@
       "year": 1,
       "semester": 1,
       "status": "active",
-      "section": "FN-1"
+      "section": "FN-2"
     },
     {
       "id": "UGPR0011/2018",
@@ -825,7 +825,7 @@
       "year": 1,
       "semester": 1,
       "status": "active",
-      "section": "FS-1"
+      "section": "FS-2"
     },
     {
       "id": "UGPR0014/2018",
@@ -839,7 +839,7 @@
       "year": 1,
       "semester": 1,
       "status": "active",
-      "section": "FS-1"
+      "section": "FS-3"
     },
     {
       "id": "UGPR0015/2018",
@@ -867,7 +867,7 @@
       "year": 1,
       "semester": 1,
       "status": "active",
-      "section": "FS-1"
+      "section": "FS-2"
     },
     {
       "id": "UGPR0017/2018",
@@ -881,16 +881,113 @@
       "year": 1,
       "semester": 1,
       "status": "active",
+      "section": "FS-2"
+    },
+    {
+      "id": "UGPR0018/2018",
+      "fullName": "muaz Abraham",
+      "email": "muaz@gmail.com",
+      "password": "edgf",
+      "gender": "Male",
+      "track": "Social",
+      "batch": "2017",
+      "level": "FreshMan",
+      "year": 1,
+      "semester": 1,
+      "status": "active",
+      "section": "FS-2"
+    },
+    {
+      "id": "UGPR0019/2018",
+      "fullName": "nati abebaw",
+      "email": "nati@gmail.com",
+      "password": "cgdhwf",
+      "gender": "Male",
+      "track": "Social",
+      "batch": "2017",
+      "level": "FreshMan",
+      "year": 1,
+      "semester": 1,
+      "status": "active",
       "section": "FS-1"
+    },
+    {
+      "id": "UGPR0020/2018",
+      "fullName": "natinael",
+      "email": "parent@example.com",
+      "password": "nati",
+      "gender": "Male",
+      "track": "Social",
+      "batch": "2016",
+      "level": "FreshMan",
+      "year": 1,
+      "semester": 1,
+      "status": "active",
+      "section": "FS-3"
+    },
+    {
+      "id": "UGPR0021/2018",
+      "fullName": "Nebil Abdosh",
+      "email": "nebilbromance@gmail.com",
+      "password": "@Nebil448",
+      "gender": "Male",
+      "track": "Social",
+      "batch": 2018,
+      "level": "FreshMan",
+      "year": 1,
+      "semester": 1,
+      "status": "active",
+      "section": "FS-1"
+    },
+    {
+      "id": "UGPR0022/2018",
+      "fullName": "Nebil Abdoshhhhh",
+      "email": "nebilbromance@gmail.com",
+      "password": "@Nebil56@",
+      "gender": "Male",
+      "track": "Social",
+      "batch": 2018,
+      "level": "FreshMan",
+      "year": 1,
+      "semester": 1,
+      "status": "active",
+      "section": "FS-1"
+    },
+    {
+      "id": "UGPR0023/2018",
+      "fullName": "nejmia   abdi",
+      "email": "nejmi@gmail.com",
+      "password": "dfs",
+      "gender": "Female",
+      "track": "Social",
+      "batch": "2017",
+      "level": "FreshMan",
+      "year": 1,
+      "semester": 1,
+      "status": "active",
+      "section": "FS-2"
+    },
+    {
+      "id": "UGPR0024/2018",
+      "fullName": "Zode Fikadu",
+      "email": "zoba@gmail.com",
+      "password": "def",
+      "gender": "Female",
+      "track": "Natural",
+      "batch": "2018",
+      "level": "FreshMan",
+      "year": 1,
+      "semester": 1,
+      "status": "active",
+      "section": "FN-1"
     }
   ],
   "teachers": [
     {
       "id": 1769587076198,
-
-      "fullName": "Natnael Abebaw",
-      "email": "nati@example.com",
-      "password": "4568",
+      "fullName": "Abdi Fekeda",
+      "email": "abdi@example.com",
+      "password": "abdi12",
       "gender": "Male",
       "phone": "+251948769744",
       "nationalId": "67234",
@@ -907,8 +1004,8 @@
     {
       "id": 1769783873758,
       "fullName": "Nebil Abdo",
-      "email": "child@example.com",
-      "password": "1234",
+      "email": "nebil@example.com",
+      "password": "nebil12",
       "role": "teachers",
       "phone": "+251948769744",
       "gender": "Male",
@@ -931,7 +1028,7 @@
       "id": 1769783873745,
       "fullName": "Natnael Abebaw",
       "email": "nati@example.com",
-      "password": "4568",
+      "password": "nati12",
       "role": "teachers",
       "phone": "+251948769744",
       "gender": "Male",
@@ -952,9 +1049,9 @@
     },
     {
       "id": 1769957309179,
-      "fullName": "Nebil Abdo",
-      "email": "nebilbromance@gmail.com",
-      "password": "@Nebilabdo44",
+      "fullName": "Kenasa Asfaw",
+      "email": "kenasa@example.com",
+      "password": "kenasa12",
       "role": "teachers",
       "phone": "+251948769744",
       "gender": "Male",
@@ -977,7 +1074,7 @@
       "id": 1769957475113,
       "fullName": "Nihan Wemaye",
       "email": "nihan@gmail.com",
-      "password": "@Nihan",
+      "password": "nihan12",
       "role": "teachers",
       "phone": "+251948769744",
       "gender": "Male",
@@ -1000,7 +1097,7 @@
       "id": 1769957535850,
       "fullName": "Mohammed Ahmed",
       "email": "mfeti@gmail.com",
-      "password": "mfeti",
+      "password": "mfeti12",
       "role": "teachers",
       "phone": "+251948769744",
       "gender": "Male",
@@ -1022,8 +1119,8 @@
     {
       "id": 1769959338269,
       "fullName": "muaz Abraham",
-      "email": "muaz@gmail.com",
-      "password": "@Muaz",
+      "email": "muaz@example.com",
+      "password": "muaz12",
       "role": "teachers",
       "phone": "+251948769744",
       "gender": "Male",
@@ -1045,8 +1142,8 @@
     {
       "id": 1769972298590,
       "fullName": "Ekram Tofik",
-      "email": "ekram@gmail.com",
-      "password": "@Ekram4488",
+      "email": "ekram@example.com",
+      "password": "ekram12",
       "role": "teachers",
       "phone": "+1 (555) 123-4567",
       "gender": "Male",
@@ -1064,6 +1161,88 @@
         "lastLogin": 1770488905559
       },
       "status": "active"
+    }
+  ],
+  "teacherSubmissions": [
+    {
+      "id": 1,
+      "teacherId": 1769783873745,
+      "departmentId": null,
+      "year": "1",
+      "courseId": "FRESH-COM-102",
+      "semester": 1,
+      "submittedAt": "2026-02-08T04:45:33.939Z",
+      "status": "approved"
+    },
+    {
+      "id": 2,
+      "teacherId": 1769783873745,
+      "departmentId": null,
+      "year": "1",
+      "courseId": "FRESH-COM-101",
+      "semester": 1,
+      "submittedAt": "2026-02-08T04:47:13.518Z",
+      "status": "approved"
+    },
+    {
+      "id": 3,
+      "teacherId": 1769972298590,
+      "departmentId": null,
+      "year": "1",
+      "courseId": "FRESH-COM-104",
+      "semester": 1,
+      "submittedAt": "2026-02-08T04:47:13.518Z",
+      "status": "approved"
+    },
+    {
+      "id": 4,
+      "teacherId": 1769959338269,
+      "departmentId": null,
+      "year": "1",
+      "courseId": "FRESH-COM-103",
+      "semester": 1,
+      "submittedAt": "2026-02-08T04:47:13.518Z",
+      "status": "approved"
+    },
+    {
+      "id": 5,
+      "teacherId": 1769957535850,
+      "departmentId": null,
+      "year": "1",
+      "courseId": "FRESH-NAT-101",
+      "semester": 1,
+      "submittedAt": "2026-02-08T04:47:13.518Z",
+      "status": "approved"
+    },
+    {
+      "id": 6,
+      "teacherId": 1769957475113,
+      "departmentId": null,
+      "year": "1",
+      "courseId": "FRESH-SOC-101",
+      "semester": 1,
+      "submittedAt": "2026-02-08T04:47:13.518Z",
+      "status": "approved"
+    },
+    {
+      "id": 7,
+      "teacherId": 1769957309179,
+      "departmentId": null,
+      "year": "1",
+      "courseId": "FRESH-SOC-102",
+      "semester": 1,
+      "submittedAt": "2026-02-08T04:47:13.518Z",
+      "status": "approved"
+    },
+    {
+      "id": 8,
+      "teacherId": 1769587076198,
+      "departmentId": null,
+      "year": "1",
+      "courseId": "FRESH-NAT-103",
+      "semester": 1,
+      "submittedAt": "2026-02-08T04:47:13.518Z",
+      "status": "approved"
     }
   ],
   "colleges": [
@@ -1224,68 +1403,6 @@
       "name": "AgroBussiness",
       "collegeId": "CA",
       "departementId": "AGRI"
-    }
-  ],
-  "teacherSubmissions": [
-    {
-      "teacherId": 1769959338269,
-      "departmentId": null,
-      "year": "1",
-      "courseId": "FRESH-COM-106",
-      "semester": 1,
-      "submittedAt": "2026-02-07T06:21:26.564Z",
-      "status": "approved",
-      "id": 1
-    },
-    {
-      "teacherId": 1769783873745,
-      "departmentId": "CS",
-      "year": "2",
-      "courseId": "CS-SO-206",
-      "semester": 1,
-      "submittedAt": "2026-02-07T06:57:18.581Z",
-      "status": "pending",
-      "id": 2
-    },
-    {
-      "teacherId": 1769783873745,
-      "departmentId": null,
-      "year": "1",
-      "courseId": "FRESH-COM-107",
-      "semester": 1,
-      "submittedAt": "2026-02-07T06:57:31.766Z",
-      "status": "approved",
-      "id": 3
-    },
-    {
-      "teacherId": 1769783873745,
-      "departmentId": null,
-      "year": "1",
-      "courseId": "FRESH-COM-101",
-      "semester": 1,
-      "submittedAt": "2026-03-07T06:57:31.766Z",
-      "status": "approved",
-      "id": 4
-    },
-    {
-      "teacherId": 1769783873745,
-      "departmentId": null,
-      "year": "1",
-      "courseId": "FRESH-COM-102",
-      "semester": 1,
-      "submittedAt": "2026-03-07T06:57:31.766Z",
-      "status": "approved",
-      "id": 4
-    },
-    {
-      "teacherId": 1769783873758,
-      "departmentId": null,
-      "year": "1",
-      "courseId": "FRESH-COM-106",
-      "semester": 2,
-      "submittedAt": "2026-02-07T15:33:43.340Z",
-      "status": "pending",
-      "id": 5
     }
   ],
   "courses": [

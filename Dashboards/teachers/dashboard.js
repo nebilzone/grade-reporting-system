@@ -164,7 +164,7 @@ async function formOpening() {
     e.preventDefault();
 
     const submission = {
-      teacherId: currentUser.teacherId,
+      teacherId: currentUser.id,
       departmentId: courseTypeSelect.value === "department" ? deptSelect.value : null,
       year: yearSelect.value,
       courseId: courseSelect.value,
