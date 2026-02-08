@@ -59,12 +59,13 @@ async function assigningClass() {
 
       console.log(`${student.fullName} → FS-${fsSection}`);
 
-      fsCounter++;
 
       if (fsCounter === classCapacity) {
         fsSection++;
         fsCounter = 0;
       }
+            fsCounter++;
+
     }
   }
 

@@ -420,10 +420,28 @@
       "status": "active"
     },
     {
+      "id": 1769587076198,
+      "fullName": "Abdi Fekeda",
+      "email": "abdi@example.com",
+      "password": "abdi12",
+      "gender": "Male",
+      "phone": "+251948769744",
+      "nationalId": "67234",
+      "role": "teachers",
+      "departement": "software",
+      "documents": {
+        "cv": "cv (1).pdf",
+        "degree": "roadmap.pdf",
+        "masters": "Not uploaded",
+        "phd": "Not uploaded"
+      },
+      "status": "active"
+    },
+    {
       "id": 1769783873758,
       "fullName": "Nebil Abdo",
-      "email": "child@example.com",
-      "password": "1234",
+      "email": "nebil@example.com",
+      "password": "nebil12",
       "role": "teachers",
       "phone": "+251948769744",
       "gender": "Male",
@@ -438,7 +456,7 @@
       "auth": {
         "failedAttempts": 0,
         "lockUntil": null,
-        "lastLogin": 1770487292006
+        "lastLogin": 1770543325831
       },
       "status": "active"
     },
@@ -446,7 +464,7 @@
       "id": 1769783873745,
       "fullName": "Natnael Abebaw",
       "email": "nati@example.com",
-      "password": "4568",
+      "password": "nati12",
       "role": "teachers",
       "phone": "+251948769744",
       "gender": "Male",
@@ -461,15 +479,15 @@
       "auth": {
         "failedAttempts": 0,
         "lockUntil": null,
-        "lastLogin": 1770525927726
+        "lastLogin": 1770487741912
       },
       "status": "active"
     },
     {
       "id": 1769957309179,
-      "fullName": "Nebil Abdo",
-      "email": "nebilbromance@gmail.com",
-      "password": "@Nebilabdo44",
+      "fullName": "Kenasa Asfaw",
+      "email": "kenasa@example.com",
+      "password": "kenasa12",
       "role": "teachers",
       "phone": "+251948769744",
       "gender": "Male",
@@ -492,7 +510,7 @@
       "id": 1769957475113,
       "fullName": "Nihan Wemaye",
       "email": "nihan@gmail.com",
-      "password": "@Nihan",
+      "password": "nihan12",
       "role": "teachers",
       "phone": "+251948769744",
       "gender": "Male",
@@ -515,7 +533,7 @@
       "id": 1769957535850,
       "fullName": "Mohammed Ahmed",
       "email": "mfeti@gmail.com",
-      "password": "mfeti",
+      "password": "mfeti12",
       "role": "teachers",
       "phone": "+251948769744",
       "gender": "Male",
@@ -537,8 +555,8 @@
     {
       "id": 1769959338269,
       "fullName": "muaz Abraham",
-      "email": "muaz@gmail.com",
-      "password": "@Muaz",
+      "email": "muaz@example.com",
+      "password": "muaz12",
       "role": "teachers",
       "phone": "+251948769744",
       "gender": "Male",
@@ -560,8 +578,8 @@
     {
       "id": 1769972298590,
       "fullName": "Ekram Tofik",
-      "email": "ekram@gmail.com",
-      "password": "@Ekram4488",
+      "email": "ekram@example.com",
+      "password": "ekram12",
       "role": "teachers",
       "phone": "+1 (555) 123-4567",
       "gender": "Male",
@@ -1243,13 +1261,23 @@
       "semester": 1,
       "submittedAt": "2026-02-08T04:47:13.518Z",
       "status": "approved"
+    },
+    {
+      "teacherId": 1769783873758,
+      "departmentId": "CS",
+      "year": "2",
+      "courseId": "CS-SO-206",
+      "semester": 2,
+      "submittedAt": "2026-02-08T09:35:50.389Z",
+      "status": "pending",
+      "id": 9
     }
   ],
   "colleges": [
     {
       "name": "College of computing and informatics",
       "collegeID": "CCI",
-      "status": "active",
+      "status": "inactive",
       "id": 1
     },
     {
@@ -1293,6 +1321,18 @@
       "collegeID": "CCE",
       "status": "inactive",
       "id": 8
+    },
+    {
+      "name": "Chbjh",
+      "collegeID": "CCI",
+      "status": "active",
+      "id": 9
+    },
+    {
+      "name": "Chbjh",
+      "collegeID": "SDFG",
+      "status": "inactive",
+      "id": 10
     }
   ],
   "departments": [

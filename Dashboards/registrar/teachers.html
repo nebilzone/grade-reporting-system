@@ -1,25 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Teachers dashboards</title>
-    <link rel="stylesheet" href="../../components/sidebar.css">
-    <link rel="stylesheet" href="./css/teacher.css">
-</head>
-<body>
-   <div class="sidebarContainer"></div>
+    <link rel="stylesheet" href="../../components/sidebar.css" />
+    <link rel="stylesheet" href="./css/teacher.css" />
+  </head>
+  <body>
+    <div class="sidebarContainer"></div>
 
     <div class="pageContent">
       <h1>Teachers dashboards</h1>
-      <div class="tabBtncontainer">
-        <button type="button" data-id="freshman">freshman</button>
-        <button type="button" data-id="departement">departement</button>
+      <div class="tabBtncontainer main-tabs">
+        <button type="button" data-id="appBtn" class="maintabBtn ">Teacher Applications</button>
+        <button type="button" data-id="assignBtn" class="maintabBtn ">Teacher Assignment</button>
+      </div>
 
+      <div class="tabBtncontainer sub-tabs hidden">
+        <button type="button"  data-id="freshman" class="subtabBtn">
+          Freshman
+        </button>
+        <button type="button" data-id="department" class="subtabBtn">
+          Department
+        </button>
       </div>
+
       <div class="tableContainer"></div>
-      </div>
-      <script src="./js/default.js"></script>
-      <script src="./js/teacher.js"></script>
-</body>
+    </div>
+    <script src="./js/default.js"></script>
+    <script src="./js/teacher.js"></script>
+  </body>
 </html>

@@ -15,3 +15,12 @@ h1 {
   padding: 20px;
   color: #435580;
 }
+.hidden{
+  display: none;
+}
+.main-tabs button.active{
+background-color: red;
+}
+.sub-tabs button.active{
+  background-color: rgb(242, 210, 210);
+}
