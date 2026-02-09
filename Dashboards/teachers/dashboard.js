@@ -3,7 +3,7 @@ console.log(currentUser)
 if (!currentUser || currentUser.role !== "teachers") {
   window.location.href = "../../index.html";
 }
-
+console.log(currentUser)
 const message = document.getElementById("portalMessage");
 const formWrapper = document.getElementById("teacherForm");
 const formContainer = document.querySelector(".formContainer");

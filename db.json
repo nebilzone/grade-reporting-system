@@ -479,7 +479,7 @@
       "auth": {
         "failedAttempts": 0,
         "lockUntil": null,
-        "lastLogin": 1770487741912
+        "lastLogin": 1770614618839
       },
       "status": "active"
     },
@@ -571,7 +571,7 @@
       "auth": {
         "failedAttempts": 0,
         "lockUntil": null,
-        "lastLogin": 1770382075141
+        "lastLogin": 1770622640104
       },
       "status": "active"
     },
@@ -1271,6 +1271,16 @@
       "submittedAt": "2026-02-08T09:35:50.389Z",
       "status": "pending",
       "id": 9
+    },
+    {
+      "teacherId": 1769783873745,
+      "departmentId": null,
+      "year": "1",
+      "courseId": "FRESH-COM-106",
+      "semester": 2,
+      "submittedAt": "2026-02-09T05:24:33.259Z",
+      "status": "approved",
+      "id": 10
     }
   ],
   "teacherAssignments": [
@@ -3651,7 +3661,7 @@
       "semester": 2,
       "credit": "4",
       "departementId": "CS",
-      "active": true,
+      "active": false,
       "code": "undefined"
     },
     {
@@ -3695,9 +3705,10 @@
       "name": "Database Systems",
       "year": 2,
       "semester": 1,
-      "credit": 3,
+      "credit": "3",
       "departementId": "CS",
-      "active": true
+      "active": true,
+      "code": "undefined"
     },
     {
       "id": "CS-SO-202",

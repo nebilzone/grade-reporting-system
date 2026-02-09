@@ -303,6 +303,19 @@ async function display() {
 
             status: "active",
           };
+          await fetch("http://localhost:5000/api/send-approval", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              name: object.fullName,
+              email: object.email,
+              password: object.password,
+             
+            }),
+          });
+
           await fetch("http://localhost:3000/teachers", {
             method: "POST",
             headers: { "content-type": "application/json" },
