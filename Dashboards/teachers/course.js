@@ -24,7 +24,8 @@ table.innerHTML=`
 <th>Course Name</th>
 <th>Course Id</th>
 <th>Section</th>
-
+<th>Year</th>
+<th>Semester</th>
 </tr>`
   let courses = [];
 

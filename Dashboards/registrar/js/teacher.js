@@ -209,7 +209,6 @@ subTab.addEventListener("click", async function (e) {
 
           saveBtn.addEventListener("click", async () => {
             const selected = [...select.selectedOptions].map((o) => o.value);
-
             for (const section of selected) {
               await fetch("http://localhost:3000/teacherAssignments", {
                 method: "POST",
@@ -218,6 +217,8 @@ subTab.addEventListener("click", async function (e) {
                   teacherId: teacher.teacherId,
                   courseId: teacher.courseId,
                   section: section,
+                  year:teacher.year,
+                  semester:teacher.semester
                 }),
               });
             }
