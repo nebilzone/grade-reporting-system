@@ -10,6 +10,14 @@
 .pageContent {
   margin-left: 220px;
 }
+.header{
+  display: flex;
+  justify-content: space-between;
+}
+.calanderBtn{
+  height: 25px;
+  margin:20px;
+}
 h1 {
   padding: 20px;
   color: #435580;

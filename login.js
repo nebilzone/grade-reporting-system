@@ -1,5 +1,5 @@
-const loginForm = document.querySelector(".loginForm");
-const formContainer = document.querySelector(".formContainer");
+const loginForm = document.querySelector("#loginForm");
+const formContainer = document.querySelector("#formContainer");
 
 async function fetchUsers() {
   const res = await fetch("http://localhost:3000/users");

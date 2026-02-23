@@ -1,4 +1,18 @@
 {
+  "academicPeriod": [
+    {
+      "id": 1,
+      "academicYear": "20l8",
+      "semester": 1,
+      "registrationStart": "2018-01-11",
+      "registrationEnd": "2018-01-16",
+      "resultUploadStart": "2018-02-11",
+      "resultUploadEnd": "2018-04-15",
+      "semester_start": "2018-01-20",
+      "semester_end": "2018-04-28",
+      "status": "upcoming"
+    }
+  ],
   "users": [
     {
       "id": 1769587076198,
@@ -1288,240 +1302,240 @@
       "teacherId": 1769783873745,
       "courseId": "FRESH-COM-102",
       "section": "FN-1",
-      "year":2018,
-      "semester":1,
+      "year": 2018,
+      "semester": 1,
       "id": 1
     },
     {
       "teacherId": 1769783873745,
       "courseId": "FRESH-COM-102",
       "section": "FN-2",
-        "year":2018,
-      "semester":1,
+      "year": 2018,
+      "semester": 1,
       "id": 2
     },
     {
       "teacherId": 1769783873745,
       "courseId": "FRESH-COM-102",
       "section": "FS-3",
-        "year":2018,
-      "semester":1,
+      "year": 2018,
+      "semester": 1,
       "id": 3
     },
     {
       "teacherId": 1769783873745,
       "courseId": "FRESH-COM-101",
       "section": "FN-3",
-        "year":2018,
-      "semester":1,
+      "year": 2018,
+      "semester": 1,
       "id": 4
     },
     {
       "teacherId": 1769783873745,
       "courseId": "FRESH-COM-101",
       "section": "FS-2",
-        "year":2018,
-      "semester":1,
+      "year": 2018,
+      "semester": 1,
       "id": 5
     },
     {
       "teacherId": 1769972298590,
       "courseId": "FRESH-COM-104",
       "section": "FN-1",
-        "year":2018,
-      "semester":1,
+      "year": 2018,
+      "semester": 1,
       "id": 6
     },
     {
       "teacherId": 1769972298590,
       "courseId": "FRESH-COM-104",
       "section": "FN-3",
-        "year":2018,
-      "semester":1,
+      "year": 2018,
+      "semester": 1,
       "id": 7
     },
     {
       "teacherId": 1769972298590,
       "courseId": "FRESH-COM-104",
       "section": "FS-1",
-        "year":2018,
-      "semester":1,
+      "year": 2018,
+      "semester": 1,
       "id": 8
     },
     {
       "teacherId": 1769587076198,
       "courseId": "FRESH-NAT-103",
       "section": "FN-1",
-        "year":2018,
-      "semester":1,
+      "year": 2018,
+      "semester": 1,
       "id": 9
     },
     {
       "teacherId": 1769587076198,
       "courseId": "FRESH-NAT-103",
       "section": "FN-3",
-        "year":2018,
-      "semester":1,
+      "year": 2018,
+      "semester": 1,
       "id": 10
     },
     {
       "teacherId": 1769957309179,
       "courseId": "FRESH-SOC-102",
       "section": "FS-2",
-        "year":2018,
-      "semester":1,
+      "year": 2018,
+      "semester": 1,
       "id": 11
     },
     {
       "teacherId": 1769957309179,
       "courseId": "FRESH-SOC-102",
       "section": "FS-3",
-        "year":2018,
-      "semester":1,
+      "year": 2018,
+      "semester": 1,
       "id": 12
     },
     {
       "teacherId": 1769957309179,
       "courseId": "FRESH-SOC-102",
       "section": "FS-1",
-        "year":2018,
-      "semester":1,
+      "year": 2018,
+      "semester": 1,
       "id": 13
     },
     {
       "teacherId": 1769957475113,
       "courseId": "FRESH-SOC-101",
       "section": "FS-2",
-        "year":2018,
-      "semester":1,
+      "year": 2018,
+      "semester": 1,
       "id": 14
     },
     {
       "teacherId": 1769957475113,
       "courseId": "FRESH-SOC-101",
       "section": "FS-3",
-        "year":2018,
-      "semester":1,
+      "year": 2018,
+      "semester": 1,
       "id": 15
     },
     {
       "teacherId": 1769957475113,
       "courseId": "FRESH-SOC-101",
       "section": "FS-1",
-        "year":2018,
-      "semester":1,
+      "year": 2018,
+      "semester": 1,
       "id": 16
     },
     {
       "teacherId": 1769957535850,
       "courseId": "FRESH-NAT-101",
       "section": "FN-1",
-        "year":2018,
-      "semester":1,
+      "year": 2018,
+      "semester": 1,
       "id": 17
     },
     {
       "teacherId": 1769957535850,
       "courseId": "FRESH-NAT-101",
       "section": "FN-3",
-        "year":2018,
-      "semester":1,
+      "year": 2018,
+      "semester": 1,
       "id": 18
     },
     {
       "teacherId": 1769957535850,
       "courseId": "FRESH-NAT-101",
       "section": "FN-2",
-        "year":2018,
-      "semester":1,
+      "year": 2018,
+      "semester": 1,
       "id": 19
     },
     {
       "teacherId": 1769959338269,
       "courseId": "FRESH-COM-103",
       "section": "FN-1",
-        "year":2018,
-      "semester":1,
+      "year": 2018,
+      "semester": 1,
       "id": 20
     },
     {
       "teacherId": 1769959338269,
       "courseId": "FRESH-COM-103",
       "section": "FN-3",
-        "year":2018,
-      "semester":1,
+      "year": 2018,
+      "semester": 1,
       "id": 21
     },
     {
       "teacherId": 1769959338269,
       "courseId": "FRESH-COM-103",
       "section": "FN-2",
-        "year":2018,
-      "semester":1,
+      "year": 2018,
+      "semester": 1,
       "id": 22
     },
     {
       "teacherId": 1769959338269,
       "courseId": "FRESH-COM-103",
       "section": "FS-2",
-        "year":2018,
-      "semester":1,
+      "year": 2018,
+      "semester": 1,
       "id": 23
     },
     {
       "teacherId": 1769959338269,
       "courseId": "FRESH-COM-103",
       "section": "FS-3",
-        "year":2018,
-      "semester":1,
+      "year": 2018,
+      "semester": 1,
       "id": 24
     },
     {
       "teacherId": 1769959338269,
       "courseId": "FRESH-COM-103",
       "section": "FS-1",
-        "year":2018,
-      "semester":1,
+      "year": 2018,
+      "semester": 1,
       "id": 25
     },
     {
       "teacherId": 1769972298590,
       "courseId": "FRESH-COM-104",
       "section": "FN-2",
-        "year":2018,
-      "semester":1,
+      "year": 2018,
+      "semester": 1,
       "id": 26
     },
     {
       "teacherId": 1769972298590,
       "courseId": "FRESH-COM-104",
       "section": "FS-2",
-        "year":2018,
-      "semester":1,
+      "year": 2018,
+      "semester": 1,
       "id": 27
     },
     {
       "teacherId": 1769972298590,
       "courseId": "FRESH-COM-104",
       "section": "FS-3",
-        "year":2018,
-      "semester":1,
+      "year": 2018,
+      "semester": 1,
       "id": 28
     },
     {
       "teacherId": 1769783873745,
       "courseId": "FRESH-COM-102",
       "section": "FS-1",
-        "year":2018,
-      "semester":1,
+      "year": 2018,
+      "semester": 1,
       "id": 29
     },
     {
       "teacherId": 1769587076198,
       "courseId": "FRESH-NAT-103",
       "section": "FN-2",
-        "year":2018,
-      "semester":1,
+      "year": 2018,
+      "semester": 1,
       "id": 30
     }
   ],

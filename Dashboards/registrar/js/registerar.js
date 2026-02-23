@@ -1,5 +1,6 @@
 const searchDiv = document.querySelector(".pageContent");
 const tableContainer = document.querySelector(".tableContainer");
+const calander=documents.crea
 async function appilications() {
   const application = await fetch("http://localhost:3000/users");
   return await application.json();
@@ -312,7 +313,7 @@ async function display() {
               name: object.fullName,
               email: object.email,
               password: object.password,
-             
+
             }),
           });
 

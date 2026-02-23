@@ -4,8 +4,7 @@
   "description": "A **pure JavaScript (Node.js) command-line application** that calculates   **Semester GPA (SGPA)** and **Cumulative GPA (CGPA)** using a real university grading system.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
@@ -17,5 +16,11 @@
     "express": "^5.2.1",
     "json-server": "^0.17.4",
     "nodemailer": "^7.0.13"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.0",
+    "autoprefixer": "^10.4.24",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.2.1"
   }
 }
