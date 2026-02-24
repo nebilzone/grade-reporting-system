@@ -1,8 +1,8 @@
-const forms = document.querySelector(".registerForm");
-const passwordContainer = document.querySelector(".password");
-const fullNameContainer = document.querySelector(".fullName");
-const emailContainer = document.querySelector(".email");
-const batchInput = document.querySelector(".year");
+const forms = document.querySelector("#registerForm");
+const passwordContainer = document.querySelector("#password");
+const fullNameContainer = document.querySelector("#fullName");
+const emailContainer = document.querySelector("#email");
+const batchInput = document.querySelector("#year");
 const streamInput = document.querySelector("freshman");
 const genderInput = document.querySelector('input[name="gender"]');
 function getEthiopianYear() {
