@@ -1,71 +1,164 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Teachers sign Up page</title>
-    <link rel="stylesheet" href="./signUp.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <form action="" class="registerForm" enctype="multipart/form-data">
-      <div class="fullName">
-        <label for="fullName" class="fullName">Full Name </label><br />
-        <input type="text" id="fullName" placeholder="Full Name" required />
+  <body class="flex justify-center items-center min-h-screen">
+    <form
+      action=""
+      class="bg-[#e8e5e5] p-4 border-2 border-[#d1d5db] rounded-sm"
+      id="registerForm"
+      enctype="multipart/form-data"
+    >
+      <div id="fullName" class="text-[#4f67be] font-semibold">
+        Full Name
+        <div
+          class="w-full border-2 border-[#d1d5db] text-gray-700 font-normal rounded-sm bg-white px-2 focus-within:border-orange-300"
+        >
+          <input
+            type="text"
+            id="fullName"
+            class="focus:outline-none"
+            placeholder="Full Name"
+            required
+          />
+        </div>
       </div>
-      <div class="email">
-        <label for="email" class="email">Email </label><br />
-        <input type="email" id="email" placeholder="Email" required />
+      <div id="email" class="text-[#4f67be] font-semibold">
+        Email
+        <div
+          class="w-full border-2 border-[#d1d5db] text-gray-700 font-normal rounded-sm bg-white px-2 focus-within:border-orange-300"
+        >
+          <input
+            type="email"
+            id="email"
+            class="focus:outline-none"
+            placeholder="Email"
+            required
+          />
+        </div>
       </div>
-      <div class="password">
-        <label for="password" class="password">Password </label><br />
-        <input type="password" id="password" placeholder="Password" required />
+      <div id="password" class="text-[#4f67be] font-semibold">
+        Password
+        <div
+          class="w-full border-2 border-[#d1d5db] text-gray-700 font-normal rounded-sm bg-white px-2 focus-within:border-orange-300"
+        >
+          <input
+            type="password"
+            id="password"
+            class="focus:outline-none"
+            placeholder="Password"
+            required
+          />
+        </div>
       </div>
-      <div class="phone">
-        <label for="phone" class="phone">Phone Number </label><br />
-        <input type="text" id="phone" placeholder="+251" required />
+      <div id="phone" class="text-[#4f67be] font-semibold">
+        Phone Number
+        <div
+          class="w-full border-2 border-[#d1d5db] text-gray-700 font-normal rounded-sm bg-white px-2 focus-within:border-orange-300"
+        >
+          <input
+            type="text"
+            id="phone"
+            class="focus:outline-none"
+            placeholder="+251"
+            required
+          />
+        </div>
       </div>
-      <div class="departement">
-        <label for="department">Departments </label><br />
-        <input
-          type="text"
-          id="department"
-          placeholder="Prefered departments"
-          required
-        />
+      <div id="departement" class="text-[#4f67be] font-semibold">
+        Departments
+        <div
+          class="w-full border-2 border-[#d1d5db] text-gray-700 font-normal rounded-sm bg-white px-2 focus-within:border-orange-300"
+        >
+          <input
+            type="text"
+            id="department"
+            class="focus:outline-none"
+            placeholder="Prefered departments"
+            required
+          />
+        </div>
       </div>
-      <div class="nationalID">
-        <label for="nationalId">National ID </label><br />
-        <input type="text" id="nationalId" placeholder="FAN Number" required />
+      <div id="nationalID" class="text-[#4f67be] font-semibold">
+        National ID
+        <div
+          class="w-full border-2 border-[#d1d5db] text-gray-700 font-normal rounded-sm bg-white px-2 focus-within:border-orange-300"
+        >
+          <input
+            type="text"
+            id="nationalId"
+            class="focus:outline-none"
+            placeholder="FAN Number"
+            required
+          />
+        </div>
       </div>
 
-      <label for="male" value="">Gender </label><br />
-      <label for="male">Male </label>
-      <input type="radio" value="Male" id="male" name="gender" required/>
-      <label for="male">Female </label>
-      <input type="radio" value="Female" id="female" name="gender" /><br /><br />
-      <label for="cv"> CV </label><br />
-      <input
-        type="file"
-        id="cv"
-        name="cv"
-        accept="application/pdf"
-        required
-      /><br /><br />
-      <label for="degree">Bachelor Degree </label><br />
-      <input
-        type="file"
-        id="degree"
-        name="degree"
-        accept="application/pdf"
-      /><br /><br />
-      <label for="masters">Masters (optional) </label><br />
+      <label for="male" value="" class="text-[#4f67be] font-semibold"
+        >Gender </label
+      ><br />
+      <label for="male" class="text-[#4f67be]">Male </label>
+      <input type="radio" value="Male" id="male" name="gender" required />
+      <label for="male" class="text-[#4f67be]">Female </label>
+      <input type="radio" value="Female" id="female" name="gender" /><br />
+      <div class="text-[#4f67be]  font-semibold">
+        CV
+        <div class="font-normal">
+          <input
+            type="file"
+            id="cv"
+            name="cv"
+            accept="application/pdf"
+            class="file:bg-[#cbd1e6] file:p-0.5 file:border-2 file:border-slate-400 file:rounded-sm file:mr-4 file:cursor-pointer"
+            required
+          />
+        </div>
+      </div>
+      <div class="text-[#4f67be] font-semibold" >
+        Bachelor Degree
 
-      <input type="file" id="masters" accept="application/pdf" /><br /><br />
-      <label for="phd">Phd (optional) </label><br />
+        <div class="font-normal">
+          <input
+            type="file"
+            id="degree"
+            name="degree"
+            accept="application/pdf"
+            class="file:bg-[#cbd1e6] file:p-0.5 file:border-2 file:border-slate-400 file:rounded-sm file:mr-4 file:cursor-pointer "
+          />
+        </div>
+      </div>
+      <div class="text-[#4f67be] font-semibold">
+        Masters (optional)
+        <div class="font-normal">
+          <input
+            type="file"
+            id="masters"
+            accept="application/pdf"
+            class="file:bg-[#cbd1e6] file:p-0.5 file:border-2 file:border-slate-400 file:rounded-sm file:mr-4 file:cursor-pointer"
+          />
+        </div>
+      </div>
 
-      <input type="file" id="phd" accept="application/pdf" /><br /><br />
+      <div class="text-[#4f67be] font-semibold">
+        Phd (optional)
+        <div class="font-normal">
+          <input type="file" id="phd" accept="application/pdf"  class="file:bg-[#cbd1e6] file:p-0.5 file:border-2 file:border-slate-400 file:rounded-sm file:mr-4 file:cursor-pointer" />
+        </div>
+      </div>
 
-      <button type="submit" class="registerBtn">Register</button>
+      <div class="flex justify-end">
+        <button
+          type="submit"
+          id="registerBtn"
+          class="bg-orange-400 text-white py-1 px-4 rounded-sm"
+        >
+          Register
+        </button>
+      </div>
     </form>
     <script src="./signUp.js"></script>
   </body>
