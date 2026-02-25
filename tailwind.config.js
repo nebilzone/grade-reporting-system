@@ -1,5 +1,8 @@
 export default {
+  darkMode: "class",
   content: ["./**/*.{html,js}"],
-  theme: { extend: {} },
+  theme: {
+    extend: {},
+  },
   plugins: [],
 };

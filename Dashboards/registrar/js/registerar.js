@@ -1,5 +1,5 @@
-const searchDiv = document.querySelector(".pageContent");
-const tableContainer = document.querySelector(".tableContainer");
+const searchDiv = document.querySelector("#pageContent");
+const tableContainer = document.querySelector("#tableContainer");
 const calander=documents.crea
 async function appilications() {
   const application = await fetch("http://localhost:3000/users");
@@ -9,7 +9,7 @@ async function display() {
   const application = await appilications();
   const table = document.createElement("table");
   const thead = document.createElement("thead");
-  const tabBtn = document.querySelector(".btnTab");
+  const tabBtn = document.querySelector("#btnTab");
   let activeTab = "students";
 
   function getEthiopianYear() {

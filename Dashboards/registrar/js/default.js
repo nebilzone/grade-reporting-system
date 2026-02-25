@@ -1,11 +1,23 @@
-const sidebar=document.querySelector('.sidebarContainer')
+
+const sidebar = document.querySelector("#sidebarContainer");
+
 async function fetchingSidebar() {
-  try {
-    let result = await fetch("/components/sidebar.html");
-    let solution = await result.text();
-    sidebar.innerHTML=solution;
-  } catch (err) {
-    console.error("Fetch failed:", err);
-  }
+  const response = await fetch("/components/sidebar.html");
+  const json = await response.text();
+  sidebar.innerHTML = json;
+  return json;
 }
-fetchingSidebar();
+
+async function display() {
+  await fetchingSidebar();
+  const mode = document.querySelector("#mode");
+  const box = document.querySelector("#box");
+
+  mode.addEventListener("click", function (e) {
+    e.preventDefault();
+    console.log("nebil");
+    box.classList.toggle("translate-x-4");
+    document.documentElement.classList.toggle("dark");
+  });
+}
+display();

@@ -6,14 +6,16 @@ if (!currentUser || currentUser.role !== "teachers") {
 console.log(currentUser)
 const message = document.getElementById("portalMessage");
 const formWrapper = document.getElementById("teacherForm");
-const formContainer = document.querySelector(".formContainer");
-const teacherFrom=document.querySelector('.formFilling');
-const logOutBtn=document.querySelector('.log-outBtn');
+const formContainer = document.querySelector("#formContainer");
+const teacherFrom=document.querySelector('#formFilling');
+
 async function fetchingDepartements() {
   const res = await fetch("http://localhost:3000/departments");
   return await res.json();
 }
-
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.remove("opacity-0");
+});
 async function fetchingCourses(deptId, semester) {
   const res = await fetch("http://localhost:3000/courses");
   const data = await res.json();
@@ -55,25 +57,41 @@ async function formOpening() {
   formContainer.innerHTML = "";
 
   const courseTypeSelect = document.createElement("select");
+  courseTypeSelect.style.border='2px solid #53758e'
+    courseTypeSelect.style.borderRadius='4px '
+    courseTypeSelect.style.outline='none '
+
   courseTypeSelect.id = "courseType";
   courseTypeSelect.className = "courseTypeSelection";
   courseTypeSelect.innerHTML = `
-    <option value="">Select Type</option>
+    <option value="" >Select Type</option>
     <option value="freshman">Freshman Courses</option>
     <option value="department">Department Courses</option>
   `;
 
   const deptSelect = document.createElement("select");
+ deptSelect.style.border='2px solid #53758e'
+
+  deptSelect.style.borderRadius='4px '
+  deptSelect.style.outline='none '
   deptSelect.id = "department";
   deptSelect.className = "departmentSelection";
   deptSelect.innerHTML = `<option value="">Select Department</option>`;
   deptSelect.style.display = "none";
 
   const yearSelect = document.createElement("select");
+    yearSelect.style.border='2px solid #53758e'
+
+   yearSelect.style.borderRadius='4px '
+   yearSelect.style.outline='none '
   yearSelect.id = "year";
   yearSelect.className = "yearSelection";
 
   const courseSelect = document.createElement("select");
+  courseSelect.style.border='2px solid #53758e'
+
+  courseSelect.style.borderRadius='4px '
+  courseSelect.style.outline='none '
   courseSelect.id = "course";
   courseSelect.className = "courseSelection";
 
@@ -81,6 +99,11 @@ async function formOpening() {
   submitBtn.type = "submit";
   submitBtn.textContent = "Submit";
   submitBtn.style.marginTop = "15px";
+    submitBtn.style.background = "#dee9f6";
+        submitBtn.style.padding = "3px";
+        submitBtn.style.borderRadius = "5px";
+
+
 
   formContainer.append(courseTypeSelect, deptSelect, yearSelect, courseSelect, submitBtn);
 
@@ -187,11 +210,6 @@ async function formOpening() {
     alert("Submitted successfully!");
   });
 }
-logOutBtn.addEventListener('click',function(e){
-  e.preventDefault();
-  localStorage.removeItem("currentUser");
 
-  window.location.href = "../../index.html";
-})
 
 formOpening();

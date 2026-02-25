@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../../components/sidebar.css">
-    <link rel="stylesheet" href="./uploadResult.css">
-</head>
-<body>
-    <div class="sidebarContainer"></div>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-<div class="pageContent">
-  <div class="title"><h1>Upload Results</h1>
-    <input type="file" id="fileInput" accept=".csv" />
+</head>
+<body class="flex gap-72">
+    <div id="sidebarContainer"></div>
+
+<div id="pageContent" class="mt-7">
+  <h1>Upload Results</h1>
+   <div>
+     <input type="file" id="fileInput" accept=".csv" />
+   </div>
 <button onclick="convertCSV()">Upload</button>
-<pre id="output"></pre>
 
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 
   <script src="./sidebar.js"></script>
   <script src="./uploadResult.js"></script>
