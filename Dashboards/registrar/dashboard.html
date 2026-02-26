@@ -4,73 +4,114 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-   <!-- Font Awesome Free CDN -->
+    <!-- Font Awesome Free CDN -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
   </head>
-  <body class="flex gap-72">
-    <div id="sidebarContainer"></div>
-    <div id="pageContent" class="mt-4 w-full">
-      <div id="header" class="flex justify-between">
-        <h1 class="font-bold text-2xl text-[#53758e]">Registerar Dashboard</h1>
+  <body class="md:flex md:gap-52 lg:gap-76">
+    <div id="sidebarContainer" class=""></div>
+    <div id="pageContent" class="mt-4 md:w-[50%] md:space-y-4">
+      <div id="header" class="flex gap-2 mx-5 justify-between w-full lg:mx-0 ">
+        <h1 class="font-bold  md:text-2xl text-[#53758e]">
+          Registerar Dashboard
+        </h1>
         <button id="calanderBtn">create calander</button>
+
       </div>
 
-      <div id="cardContainer" class="flex gap-6">
-        <div id="totalStudents" class="bg-[#E3EDF7] p-8 rounded-lg shadow-2xs cursor-pointer text-[#687482] w-36">
+      <div
+        id="cardContainer"
+        class="grid grid-cols-2 md:grid-cols-3 mx-8 gap-x-3 md:w-162   my-4 gap-y-5    md:mx-4 lg:grid-cols-7 lg:w-full lg:gap-40 lg:mx-0"
+      >
+        <div
+          id="totalStudents"
+          class="bg-[#E3EDF7] p-8 rounded-lg shadow-2xl cursor-pointer text-[#687482] w-40 md:w-50 lg:w-36 "
+        >
           <h3>total No of students</h3>
-          <i class="fas fa-user-graduate" class="text-blue-300"></i>
+          <i class="fas fa-user-graduate"></i>
           <h3>435</h3>
         </div>
-        <div id="pendingApplication" class="bg-[#E3EDF7] p-8 rounded-lg shadow-2xs text-[#687482] w-36">
+        <div
+          id="pendingApplication"
+          class="bg-[#E3EDF7] p-8 rounded-lg shadow-2xl text-[#687482] w-40 md:w-50 lg:w-36"
+        >
           <h3>Pending applications</h3>
           <i class="fas fa-hourglass-half"></i>
           <h3>45</h3>
         </div>
-        <div id="totalTeachers" class="bg-[#E3EDF7] p-8 rounded-lg shadow-2xs text-[#687482] w-36">
+        <div
+          id="totalTeachers"
+          class="bg-[#E3EDF7] p-8 rounded-lg shadow-2xl text-[#687482] w-40 md:w-50 lg:w-36"
+        >
           <h3>total teachers</h3>
           <i class="fas fa-chalkboard-teacher"></i>
           <h3>45</h3>
         </div>
-        <div id="rejectedApplication" class="bg-[#E3EDF7] p-8 rounded-lg shadow-2xs text-[#687482] w-36">
+        <div
+          id="rejectedApplication"
+          class="bg-[#E3EDF7] p-8 rounded-lg shadow-2xl text-[#687482] w-40 md:w-50 lg:w-36"
+        >
           <h3>Rejected apllications</h3>
           <i class="fas fa-times-circle"></i>
           <h3>554</h3>
         </div>
-        <div id="freshman" class="bg-[#E3EDF7] p-8 rounded-lg shadow-2xs text-[#687482] w-36">
+        <div
+          id="freshman"
+          class="bg-[#E3EDF7] p-8 rounded-lg shadow-2xl text-[#687482] w-40 md:w-50  lg:w-36"
+        >
           <h4>freshman Courses</h4>
           <i class="fas fa-book"></i>
           <h4>554</h4>
         </div>
-        <div id="departements" class="bg-[#E3EDF7] p-8 rounded-lg shadow-2xs text-[#687482] w-36">
+        <div
+          id="departements"
+          class="bg-[#E3EDF7] p-8 rounded-lg shadow-2xl text-[#687482] w-40 md:w-50 lg:w-36"
+        >
           <h4>Number of departements</h4>
           <i class="fas fa-building"></i>
           <h4>554</h4>
         </div>
-        <div id="graduated" class="bg-[#E3EDF7] p-8 rounded-lg shadow-2xs text-[#687482] w-36">
+        <div
+          id="graduated"
+          class="bg-[#E3EDF7] p-8 rounded-lg shadow-2xl text-[#687482] w-40 md:w-50 lg:w-36"
+        >
           <h4>graduated Students</h4>
           <i class="fas fa-user-graduate"></i>
           <h4>554</h4>
         </div>
       </div>
-      <div id="filter">
-        <label for="filter">Search </label>
+      <div id="filter" class="flex justify-center   mb-3 ">
+        <label for="filter" class="text-2xl text-[#326095]">Search </label>
         <input
           type="search"
           placeholder="Filter by status pending"
           id="filter"
+          class="border-2 border-blue-300 rounded-sm outline-none ml-4 px-4 py-1"
         />
       </div>
-      <div id="btnTab">
-        <button type="button" data-tab="students" id="fristBtn">Pending Students</button>
-        <button type="button" data-tab="teachers" id="secondBtn">Pending teachers</button>
+      <div id="btnTab" class="flex justify-center  md:gap-5 lg:gap-10 gap-10">
+        <button
+          type="button"
+          data-tab="students"
+          id="fristBtn"
+          class="bg-[#bedbff] px-4 py-2 rounded-sm text-[#326095] shadow-2xl"
+        >
+          Pending Students
+        </button>
+        <button
+          type="button"
+          data-tab="teachers"
+          id="secondBtn"
+          class="bg-[#bedbff] px-4 py-2 rounded-sm text-[#326095] shadow-2xl"
+        >
+          Pending teachers
+        </button>
       </div>
-      <div id="tableContainer">
-
+      <div id="tableContainer" class="overflow-x-auto lg:overflow-x-hidden lg:w-[70vw]">
+  </table>
       </div>
     </div>
     <script src="./js/default.js"></script>

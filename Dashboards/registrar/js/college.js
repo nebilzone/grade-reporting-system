@@ -1,17 +1,17 @@
-const newCollegeFormBtn = document.querySelector(".newCollegeFormBtn");
-const newCollegeForm = document.querySelector(".newCollegeForm");
+const newCollegeFormBtn = document.querySelector("#newCollegeFormBtn");
+const newCollegeForm = document.querySelector("#newCollegeForm");
 
-const overlay = document.querySelector(".overlay");
-const backBtn = document.querySelector(".backBtn");
+const overlay = document.querySelector("#overlay");
+const backBtn = document.querySelector("#backBtn");
 
-const collegeNameContainer = document.querySelector(".collegeName");
-const collegeIdContainer = document.querySelector(".collegeIdContainer");
+const collegeNameContainer = document.querySelector("#collegeName");
+const collegeIdContainer = document.querySelector("#collegeIdContainer");
 
-const collegeContainer = document.querySelector(".collageBtnContainer");
-const departementContainer = document.querySelector(".departementContainer");
-const addingCollegeForm = document.querySelector(".addingCourseForm");
+const collegeContainer = document.querySelector("#collageBtnContainer");
+const departementContainer = document.querySelector("#departementContainer");
+const addingCollegeForm = document.querySelector("#addingCourseForm");
 
-const yearBtn = document.querySelectorAll(".yearOfDept");
+const yearBtn = document.querySelectorAll("#yearOfDept");
 newCollegeFormBtn.addEventListener("click", function () {
   document.querySelector("#collegeName").value = "";
   document.querySelector("#collegeId").value = "";

@@ -7,8 +7,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body >
-    <div class="w-60 flex flex-col min-h-screen justify-between bg-[#EBF2FA]  fixed">
-      <div class="flex flex-col gap-4  px-10 text-blue-500 pt-4">
+    <button class="text-2xl md:relative  md:hidden ">☰</button>
+      <div class="hidden md:flex md:fixed md:top-0 md:left-0 md:w-50 lg:w-60  md:flex-col  md:h-screen md:justify-between bg-[#EBF2FA]  ">
+      <div class="flex flex-col gap-4  md:px-6 lg:px-10 text-blue-500 pt-4 ">
         <a
           href="dashboard.html"
           class="hover:bg-blue-100 py-2 px-4 pr-6 rounded-sm hover:border-l-3 hover:border-l-blue-400"
@@ -27,8 +28,8 @@
 
       </div>
       <div class="flex flex-col gap-5 px-10 mb-4 relative ">
-        <button type="submit" class=" px-4 py-2  bg-blue-200 rounded-sm">Log out</button>
-       <div class=" px-4 py-2 flex justify-between items-center bg-blue-200 rounded-sm ">
+        <button type="submit" class="md:px-2 lg:px-4 py-2  bg-blue-200 rounded-sm">Log out</button>
+       <div class="md:px-4 lg:px-4 py-2 flex justify-between items-center bg-blue-200 rounded-sm ">
          <p>Dark</p>
          <div class="bg-[#dee9f6]  w-8 h-4  rounded-3xl relative " id="mode">
            <span class="bg-[#1d7aeb]  w-4 h-4 rounded-full absolute transform " id="box"></span>
@@ -36,6 +37,7 @@
        </div>
       </div>
     </div>
+
   </body>
   <script src="./sidebar.js"></script>
 </html>

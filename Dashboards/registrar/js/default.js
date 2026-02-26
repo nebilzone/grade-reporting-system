@@ -1,4 +1,3 @@
-
 const sidebar = document.querySelector("#sidebarContainer");
 
 async function fetchingSidebar() {
