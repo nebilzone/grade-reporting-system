@@ -1553,7 +1553,7 @@
     {
       "name": "College of computing and informatics",
       "collegeID": "CCI",
-      "status": "inactive",
+      "status": "active",
       "id": 1
     },
     {
@@ -1609,6 +1609,12 @@
       "collegeID": "SDFG",
       "status": "inactive",
       "id": 10
+    },
+    {
+      "name": "Neba",
+      "collegeID": "NEBS",
+      "status": "inactive",
+      "id": 11
     }
   ],
   "departments": [
@@ -3753,9 +3759,10 @@
       "name": "Object-Oriented Programming",
       "year": 1,
       "semester": 2,
-      "credit": 3,
+      "credit": "3",
       "departementId": "CS",
-      "active": true
+      "active": false,
+      "code": "undefined"
     },
     {
       "id": "CS-FR-108",
@@ -4186,9 +4193,10 @@
       "name": "Cloud Infrastructure & Services",
       "year": 3,
       "semester": 1,
-      "credit": 3,
+      "credit": "3",
       "departementId": "IT",
-      "active": true
+      "active": true,
+      "code": "undefined"
     },
     {
       "id": "IT-JU-302",
@@ -4503,7 +4511,7 @@
       "semester": 2,
       "credit": 3,
       "departementId": "IS",
-      "active": true
+      "active": false
     },
     {
       "id": "IS-JU-307",
