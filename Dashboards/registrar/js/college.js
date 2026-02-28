@@ -14,7 +14,6 @@ let activeDepartmentBtn = null;
 let activeYearBtn = null;
 let activeSemesterBtn = null;
 
-/* ================= FETCH FUNCTIONS ================= */
 
 async function fetchingCollege() {
   const res = await fetch("http://localhost:3000/colleges");
@@ -34,7 +33,6 @@ async function fetchingCourse() {
   return json.filter((c) => c.active);
 }
 
-/* ================= BUTTON CREATOR ================= */
 
 function createButton(text, withArrow = false) {
   const btn = document.createElement("button");
@@ -54,7 +52,6 @@ function createButton(text, withArrow = false) {
   return btn;
 }
 
-/* ================= CLEAR BELOW ================= */
 
 function clearBelow(level) {
   if (level === "college") {
@@ -86,7 +83,6 @@ function clearBelow(level) {
   }
 }
 
-/* ================= DISPLAY COLLEGES ================= */
 
 async function displayCollege() {
   const colleges = await fetchingCollege();
@@ -101,7 +97,6 @@ async function displayCollege() {
 
 displayCollege();
 
-/* ================= COLLEGE CLICK ================= */
 
 collegeContainer.addEventListener("click", async (e) => {
   const btn = e.target.closest("button");
@@ -119,7 +114,6 @@ collegeContainer.addEventListener("click", async (e) => {
   });
 });
 
-/* ================= DEPARTMENT CLICK ================= */
 
 departementContainer.addEventListener("click", async (e) => {
   const btn = e.target.closest("button");
@@ -161,7 +155,6 @@ departementContainer.addEventListener("click", async (e) => {
   });
 });
 
-/* ================= YEAR CLICK ================= */
 
 yearContainer.addEventListener("click", (e) => {
   const btn = e.target.closest("button");
@@ -206,7 +199,6 @@ yearContainer.addEventListener("click", (e) => {
   });
 });
 
-/* ================= SEMESTER CLICK ================= */
 
 semesterContainer.addEventListener("click", (e) => {
   const btn = e.target.closest("button");
@@ -242,7 +234,6 @@ semesterContainer.addEventListener("click", (e) => {
   createTable(filtered);
 });
 
-/* ================= TABLE + EDIT + REMOVE ================= */
 
 function createTable(filtered) {
   tableContainer.innerHTML = "";

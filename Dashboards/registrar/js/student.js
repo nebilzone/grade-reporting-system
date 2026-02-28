@@ -1,4 +1,4 @@
-const pageContent = document.querySelector(".pageContent");
+const pageContent = document.querySelector("#pageContent");
 
 async function fetchingData() {
   const data = await fetch("http://localhost:3000/students");

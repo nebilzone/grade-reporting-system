@@ -14,7 +14,6 @@ async function display() {
 
   mode.addEventListener("click", function (e) {
     e.preventDefault();
-    console.log("nebil");
     box.classList.toggle("translate-x-4");
     document.documentElement.classList.toggle("dark");
   });

@@ -6,26 +6,26 @@
     <title>Teachers dashboards</title>
        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body class="flex gap-72">
+  <body class="flex overflow-x-hidden md:pl-60 lg:pl-72 mr-8">
     <div id="sidebarContainer"></div>
 
-    <div id="pageContent">
-      <h1>Teachers dashboards</h1>
-      <div id="tabBtncontainer main-tabs">
-        <button type="button" data-id="appBtn" id="maintabBtn ">Teacher Applications</button>
-        <button type="button" data-id="assignBtn" id="maintabBtn ">Teacher Assignment</button>
+    <div id="pageContent" class="mt-4 flex-1 min-w-0">
+      <h1 class="font-bold  md:text-2xl text-[#53758e]">Teachers dashboards</h1>
+      <div id="tabBtncontainer" class="main-tabs space-x-2">
+        <button type="button" data-id="appBtn" id="maintabBtn" class="bg-blue-100 px-4 py-1 rounded-sm hover:bg-blue-300" >Teacher Applications</button>
+        <button type="button" data-id="assignBtn" id="maintabBtn" class="bg-blue-100 px-4 py-1 rounded-sm hover:bg-blue-300" >Teacher Assignment</button>
       </div>
 
-      <div id="tabBtncontainer sub-tabs hidden">
-        <button type="button"  data-id="freshman" id="subtabBtn">
+      <div id="tabBtncontainer" class="sub-tabs hidden mt-4 space-x-2">
+        <button type="button"  data-id="freshman" id="subtabBtn" class="bg-blue-100 px-4 py-1 rounded-sm hover:bg-blue-300">
           Freshman
         </button>
-        <button type="button" data-id="department" id="subtabBtn">
+        <button type="button" data-id="department" id="subtabBtn" class="bg-blue-100 px-4 py-1 rounded-sm hover:bg-blue-300">
           Department
         </button>
       </div>
 
-      <div id="tableContainer"></div>
+      <div id="tableContainer" class="mt-4 overflow-x-auto  lg:overflow-x-hidden"></div>
     </div>
     <script src="./js/default.js"></script>
     <script src="./js/teacher.js"></script>

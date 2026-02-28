@@ -1,9 +1,9 @@
-const tabBtnContainer = document.querySelector(".tabBtncontainer");
+const tabBtnContainer = document.querySelector("#tabBtncontainer");
 const mainTab = document.querySelector(".main-tabs");
 const subTab = document.querySelector(".sub-tabs");
-const tableContiner = document.querySelector(".tableContainer");
-const mainTabBtn = document.querySelectorAll(".maintabBtn");
-const subTabBtn = document.querySelectorAll(".subtabBtn");
+const tableContiner = document.querySelector("#tableContainer");
+const mainTabBtn = document.querySelectorAll("#maintabBtn");
+const subTabBtn = document.querySelectorAll("#subtabBtn");
 
 async function fetchingTeacherSubmission(status) {
   const res = await fetch("http://localhost:3000/teacherSubmissions");
@@ -41,7 +41,6 @@ mainTab.addEventListener("click", function (e) {
 
   const event = e.target.closest("button");
   activeMainTab = event.dataset.id;
-  console.log(activeMainTab);
   event.classList.add("active");
   if (!event) return;
   subTab.style.display = "block";
@@ -59,15 +58,15 @@ subTab.addEventListener("click", async function (e) {
 
   const table = document.createElement("table");
   table.innerHTML = `
-      <tr>
-        <th>teacherId</th>
-        <th>departmentId</th>
-        <th>year</th>
-        <th>courseId</th>
-        <th>semester</th>
-        <th>submittedAt</th>
-        <th>status</th>
-        <th>action</th>
+      <tr class="bg-blue-100 text-blue-950">
+        <th class="text-start py-1 pl-2 lg:pl-0">teacherId</th>
+        <th class="text-start py-1 pl-2 lg:pl-0">departmentId</th>
+        <th class="text-start py-1 pl-2 lg:pl-0">year</th>
+        <th class="text-start py-1 pl-2 lg:pl-0">courseId</th>
+        <th class="text-start py-1 pl-2 lg:pl-0">semester</th>
+        <th class="text-start py-1 pl-2 lg:pl-0">submittedAt</th>
+        <th class="text-start py-1 pl-2 lg:pl-0">status</th>
+        <th class="text-start py-1 pl-2 lg:pl-0">action</th>
       </tr>
     `;
 
@@ -81,23 +80,32 @@ subTab.addEventListener("click", async function (e) {
 
       for (const teacher of freshTeacher) {
         const tr = document.createElement("tr");
+        tr.className =
+          "text-blue-950 border-b border-[#c1babaff] w-full bg-[#f3f4f6] ";
         for (const data in teacher) {
           if (data == "id") {
             continue;
           }
           if (data == "departmentId") {
             const td = document.createElement("td");
+            td.className = "pl-2 text-nowrap lg:pl-0";
+
             td.textContent = "Freshman";
             tr.append(td);
             continue;
           }
           const td = document.createElement("td");
+          td.className = "pl-2 text-nowrap lg:pl-0";
+
           td.textContent = teacher[data];
           tr.append(td);
         }
         const approveBtn = document.createElement("button");
         approveBtn.textContent = "aprove";
+        approveBtn.className = "pl-3 lg:pl-0";
         const rejectBtn = document.createElement("button");
+        rejectBtn.className = "pl-3 lg:pl-0";
+
         rejectBtn.textContent = "reject";
         approveBtn.addEventListener("click", async function (e) {
           e.preventDefault();
@@ -110,6 +118,8 @@ subTab.addEventListener("click", async function (e) {
             },
           );
         });
+        tr.className = "text-nowrap";
+
         tr.append(approveBtn, rejectBtn);
         table.append(tr);
       }
@@ -119,23 +129,31 @@ subTab.addEventListener("click", async function (e) {
       );
       for (const teacher of departementTeacher) {
         const tr = document.createElement("tr");
+        tr.className =
+          "text-blue-950 border-b border-[#c1babaff] w-full bg-[#f3f4f6] ";
         for (const data in teacher) {
           if (data == "id") {
             continue;
           }
           const td = document.createElement("td");
+          td.className = "pl-2 text-nowrap lg:pl-0";
+
           td.textContent = teacher[data];
           tr.append(td);
-          console.log(teacher[data]);
         }
         const approveBtn = document.createElement("button");
         approveBtn.textContent = "aprove";
+        approveBtn.className = "pl-3 lg:pl-0";
+
         const rejectBtn = document.createElement("button");
+        rejectBtn.className = "pl-3 lg:pl-0";
+
         rejectBtn.textContent = "reject";
         approveBtn.addEventListener("click", function (e) {
           e.preventDefault();
-          console.log("neba");
         });
+                        tr.className="text-nowrap"
+
         tr.append(approveBtn, rejectBtn);
         table.append(tr);
       }
@@ -153,21 +171,29 @@ subTab.addEventListener("click", async function (e) {
 
       for (const teacher of freshTeacher) {
         const tr = document.createElement("tr");
+        tr.className =
+          "text-blue-950 border-b border-[#c1babaff] w-full bg-[#f3f4f6] ";
         for (const data in teacher) {
           if (data == "id") {
             continue;
           }
           if (data == "departmentId") {
             const td = document.createElement("td");
+            td.className = "pl-2 text-nowrap lg:pl-0";
+
             td.textContent = "Freshman";
             tr.append(td);
             continue;
           }
           const td = document.createElement("td");
+          td.className = "pl-2 text-nowrap lg:pl-0";
+
           td.textContent = teacher[data];
           tr.append(td);
         }
         const assignBtn = document.createElement("button");
+                        assignBtn.className="ml-3 px-2  rounded-sm bg-green-200 lg:ml-0 "
+
         assignBtn.textContent = "assign";
         tr.append(assignBtn);
 
@@ -217,8 +243,8 @@ subTab.addEventListener("click", async function (e) {
                   teacherId: teacher.teacherId,
                   courseId: teacher.courseId,
                   section: section,
-                  year:teacher.year,
-                  semester:teacher.semester
+                  year: teacher.year,
+                  semester: teacher.semester,
                 }),
               });
             }
@@ -239,20 +265,23 @@ subTab.addEventListener("click", async function (e) {
       );
       for (const teacher of departementTeacher) {
         const tr = document.createElement("tr");
+        tr.className =
+          "text-blue-950 border-b border-[#c1babaff] w-full bg-[#f3f4f6] ";
         for (const data in teacher) {
           if (data == "id") {
             continue;
           }
           const td = document.createElement("td");
+          td.className = "pl-2 text-nowrap lg:pl-0";
+
           td.textContent = teacher[data];
           tr.append(td);
-          console.log(teacher[data]);
         }
         const assignBtn = document.createElement("button");
+                assignBtn.className="pl-3 lg:pl-0"
 
         assignBtn.addEventListener("click", function (e) {
           e.preventDefault();
-          console.log("neba");
         });
         tr.append(assignBtn);
         table.append(tr);
