@@ -674,6 +674,56 @@
         "lastLogin": null
       },
       "status": "active"
+    },
+    {
+      "id": 1772349641886,
+      "fullName": "Nebil Abdo",
+      "email": "nebilbromance@gmail.com",
+      "password": "Nebil@A432",
+      "year": 2018,
+      "track": "Natural",
+      "role": "students",
+      "gender": "Male",
+      "documents": {
+        "grade8": "cv (1).pdf",
+        "grade12": "cv (1).pdf",
+        "transcript": "cv (1).pdf"
+      },
+      "status": "Pending"
+    },
+    {
+      "id": 1772349721229,
+      "fullName": "Husniya Tayib",
+      "email": "nebilbromance@gmail.com",
+      "password": "@Husniya43",
+      "year": 2018,
+      "track": "Natural",
+      "role": "students",
+      "gender": "Male",
+      "documents": {
+        "grade8": "cv (1).pdf",
+        "grade12": "cv (1).pdf",
+        "transcript": "cv (1).pdf"
+      },
+      "status": "Pending"
+    },
+    {
+      "id": 1772353639613,
+      "fullName": "Nebil Abdo",
+      "email": "nebilbromance@gmail.com",
+      "password": "@Wezir45",
+      "role": "teachers",
+      "phone": "+251948769744",
+      "gender": "Male",
+      "nationalID": "1234567898765432",
+      "departments": "Fregftr",
+      "documents": {
+        "cv": "cv (1).pdf",
+        "degree": "cv (1).pdf",
+        "masters": "Not uploaded",
+        "phd": "Not uploaded"
+      },
+      "status": "Pending"
     }
   ],
   "students": [
@@ -996,8 +1046,7 @@
       "level": "FreshMan",
       "year": 1,
       "semester": 1,
-      "status": "active",
-      "section": "FS-2"
+      "status": "Pending"
     },
     {
       "id": "UGPR0024/2018",
@@ -1054,7 +1103,7 @@
         "lockUntil": null,
         "lastLogin": 1770487292006
       },
-      "status": "active"
+      "status": "Pending"
     },
     {
       "id": 1769783873745,
@@ -1077,7 +1126,7 @@
         "lockUntil": null,
         "lastLogin": 1770487741912
       },
-      "status": "active"
+      "status": "Pending"
     },
     {
       "id": 1769957309179,
@@ -4239,9 +4288,10 @@
       "name": "Cybersecurity Management",
       "year": 3,
       "semester": 2,
-      "credit": 3,
+      "credit": "3",
       "departementId": "IT",
-      "active": true
+      "active": true,
+      "code": "undefined"
     },
     {
       "id": "IT-JU-307",

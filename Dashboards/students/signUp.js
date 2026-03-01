@@ -1,7 +1,7 @@
 const forms = document.querySelector("#registerForm");
-const passwordContainer = document.querySelector("#password");
-const fullNameContainer = document.querySelector("#fullName");
-const emailContainer = document.querySelector("#email");
+const passwordContainer = document.querySelector("#passwordContainer");
+const fullNameContainer = document.querySelector("#fullNameContainer");
+const emailContainer = document.querySelector("#emailContainer");
 const batchInput = document.querySelector("#year");
 const streamInput = document.querySelector("freshman");
 const genderInput = document.querySelector('input[name="gender"]');
@@ -19,33 +19,37 @@ function getEthiopianYear() {
 }
 async function nameValidation(name) {
   const err = document.createElement("p");
-  document.querySelector("#email").addEventListener("focus", async function () {
-    err.textContent = "";
-  });
+  document
+    .querySelector("#fullNameInput")
+    .addEventListener("focus", async function () {
+      err.textContent = "";
+    });
   let value = name.trim();
   value = value.replace(/\s+/g, " ");
-  const parts = value.split(" ");
-  const isCapitalized = parts.every(
-    (word) => word[0] === word[0].toUpperCase(),
-  );
+
   if (
     value.length < 7 ||
     !value.includes(" ") ||
-    !/^[A-Za-z\s]+$/.test(value) ||
-    !isCapitalized
+    !/^[A-Za-z\s]+$/.test(value)
   ) {
     err.textContent = "Please insert Valid Name";
     err.style.color = "red";
     emailContainer.append(err);
     return false;
   } else {
-    return value;
+    const parts = value.split(" ");
+    console.log(parts);
+    const isCapitalized = parts.map(
+      (word) => word[0].toUpperCase() + word.slice(1),
+    );
+
+    return isCapitalized.join(" ");
   }
 }
 async function emailValidation(email) {
   const err = document.createElement("p");
   document
-    .querySelector("#fullName")
+    .querySelector("#emailInput")
     .addEventListener("focus", async function () {
       err.textContent = "";
     });
@@ -61,7 +65,7 @@ async function emailValidation(email) {
 async function passwordValidation(password) {
   const err = document.createElement("p");
   document
-    .querySelector("#password")
+    .querySelector("#passwordInput")
     .addEventListener("focus", async function () {
       err.textContent = "";
     });
@@ -83,9 +87,9 @@ forms.addEventListener("submit", async (e) => {
   const event = e.target;
   const etYear = getEthiopianYear();
 
-  const name = await nameValidation(event.fullName.value);
-  const email = await emailValidation(event.email.value);
-  const password = await passwordValidation(event.password.value);
+  const name = await nameValidation(event.fullNameInput.value);
+  const email = await emailValidation(event.emailInput.value);
+  const password = await passwordValidation(event.passwordInput.value);
 
   const data = {
     id: Date.now(),
@@ -93,7 +97,7 @@ forms.addEventListener("submit", async (e) => {
     email: email,
     password: password,
     year: etYear,
-    track:event.freshman.value,
+    track: event.freshman.value,
     role: "students",
     gender: document.querySelector('input[name="gender"]:checked')?.value || 0,
     documents: {

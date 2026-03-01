@@ -9,25 +9,27 @@
   <body class="flex justify-center items-center min-h-screen">
     <form
       action=""
-      class="bg-[#e8e5e5] p-4 border-2 border-[#d1d5db] rounded-sm"
+      class="bg-[#e8e5e5] p-4 border-2 border-[#d1d5db] rounded-sm max-w-sm"
       id="registerForm"
       enctype="multipart/form-data"
     >
-      <div id="fullName" class="text-[#4f67be] font-semibold">
+      <div id="fullNameContainer" class="text-[#4f67be] font-semibold">
         Full Name
         <div
           class="w-full border-2 border-[#d1d5db] text-gray-700 font-normal rounded-sm bg-white px-2 focus-within:border-orange-300"
         >
           <input
             type="text"
-            id="fullName"
+            id="fullNameInput"
             class="focus:outline-none"
             placeholder="Full Name"
             required
           />
         </div>
+          <p class="error text-red-500 text-sm mt-1  break-all"></p>
+
       </div>
-      <div id="email" class="text-[#4f67be] font-semibold">
+      <div id="emailContainer" class="text-[#4f67be] font-semibold">
         Email
         <div
           class="w-full border-2 border-[#d1d5db] text-gray-700 font-normal rounded-sm bg-white px-2 focus-within:border-orange-300"
@@ -40,8 +42,10 @@
             required
           />
         </div>
+          <p class="error text-red-500 text-sm mt-1  break-all"></p>
+
       </div>
-      <div id="password" class="text-[#4f67be] font-semibold">
+      <div id="passwordContainer" class="text-[#4f67be] font-semibold">
         Password
         <div
           class="w-full border-2 border-[#d1d5db] text-gray-700 font-normal rounded-sm bg-white px-2 focus-within:border-orange-300"
@@ -54,8 +58,10 @@
             required
           />
         </div>
+          <p class="error text-red-500 text-sm mt-1 break-all"></p>
+
       </div>
-      <div id="phone" class="text-[#4f67be] font-semibold">
+      <div id="phoneContainer" class="text-[#4f67be] font-semibold">
         Phone Number
         <div
           class="w-full border-2 border-[#d1d5db] text-gray-700 font-normal rounded-sm bg-white px-2 focus-within:border-orange-300"
@@ -68,8 +74,10 @@
             required
           />
         </div>
+          <p class="error text-red-500 text-sm mt-1 break-all"></p>
+
       </div>
-      <div id="departement" class="text-[#4f67be] font-semibold">
+      <div id="departementContainer" class="text-[#4f67be] font-semibold">
         Departments
         <div
           class="w-full border-2 border-[#d1d5db] text-gray-700 font-normal rounded-sm bg-white px-2 focus-within:border-orange-300"
@@ -82,6 +90,8 @@
             required
           />
         </div>
+          <p class="error text-red-500 text-sm mt-1 break-all"></p>
+
       </div>
       <div id="nationalID" class="text-[#4f67be] font-semibold">
         National ID
@@ -96,6 +106,8 @@
             required
           />
         </div>
+          <p class="error text-red-500 text-sm mt-1 break-all"></p>
+
       </div>
 
       <label for="male" value="" class="text-[#4f67be] font-semibold"

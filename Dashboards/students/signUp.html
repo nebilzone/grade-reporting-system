@@ -16,10 +16,10 @@
       <label for="fullName" class="text-[#2443b1] font-semibold"
         >Full Name
       </label>
-      <div id="fullName">
+      <div id="fullNameContainer">
         <input
           type="text"
-          id="fullName"
+          id="fullNameInput"
           placeholder="Full Name"
           class="w-full bg-white border-2 border-[#d1d5db] rounded-sm p-1 focus:outline-none focus:border-sky-400 cursor-pointer"
           required
@@ -29,10 +29,10 @@
       <label for="email" id="email" class="text-[#2443b1] font-semibold"
         >Email
       </label>
-      <div class="email">
+      <div id="emailContainer">
         <input
           type="email"
-          id="email"
+          id="emailInput"
           class="w-full bg-white border-2 border-[#d1d5db] rounded-sm p-1 focus:outline-none focus:border-sky-400 cursor-pointer"
           placeholder="Email"
           required
@@ -42,10 +42,10 @@
       <label for="password" class="text-[#2443b1] font-semibold"
         >Password
       </label>
-      <div class="password">
+      <div id="passwordContainer">
         <input
           type="password"
-          id="password"
+          id="passwordInput"
           class="w-full bg-white border-2 border-[#d1d5db] rounded-sm p-1 focus:outline-none focus:border-sky-400 cursor-pointer"
           placeholder="Password"
           required
@@ -87,7 +87,7 @@
         >Grade 8 result </label
       ><br />
 
-      <input
+    <input
         type="file"
         id="grade8"
         accept="application/pdf"
@@ -114,7 +114,7 @@
         accept="application/pdf"
         required
         class="file:bg-[#cbd1e6] file:p-0.5 file:border-2 file:border-slate-400 file:rounded-sm file:text-gray-500 file:mr-4 file:cursor-pointer "
-      /><br /><br />
+      /><br /><br /> 
       <div class="flex justify-end">
         <button type="submit" id="registerBtn" class="bg-orange-400 text-white py-1 px-3 rounded-sm cursor-pointer ">Register</button>
       </div>
