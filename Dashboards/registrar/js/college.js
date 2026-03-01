@@ -38,7 +38,7 @@ function createButton(text, withArrow = false) {
   const btn = document.createElement("button");
   btn.type = "button";
   btn.className =
-    "bg-blue-200 hover:bg-blue-300 transition rounded px-4 py-3 min-w-[180px] text-left flex justify-between items-center";
+    "bg-blue-200 hover:bg-[#8EC5FF] transition rounded px-4 py-3 min-w-[180px] text-left flex justify-between items-center";
 
   if (withArrow) {
     btn.innerHTML = `

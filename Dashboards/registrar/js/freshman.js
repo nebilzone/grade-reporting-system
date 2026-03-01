@@ -15,7 +15,8 @@ freshmanContainer.addEventListener("click", async function (e) {
   tablecontainer.innerHTML = "";
   const event = e.target.closest("button");
   const table = document.createElement("table");
-  table.className="w-full  border-spacing-x-2 md:border-spacing-y-0 cursor-pointer"
+  table.className =
+    "w-full  border-spacing-x-2 md:border-spacing-y-0 cursor-pointer";
 
   if (!event) return;
   const deptId = event.dataset.id;
@@ -37,13 +38,13 @@ freshmanContainer.addEventListener("click", async function (e) {
     const students = await fetchingStudents(deptId);
     for (const student of students) {
       const tr = document.createElement("tr");
-       tr.className="text-blue-950 border-b border-[#c1babaff]  w-full bg-[#f3f4f6]"
+      tr.className = "text-blue-950 border-b border-[#c1babaff]  w-full ";
       for (const data in student) {
         if (data == "level" || data === "year" || data == "password") {
           continue;
         }
         const td = document.createElement("td");
-        td.className='pl-2 text-nowrap md:pl-0'
+        td.className = "pl-2 text-nowrap md:pl-0";
         td.textContent = student[data];
         tr.append(td);
       }
@@ -65,13 +66,13 @@ freshmanContainer.addEventListener("click", async function (e) {
     const courses = await fetchingCourse(deptId);
     for (const course of courses) {
       const tr = document.createElement("tr");
-      tr.className="text-blue-950 border-b border-[#c1babaff] w-full bg-[#f3f4f6] "
+      tr.className = "text-blue-950 border-b border-[#c1babaff] w-full  ";
       for (const data in course) {
         if (data == "active") {
           continue;
         }
         const td = document.createElement("td");
-                td.className='pl-2 text-nowrap md:pl-0'
+        td.className = "pl-2 text-nowrap md:pl-0";
 
         td.textContent = course[data];
         tr.append(td);

@@ -419,6 +419,8 @@
       "email": "child@gmail.com",
       "password": "fdrr",
       "year": "2018",
+            "track": "Natural",
+
       "role": "students",
       "gender": "Male",
       "documents": {
@@ -610,7 +612,7 @@
         "lockUntil": null,
         "lastLogin": 1770488905559
       },
-      "status": "active"
+      "status": "Pending"
     },
     {
       "id": 1770205878553,
