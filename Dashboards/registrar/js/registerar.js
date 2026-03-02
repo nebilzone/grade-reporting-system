@@ -38,7 +38,7 @@ async function display() {
 
     const h3 = document.createElement("h3");
     h3.textContent = "Students applications";
-    h3.style.marginLeft = "40px";
+    h3.className = "ml-10 dark:text-cyan-300";
 
     tableContainer.append(h3);
     let conditions = true;
@@ -46,7 +46,8 @@ async function display() {
     for (const object of application) {
       if (object.status == "Pending" && object.role == "students") {
         const tr = document.createElement("tr");
-        tr.className = "bg-blue-100 text-blue-950";
+        tr.className =
+          "bg-blue-100 text-blue-950 dark:bg-[#3F4554] dark:text-gray-200 text-start p-2";
         if (conditions) {
           for (const each in object) {
             const th = document.createElement("th");
@@ -54,16 +55,12 @@ async function display() {
               continue;
             }
             th.textContent = each;
-            th.style.textAlign = "start";
+
             tr.append(th);
-            th.style.padding = "5px";
-            th.style.borderTop = "1px solid #c1babaff";
           }
           const th = document.createElement("th");
-          th.style.borderTop = "1px solid #c1babaff";
-
+          th.className = "dark:bg-[#3F4554] dark:text-gray-200 text-start p-2 ";
           th.textContent = "action";
-          th.style.textAlign = "start";
 
           tr.append(th);
 
@@ -76,7 +73,8 @@ async function display() {
     for (const object of application) {
       if (object.status == "Pending" && object.role == "students") {
         const tr = document.createElement("tr");
-        tr.className = "border-b border-[#c1babaff] w-full bg-[#f3f4f6] ";
+        tr.className =
+          "border-b border-[#c1babaff] w-full bg-[#f3f4f6] dark:bg-[#444B5A] dark:text-gray-300 ";
         for (const each in object) {
           if (each == "password") {
             continue;
@@ -85,9 +83,8 @@ async function display() {
             const button = document.createElement("button");
             button.textContent = "View Docs";
             button.className =
-              "bg-red-100 px-2 py-1 mx-2  rounded-sm text-nowrap";
+              "bg-red-100 px-2 py-1 mx-2  rounded-sm text-nowrap dark:text-gray-400";
             const td = document.createElement("td");
-
 
             td.append(button);
             tr.append(td);
@@ -95,7 +92,7 @@ async function display() {
           }
           const td = document.createElement("td");
           td.textContent = object[each];
-          td.className = "p-2 text-nowrap";
+          td.className = "p-2 text-nowrap ";
 
           tr.append(td);
         }
@@ -107,7 +104,6 @@ async function display() {
 
         approveBtn.className =
           "px-3 py-1 bg-[#15803D] mr-2 rounded-sm text-stone-50";
-
 
         approveBtn.addEventListener("click", async function event(e) {
           e.preventDefault();
@@ -156,7 +152,6 @@ async function display() {
             body: JSON.stringify({ status: "active" }),
           });
         });
-        td.style.borderTop = "1px solid #c1babaff";
         td.append(approveBtn);
         const rejectBtn = document.createElement("button");
         rejectBtn.className =
@@ -181,34 +176,33 @@ async function display() {
     table.innerHTML = "";
     thead.innerHTML = "";
     const h3 = document.createElement("h3");
+    h3.className = "ml-10 dark:text-cyan-300";
     h3.textContent = "Teachers applications";
-    h3.style.marginLeft = "40px";
     tableContainer.append(h3);
     let conditions = true;
 
     for (const object of application) {
       if (object.status == "Pending" && object.role == "teachers") {
         const tr = document.createElement("tr");
-        tr.className = "bg-blue-100 text-blue-950";
+        tr.className =
+          "bg-blue-100 text-blue-950 dark:bg-[#3F4554] dark:text-gray-200 text-start p-2";
         if (conditions) {
           for (const each in object) {
             const th = document.createElement("th");
             if (each == "password") {
               continue;
             }
-              if (each == "auth") {
+            if (each == "auth") {
               continue;
             }
-             if (each == "id") {
+            if (each == "id") {
               continue;
             }
             th.textContent = each;
-            th.className="p-2 border-t border-[#c1babaff] text-start"
+            th.className = "p-2  text-start";
             tr.append(th);
-
           }
           const th = document.createElement("th");
-          th.style.borderTop = "1px solid #c1babaff";
 
           th.textContent = "action";
           th.style.textAlign = "start";
@@ -226,26 +220,26 @@ async function display() {
     for (const object of application) {
       if (object.status == "Pending" && object.role == "teachers") {
         const tr = document.createElement("tr");
-
+        tr.className =
+          "border-b border-[#c1babaff] w-full bg-[#f3f4f6] dark:bg-[#444B5A] dark:text-gray-300 ";
         for (const each in object) {
           if (each == "password") {
             continue;
           }
-           if (each == "auth") {
-              continue;
-            }
-              if (each == "id") {
-              continue;
-            }
+          if (each == "auth") {
+            continue;
+          }
+          if (each == "id") {
+            continue;
+          }
           if (each == "documents") {
             const button = document.createElement("button");
             button.textContent = "View";
             button.className =
-              "bg-red-100 px-2 py-1 mx-2  rounded-sm text-nowrap";
+              "bg-red-100 px-2 py-1 mx-2  rounded-sm text-nowrap dark:text-gray-500";
 
             const td = document.createElement("td");
 
-            td.className="border-y border-y-[#F2F2F2]"
 
             td.append(button);
             tr.append(td);
@@ -253,20 +247,15 @@ async function display() {
           }
           const td = document.createElement("td");
           td.textContent = object[each];
-          td.style.borderBottom = "1px solid #c1babaff";
-          td.style.borderTop = "1px solid #c1babaff";
-          td.style.padding = "5px";
 
           tr.append(td);
         }
         const approveBtn = document.createElement("button");
         approveBtn.textContent = "Approve";
-         approveBtn.className =
+        approveBtn.className =
           "px-3 py-1 bg-[#15803D] mr-2 rounded-sm text-stone-50";
 
         const td = document.createElement("td");
-        td.style.borderBottom = "1px solid #c1babaff";
-        td.style.background = "#F2F2F2";
 
 
         approveBtn.addEventListener("click", async function event(e) {
@@ -307,12 +296,11 @@ async function display() {
             body: JSON.stringify({ status: "approved" }),
           });
         });
-        td.style.borderTop = "1px solid #c1babaff";
         td.append(approveBtn);
         const rejectBtn = document.createElement("button");
 
         rejectBtn.textContent = "Reject";
-           rejectBtn.className =
+        rejectBtn.className =
           "px-3 py-1 bg-[#bc1111ff] rounded-sm text-stone-50";
 
         td.append(rejectBtn);

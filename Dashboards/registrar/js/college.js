@@ -38,7 +38,7 @@ function createButton(text, withArrow = false) {
   const btn = document.createElement("button");
   btn.type = "button";
   btn.className =
-    "bg-blue-200 hover:bg-[#8EC5FF] transition rounded px-4 py-3 min-w-[180px] text-left flex justify-between items-center";
+    "bg-blue-200 hover:bg-[#8EC5FF] dark:bg-cyan-300 dark:hover:bg-cyan-500 transition rounded px-4 py-3 min-w-[180px] text-left flex justify-between items-center";
 
   if (withArrow) {
     btn.innerHTML = `
@@ -243,12 +243,12 @@ function createTable(filtered) {
     "w-full border border-gray-300 text-sm bg-white shadow rounded mt-4";
 
   table.innerHTML = `
-    <thead class="bg-gray-100">
-      <tr>
-        <th class="border p-2">Course</th>
-        <th class="border p-2">Code</th>
-        <th class="border p-2">Credit</th>
-        <th class="border p-2">Action</th>
+    <thead class="bg-blue-100 text-blue-950 ">
+      <tr >
+        <th class="border-b p-2">Course</th>
+        <th class="border-b p-2">Code</th>
+        <th class="border-b p-2">Credit</th>
+        <th class="border-b p-2">Action</th>
       </tr>
     </thead>
   `;
@@ -260,11 +260,11 @@ function createTable(filtered) {
     tr.dataset.id = course.id;
 
     tr.innerHTML = `
-      <td class="border p-2">${course.name}</td>
-      <td class="border p-2">${course.code}</td>
-      <td class="border p-2">${course.credit}</td>
-      <td class="border p-2 flex gap-2">
-        <button class="editBtn bg-green-200 hover:bg-green-300 px-2 py-1 rounded">
+      <td class="border-b p-2">${course.name}</td>
+      <td class="border-b p-2">${course.code}</td>
+      <td class="border-b p-2">${course.credit}</td>
+      <td class="border-b p-2 flex gap-2">
+        <button class="editBtn bg-green-300 hover:bg-green-400 px-2 py-1 rounded">
           Edit
         </button>
         <button class="removeBtn bg-red-200 hover:bg-red-300 px-2 py-1 rounded">

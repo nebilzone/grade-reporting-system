@@ -8,6 +8,8 @@ async function display() {
   const application = await fetchingFunc();
   const appTable = document.createElement("table");
   const tHead = document.createElement("thead");
+  tHead.className =
+    "bg-blue-100 text-blue-950 dark:bg-[#3F4554] dark:text-gray-200 text-start ";
   let Year;
   for (const option in application) {
     if (Year == application[option].year) {
@@ -31,7 +33,7 @@ async function display() {
     }
     const th = document.createElement("th");
     th.textContent = header;
-    th.className = "p-2 bg-[#DFEDFF]  border-b  border-[#c1babaff] text-start";
+    th.className = "p-2";
 
     tHead.append(th);
   }
@@ -39,7 +41,8 @@ async function display() {
   for (const object of application) {
     if (object.year == select.value) {
       const tr = document.createElement("tr");
-      tr.className = "text-blue-950 border-b border-[#c1babaff] w-full  ";
+      tr.className =
+        "border-b border-[#c1babaff] w-full bg-[#f3f4f6] dark:bg-[#444B5A] dark:text-gray-300 p-2 ";
 
       for (const row in object) {
         if (row == "password") {
@@ -50,7 +53,7 @@ async function display() {
         }
         const td = document.createElement("td");
         td.textContent = object[row];
-        td.className = "text-nowrap pl-1  ";
+        td.className = "text-nowrap  p-2  ";
 
         tr.append(td);
       }
@@ -71,10 +74,8 @@ async function display() {
         continue;
       }
       const th = document.createElement("th");
+      th.className="p-2"
       th.textContent = header;
-
-      th.className =
-        "p-2 bg-[#DFEDFF]  border-b  border-[#c1babaff] text-start";
 
       tHead.append(th);
     }
@@ -82,7 +83,8 @@ async function display() {
     for (const object of application) {
       if (object.year == selectedBatch) {
         const tr = document.createElement("tr");
-        tr.className = "text-blue-950 border-b border-[#c1babaff] w-full  ";
+        tr.className =
+          "border-b border-[#c1babaff] w-full bg-[#f3f4f6] dark:bg-[#444B5A] dark:text-gray-300 p-2 ";
 
         for (const row in object) {
           if (row == "password") {
@@ -93,7 +95,7 @@ async function display() {
           }
           const td = document.createElement("td");
           td.textContent = object[row];
-          td.className = "text-nowrap pl-1  ";
+          td.className = "text-nowrap  p-2  ";
 
           tr.append(td);
         }

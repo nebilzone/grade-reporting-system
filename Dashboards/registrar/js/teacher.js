@@ -58,15 +58,15 @@ subTab.addEventListener("click", async function (e) {
 
   const table = document.createElement("table");
   table.innerHTML = `
-      <tr class="bg-blue-100 text-blue-950">
-        <th class="text-start py-1 pl-2 lg:pl-0">teacherId</th>
-        <th class="text-start py-1 pl-2 lg:pl-0">departmentId</th>
-        <th class="text-start py-1 pl-2 lg:pl-0">year</th>
-        <th class="text-start py-1 pl-2 lg:pl-0">courseId</th>
-        <th class="text-start py-1 pl-2 lg:pl-0">semester</th>
-        <th class="text-start py-1 pl-2 lg:pl-0">submittedAt</th>
-        <th class="text-start py-1 pl-2 lg:pl-0">status</th>
-        <th class="text-start py-1 pl-2 lg:pl-0">action</th>
+      <tr class="bg-blue-100 text-blue-950 dark:bg-[#3F4554] dark:text-gray-200 text-start ">
+        <th class="text-start p-2  ">teacherId</th>
+        <th class="text-start p-2 ">departmentId</th>
+        <th class="text-start p-2 ">year</th>
+        <th class="text-start p-2 ">courseId</th>
+        <th class="text-start p-2 ">semester</th>
+        <th class="text-start p-2 ">submittedAt</th>
+        <th class="text-start p-2 ">status</th>
+        <th class="text-start p-2 ">action</th>
       </tr>
     `;
 
@@ -80,31 +80,30 @@ subTab.addEventListener("click", async function (e) {
 
       for (const teacher of freshTeacher) {
         const tr = document.createElement("tr");
-        tr.className =
-          "text-blue-950 border-b border-[#c1babaff] w-full bg-[#f3f4f6] ";
+      tr.className ="border-b border-[#c1babaff] w-full bg-[#f3f4f6] dark:bg-[#444B5A] dark:text-gray-300  ";
         for (const data in teacher) {
           if (data == "id") {
             continue;
           }
           if (data == "departmentId") {
             const td = document.createElement("td");
-            td.className = "pl-2 text-nowrap lg:pl-0";
+            td.className = "p-2 text-nowrap ";
 
             td.textContent = "Freshman";
             tr.append(td);
             continue;
           }
           const td = document.createElement("td");
-          td.className = "pl-2 text-nowrap lg:pl-0";
+          td.className = "p-2 text-nowrap ";
 
           td.textContent = teacher[data];
           tr.append(td);
         }
         const approveBtn = document.createElement("button");
         approveBtn.textContent = "aprove";
-        approveBtn.className = "pl-3 lg:pl-0";
+        approveBtn.className = "p-3 ";
         const rejectBtn = document.createElement("button");
-        rejectBtn.className = "pl-3 lg:pl-0";
+        rejectBtn.className = "p-3 ";
 
         rejectBtn.textContent = "reject";
         approveBtn.addEventListener("click", async function (e) {
@@ -129,30 +128,29 @@ subTab.addEventListener("click", async function (e) {
       );
       for (const teacher of departementTeacher) {
         const tr = document.createElement("tr");
-        tr.className =
-          "text-blue-950 border-b border-[#c1babaff] w-full bg-[#f3f4f6] ";
+        tr.className ="border-b border-[#c1babaff] w-full bg-[#f3f4f6] dark:bg-[#444B5A] dark:text-gray-300 p-2 ";
         for (const data in teacher) {
           if (data == "id") {
             continue;
           }
           const td = document.createElement("td");
-          td.className = "pl-2 text-nowrap lg:pl-0";
+          td.className = "p-2 text-nowrap ";
 
           td.textContent = teacher[data];
           tr.append(td);
         }
         const approveBtn = document.createElement("button");
         approveBtn.textContent = "aprove";
-        approveBtn.className = "pl-3 lg:pl-0";
+        approveBtn.className = "p-3 ";
 
         const rejectBtn = document.createElement("button");
-        rejectBtn.className = "pl-3 lg:pl-0";
+        rejectBtn.className = "p-3 ";
 
         rejectBtn.textContent = "reject";
         approveBtn.addEventListener("click", function (e) {
           e.preventDefault();
         });
-                        tr.className="text-nowrap"
+        tr.className = "text-nowrap";
 
         tr.append(approveBtn, rejectBtn);
         table.append(tr);
@@ -171,28 +169,27 @@ subTab.addEventListener("click", async function (e) {
 
       for (const teacher of freshTeacher) {
         const tr = document.createElement("tr");
-        tr.className =
-          "text-blue-950 border-b border-[#c1babaff] w-full bg-[#f3f4f6] ";
+        tr.className ="border-b border-[#c1babaff] w-full bg-[#f3f4f6] dark:bg-[#444B5A] dark:text-gray-300 p-2 ";
         for (const data in teacher) {
           if (data == "id") {
             continue;
           }
           if (data == "departmentId") {
             const td = document.createElement("td");
-            td.className = "pl-2 text-nowrap lg:pl-0";
+            td.className = "p-2 text-nowrap";
 
             td.textContent = "Freshman";
             tr.append(td);
             continue;
           }
           const td = document.createElement("td");
-          td.className = "pl-2 text-nowrap lg:pl-0";
+          td.className = "p-2 text-nowrap ";
 
           td.textContent = teacher[data];
           tr.append(td);
         }
         const assignBtn = document.createElement("button");
-                        assignBtn.className="ml-3 px-2  rounded-sm bg-green-200 lg:ml-0 "
+        assignBtn.className = "px-2  rounded-sm bg-green-400 dark:text-gray-500  mt-2 ";
 
         assignBtn.textContent = "assign";
         tr.append(assignBtn);
@@ -266,19 +263,19 @@ subTab.addEventListener("click", async function (e) {
       for (const teacher of departementTeacher) {
         const tr = document.createElement("tr");
         tr.className =
-          "text-blue-950 border-b border-[#c1babaff] w-full bg-[#f3f4f6] ";
+          "border-b border-[#c1babaff] w-full bg-[#f3f4f6] dark:bg-[#444B5A] dark:text-gray-300  ";
         for (const data in teacher) {
           if (data == "id") {
             continue;
           }
           const td = document.createElement("td");
-          td.className = "pl-2 text-nowrap lg:pl-0";
+          td.className = "p-2 text-nowrap ";
 
           td.textContent = teacher[data];
           tr.append(td);
         }
         const assignBtn = document.createElement("button");
-                assignBtn.className="pl-3 lg:pl-0"
+        assignBtn.className = "p-2 ";
 
         assignBtn.addEventListener("click", function (e) {
           e.preventDefault();

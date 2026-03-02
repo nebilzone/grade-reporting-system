@@ -23,7 +23,8 @@ freshmanContainer.addEventListener("click", async function (e) {
   const dataType = event.dataset.type;
   if (dataType === "students") {
     table.innerHTML = `
-      <tr class="bg-blue-100 text-blue-950 ">
+      <tr class=
+    "bg-blue-100 text-blue-950 dark:bg-[#3F4554] dark:text-gray-200 text-start  ">
         <th class="text-start py-1 pl-2 md:pl-0">Id</th>
         <th class="text-start pl-2 md:pl-0">Name</th>
         <th class="text-start pl-2 md:pl-0">Email</th>
@@ -38,13 +39,14 @@ freshmanContainer.addEventListener("click", async function (e) {
     const students = await fetchingStudents(deptId);
     for (const student of students) {
       const tr = document.createElement("tr");
-      tr.className = "text-blue-950 border-b border-[#c1babaff]  w-full ";
+      tr.className =
+        "border-b border-[#c1babaff] w-full bg-[#f3f4f6] dark:bg-[#444B5A] dark:text-gray-300 p-2 ";
       for (const data in student) {
         if (data == "level" || data === "year" || data == "password") {
           continue;
         }
         const td = document.createElement("td");
-        td.className = "pl-2 text-nowrap md:pl-0";
+        td.className = "p-1 text-nowrap md:pl-0";
         td.textContent = student[data];
         tr.append(td);
       }
@@ -53,7 +55,8 @@ freshmanContainer.addEventListener("click", async function (e) {
     // console.log(students);
   } else if (dataType === "courses") {
     table.innerHTML = `
-      <tr class="bg-blue-100 text-blue-950 ">
+      <tr class=
+    "bg-blue-100 text-blue-950 dark:bg-[#3F4554] dark:text-gray-200 text-start  ">
         <th class="text-start py-1 pl-2 md:pl-0">Id</th>
         <th class="text-start py-1 pl-2 md:pl-0">Name</th>
         <th class="text-start py-1 pl-2 md:pl-0">Level</th>
@@ -66,13 +69,14 @@ freshmanContainer.addEventListener("click", async function (e) {
     const courses = await fetchingCourse(deptId);
     for (const course of courses) {
       const tr = document.createElement("tr");
-      tr.className = "text-blue-950 border-b border-[#c1babaff] w-full  ";
+      tr.className =
+        "border-b border-[#c1babaff] w-full bg-[#f3f4f6] dark:bg-[#444B5A] dark:text-gray-300 p-2 ";
       for (const data in course) {
         if (data == "active") {
           continue;
         }
         const td = document.createElement("td");
-        td.className = "pl-2 text-nowrap md:pl-0";
+        td.className = "p-1 text-nowrap md:pl-0";
 
         td.textContent = course[data];
         tr.append(td);
