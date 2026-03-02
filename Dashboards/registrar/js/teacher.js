@@ -80,7 +80,8 @@ subTab.addEventListener("click", async function (e) {
 
       for (const teacher of freshTeacher) {
         const tr = document.createElement("tr");
-      tr.className ="border-b border-[#c1babaff] w-full bg-[#f3f4f6] dark:bg-[#444B5A] dark:text-gray-300  ";
+        tr.className =
+          "border-b border-[#c1babaff] w-full bg-[#f3f4f6] dark:bg-[#444B5A] dark:text-gray-300";
         for (const data in teacher) {
           if (data == "id") {
             continue;
@@ -101,9 +102,11 @@ subTab.addEventListener("click", async function (e) {
         }
         const approveBtn = document.createElement("button");
         approveBtn.textContent = "aprove";
-        approveBtn.className = "p-3 ";
+         approveBtn.className =
+          "px-3 py-0.5 mt-1 rounded-sm border border-emerald-500  text-emerald-400 hover:bg-emerald-500 hover:text-white transition-all duration-200";
         const rejectBtn = document.createElement("button");
-        rejectBtn.className = "p-3 ";
+        rejectBtn.className =
+          "px-3 py-0.5 mt-1 rounded-sm border border-rose-500 text-rose-400  hover:bg-rose-500 hover:text-white transition-all duration-200 mx-2";
 
         rejectBtn.textContent = "reject";
         approveBtn.addEventListener("click", async function (e) {
@@ -117,7 +120,6 @@ subTab.addEventListener("click", async function (e) {
             },
           );
         });
-        tr.className = "text-nowrap";
 
         tr.append(approveBtn, rejectBtn);
         table.append(tr);
@@ -128,7 +130,8 @@ subTab.addEventListener("click", async function (e) {
       );
       for (const teacher of departementTeacher) {
         const tr = document.createElement("tr");
-        tr.className ="border-b border-[#c1babaff] w-full bg-[#f3f4f6] dark:bg-[#444B5A] dark:text-gray-300 p-2 ";
+        tr.className =
+          "border-b border-[#c1babaff] w-full bg-[#f3f4f6] dark:bg-[#444B5A] dark:text-gray-300 p-2 ";
         for (const data in teacher) {
           if (data == "id") {
             continue;
@@ -141,16 +144,17 @@ subTab.addEventListener("click", async function (e) {
         }
         const approveBtn = document.createElement("button");
         approveBtn.textContent = "aprove";
-        approveBtn.className = "p-3 ";
+        approveBtn.className =
+          "px-3 py-0.5 mt-1 rounded-sm border border-emerald-500  text-emerald-400 hover:bg-emerald-500 hover:text-white transition-all duration-200";
 
         const rejectBtn = document.createElement("button");
-        rejectBtn.className = "p-3 ";
+        rejectBtn.className =
+          "px-3 py-0.5 mt-1 rounded-sm border border-rose-500 text-rose-400  hover:bg-rose-500 hover:text-white transition-all duration-200 mx-2";
 
         rejectBtn.textContent = "reject";
         approveBtn.addEventListener("click", function (e) {
           e.preventDefault();
         });
-        tr.className = "text-nowrap";
 
         tr.append(approveBtn, rejectBtn);
         table.append(tr);
@@ -169,7 +173,8 @@ subTab.addEventListener("click", async function (e) {
 
       for (const teacher of freshTeacher) {
         const tr = document.createElement("tr");
-        tr.className ="border-b border-[#c1babaff] w-full bg-[#f3f4f6] dark:bg-[#444B5A] dark:text-gray-300 p-2 ";
+        tr.className =
+          "border-b border-[#c1babaff] w-full bg-[#f3f4f6] dark:bg-[#444B5A] dark:text-gray-300 p-2 ";
         for (const data in teacher) {
           if (data == "id") {
             continue;
@@ -189,7 +194,9 @@ subTab.addEventListener("click", async function (e) {
           tr.append(td);
         }
         const assignBtn = document.createElement("button");
-        assignBtn.className = "px-2  rounded-sm bg-green-400 dark:text-gray-500  mt-2 ";
+        assignBtn.className =
+          "px-3 py-0.5 mt-1 rounded-sm border border-emerald-500  text-emerald-400 hover:bg-emerald-500 hover:text-white transition-all duration-200";
+
 
         assignBtn.textContent = "assign";
         tr.append(assignBtn);
@@ -275,7 +282,8 @@ subTab.addEventListener("click", async function (e) {
           tr.append(td);
         }
         const assignBtn = document.createElement("button");
-        assignBtn.className = "p-2 ";
+        assignBtn.className =
+          "px-3 py-0.5 mt-1 rounded-sm border border-emerald-500  text-emerald-400 hover:bg-emerald-500 hover:text-white transition-all duration-200";
 
         assignBtn.addEventListener("click", function (e) {
           e.preventDefault();

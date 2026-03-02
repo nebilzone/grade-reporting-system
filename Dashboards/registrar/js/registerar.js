@@ -102,9 +102,9 @@ async function display() {
         const td = document.createElement("td");
         td.className = "p-2 text-nowrap";
 
-        approveBtn.className =
-          "px-3 py-1 bg-[#15803D] mr-2 rounded-sm text-stone-50";
 
+        approveBtn.className =
+          "px-3 py-0.5 mt-1 rounded-sm border border-emerald-500  text-emerald-400 hover:bg-emerald-500 hover:text-white transition-all duration-200";
         approveBtn.addEventListener("click", async function event(e) {
           e.preventDefault();
           const numberOfStudents = await fetch(
@@ -154,8 +154,8 @@ async function display() {
         });
         td.append(approveBtn);
         const rejectBtn = document.createElement("button");
-        rejectBtn.className =
-          "px-3 py-1 bg-[#bc1111ff] rounded-sm text-stone-50";
+         rejectBtn.className =
+          "px-3 py-0.5 mt-1 rounded-sm border border-rose-500 text-rose-400  hover:bg-rose-500 hover:text-white transition-all duration-200 mx-2";
         rejectBtn.textContent = "Reject";
 
         td.append(rejectBtn);
@@ -165,8 +165,7 @@ async function display() {
       }
       table.append(thead);
       table.style.borderCollapse = "collapse";
-      table.style.width = "95%";
-      table.style.margin = "40px";
+      table.style.marginRight = "10px";
 
       tableContainer.append(table);
     }
@@ -240,7 +239,6 @@ async function display() {
 
             const td = document.createElement("td");
 
-
             td.append(button);
             tr.append(td);
             continue;
@@ -252,11 +250,11 @@ async function display() {
         }
         const approveBtn = document.createElement("button");
         approveBtn.textContent = "Approve";
+
         approveBtn.className =
-          "px-3 py-1 bg-[#15803D] mr-2 rounded-sm text-stone-50";
+          "px-3 py-0.5 mt-1 rounded-sm border border-emerald-500  text-emerald-400 hover:bg-emerald-500 hover:text-white transition-all duration-200";
 
         const td = document.createElement("td");
-
 
         approveBtn.addEventListener("click", async function event(e) {
           e.preventDefault();
@@ -300,8 +298,8 @@ async function display() {
         const rejectBtn = document.createElement("button");
 
         rejectBtn.textContent = "Reject";
-        rejectBtn.className =
-          "px-3 py-1 bg-[#bc1111ff] rounded-sm text-stone-50";
+         rejectBtn.className =
+          "px-3 py-0.5 mt-1 rounded-sm border border-rose-500 text-rose-400  hover:bg-rose-500 hover:text-white transition-all duration-200 mx-2";
 
         td.append(rejectBtn);
         tr.append(td);
@@ -310,8 +308,7 @@ async function display() {
       }
       table.append(thead);
       table.style.borderCollapse = "collapse";
-      table.style.width = "95%";
-      table.style.margin = "40px";
+      table.style.marginRight = "10px";
 
       tableContainer.append(table);
     }
